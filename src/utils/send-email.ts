@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 export function sendEmail(data: FormData) {
   const apiEndpoint = '/api/email';
 
-  const loadingToastId = toast.loading('Sending email...');
+  const loadingToastId = toast.loading('Wysyłanie...');
 
   fetch(apiEndpoint, {
     method: 'POST',
@@ -13,7 +13,7 @@ export function sendEmail(data: FormData) {
     .then((res) => res.json())
     .then((response) => {
       // Dodaj krok wysyłki kopii do nadawcy
-      sendCopyToSender(data);
+      sendAnswerToSender(data);
       
       toast.dismiss(loadingToastId);
       toast.success(response.message);
@@ -25,9 +25,9 @@ export function sendEmail(data: FormData) {
 }
 
 // Dodaj funkcję do wysyłania kopii do nadawcy
-function sendCopyToSender(data: FormData) {
+function sendAnswerToSender(data: FormData) {
   const senderEmail = data.email;
-  const copyEndpoint = '/api/autoAnswer';
+  const copyEndpoint = '/api/answer';
 
   fetch(copyEndpoint, {
     method: 'POST',
@@ -35,6 +35,7 @@ function sendCopyToSender(data: FormData) {
   })
     .then((res) => res.json())
     .then((response) => {
+      toast.success(response.message);
       console.log(response.message); // Możesz użyć toast, aby poinformować użytkownika
     })
     .catch((err) => {

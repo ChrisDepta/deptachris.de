@@ -1,7 +1,7 @@
+import { autoAnswerTemplate } from '@/utils/autoAnswerTemplate';
 import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
-import { autoAnswerTemplate } from '@/utils/autoAnswerTemplate';
 import * as handlebars from 'handlebars';
 
 export async function POST(request: NextRequest) {
@@ -15,11 +15,10 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  // Use your custom email template
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
     to,
-    subject: `Copy of your message from ${name}`,
+    subject: `Automatyczna odpowiedź od NCOFFEE`,
     html: compileTemplate(name,email,message),
   };
 
@@ -27,7 +26,7 @@ export async function POST(request: NextRequest) {
     new Promise<string>((resolve, reject) => {
       transport.sendMail(mailOptions, function (err) {
         if (!err) {
-          resolve('Email sent');
+          resolve('Wysłana');
         } else {
           reject(err.message);
         }
@@ -36,17 +35,22 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: 'Automatyczna odpowiedź od NCOFFEE' });
+    return NextResponse.json({ message: 'Potwierdzenie odbioru wiadomości.' });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }
 }
 
-export function compileTemplate(name: string, email: string, message: string) {
+export function compileTemplate(
+  name: string,
+  email: string,
+  message: string
+): string {
   const template = handlebars.compile(autoAnswerTemplate);
+  console.log(template);
   return template({
-    name:name,
-    email:email,
-    message:message,
-  })
+    name: name,
+    email: email,
+    message: message,
+  });
 }

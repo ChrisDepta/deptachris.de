@@ -26,7 +26,7 @@ const ContactForm: FC = () => {
       <div className='mb-5'>
         <label
           htmlFor='name'
-          className='mb-3 block text-base font-medium text-black'
+          className='mb-3 block text-base font-medium text-white'
         >
           Full Name
         </label>
@@ -40,7 +40,7 @@ const ContactForm: FC = () => {
       <div className='mb-5'>
         <label
           htmlFor='email'
-          className='mb-3 block text-base font-medium text-black'
+          className='mb-3 block text-base font-medium text-white'
         >
           Email Address
         </label>
@@ -54,7 +54,7 @@ const ContactForm: FC = () => {
       <div className='mb-5'>
         <label
           htmlFor='message'
-          className='mb-3 block text-base font-medium text-black'
+          className='mb-3 block text-base font-medium text-white'
         >
           Message
         </label>
@@ -66,7 +66,7 @@ const ContactForm: FC = () => {
         ></textarea>
       </div>
       <div>
-        <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+        <button className='hover:shadow-form rounded-md bg-black py-3 px-8 font-semibold text-white outline-none w-auto h-auto'>
           Submit
         </button>
       </div>

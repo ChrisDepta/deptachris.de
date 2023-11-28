@@ -35,8 +35,6 @@ function sendAnswerToSender(data: FormData) {
   })
     .then((res) => res.json())
     .then((response) => {
-      toast.success(response.message);
-      console.log(response.message); // Możesz użyć toast, aby poinformować użytkownika
     })
     .catch((err) => {
       console.error(err);

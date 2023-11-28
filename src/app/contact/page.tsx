@@ -1,11 +1,15 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Link from 'next/link'
-import depidevLogo from "../../public/depidevLogoDark.webp"
-import homeBaner  from "../../public/laptop.webp"
+import ContactForm from "@/components/sections/contact/contactForm"
+import React from "react"
+import { Toaster } from 'react-hot-toast';
 
-export default function About() {
+
+
+export default function Contact() {
   return (
-    <div>hi</div>
+    <main className="w-screen h-screen flex justify-center items-center">
+    <Toaster position="top-right"/>
+    <ContactForm/>
+    </main>
+    
   )
 }

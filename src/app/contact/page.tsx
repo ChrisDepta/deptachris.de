@@ -1,15 +1,16 @@
-import ContactForm from "@/components/sections/contact/contactForm"
-import React from "react"
-import { Toaster } from 'react-hot-toast';
-
-
+import Footer from "@/components/common/footer";
+import Navbar from "@/components/common/navbar";
+import ContactForm from "@/components/sections/contact/contactForm";
+import React from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function Contact() {
   return (
-    <main className="w-screen h-screen flex justify-center items-center">
-    <Toaster position="top-right"/>
-    <ContactForm/>
-    </main>
-    
-  )
+    <>
+      <Toaster position="top-right" />
+      <Navbar />
+      <ContactForm />
+      <Footer />
+    </>
+  );
 }

@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className={inter.className}>
-        <div className="min-h-screen overflow-x-hidden flex flex-col items-center bg-gradient-to-bl from-black via-primary to-black">
+        <div className="min-h-screen overflow-x-hidden flex flex-col items-center">
           {children}
         </div>
       </body>

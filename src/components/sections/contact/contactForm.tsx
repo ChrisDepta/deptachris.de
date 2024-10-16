@@ -74,9 +74,9 @@ const ContactForm: FC = () => {
             {...register("message", { required: true })}></textarea>
         </div>
         <div>
-          <button className="rounded-md text-xl font-extrabold bg-gradient-to-br from-dcblue to-dcturkis hover:bg-gradient-to-tl py-2 px-6 text-white outline-none w-auto h-auto transition-colors delay-300 hover:scale-105">
-            Submit
-          </button>
+          {/* <button className="rounded-md text-xl font-extrabold bg-gradient-to-br from-dcblue via-dcturkis to-dcturkis  hover:bg-gradient-to-tl py-2 px-6 text-white outline-none w-auto h-auto transition-colors hover:scale-105">
+           */}
+          <button className="schreibeButton">Submit</button>
         </div>
       </form>
     </div>

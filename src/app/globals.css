@@ -28,8 +28,33 @@ body {
     background-image: url(../../public/bgLogo.webp);
     background-repeat: no-repeat;
     background-size: 150%;
-    background-position: var(--background-start-rgb)
+    background-position: var(--background-start-rgb);
+    animation: backgroundZoomAndShake 100s infinite;
 }
+
+@keyframes backgroundZoomAndShake {
+  0% {
+    background-size: 150%;
+    background-position: var(--background-start-rgb);
+  }
+  25% {
+    background-size: 130%;
+    background-position: 2px -20px;
+  }
+  50% {
+    background-size: 110%;
+    background-position: -50px 2px;
+  }
+  75% {
+    background-size: 130%;
+    background-position: 30px -3px;
+  }
+  100% {
+    background-size: 150%;
+    background-position: var(--background-start-rgb);
+  }
+}
+
 
 button {
   margin: 0.2em;
@@ -38,3 +63,91 @@ button {
   border-radius: .3em;
   background-color: rgba(105, 23, 37, 0.6);
 }
+
+h1 {
+  font-size: xx-large;
+  color: #00f7f7;
+  margin: 0.7em auto;
+}
+
+h2 {
+  font-size: x-large;
+  color: #00f7f7;
+  margin: 0.5em auto;
+}
+
+.textShadow {
+  transition: all 0.3s;
+}
+
+.textShadow:hover {
+  text-shadow: 0 0 15px rgba(0, 247, 247, 0.9);
+}
+
+ .schreibeButton{
+  margin: 0 auto;
+  padding: 0.2em ;
+  min-width: 150px;
+  background: #1c1f2b;
+  text-align: center;
+  font-size: x-large;
+  color: #00f7f7;
+  border-radius: 50px;
+  position: relative;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.schreibeButton:hover {
+  font-weight: bolder;
+  box-shadow: 0 0 15px 5px rgba(0, 247, 247, 0.7);
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.schreibeButton::after, .schreibeButton::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #00f7f7, transparent);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 50px;
+  animation: 3s spin linear infinite;
+}
+.schreibeButton::before{
+  filter: blur(1.5rem);
+  opacity: 0.9;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.schreibeButton::after:hover, .schreibeButton::before:hover {
+  animation: 3s spin  backwards;
+}
+
+/* Ukrycie scrollbara, ale zachowanie przewijania */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Dla przeglądarek WebKit (Chrome, Safari, itp.) */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Dla Internet Explorera i starszych Edge */
+  scrollbar-width: none;      /* Dla Firefox */
+}
+
+

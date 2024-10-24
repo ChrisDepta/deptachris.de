@@ -1,27 +1,33 @@
 "use client";
 import db from "@/db/db.json";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 // Interfejs dla każdego projektu
 interface ProjectItem {
   id: number;
   titel: string;
+  link: string;
   image: string;
   shortDescription: string;
 }
 
 // Interfejs dla obiektu graphics, z index signature
-interface GraphicsData {
+interface WebsitesData {
   [key: string]: ProjectItem[]; // Zawiera dynamiczny indeks dla kategorii
 }
 
-export default function MapComponent({ category }: { category: string }) {
+export default function MapWebsitesComponent({
+  category,
+}: {
+  category: string;
+}) {
   // Typujemy db.graphics jako GraphicsData
-  const graphics: GraphicsData = db.graphics;
+  const websites: WebsitesData = db.websites;
 
   // Pobranie danych na podstawie przekazanego propsa "category"
-  const data = graphics[category];
+  const data = websites[category];
 
   // Sprawdzanie, czy dane istnieją
   if (!data) {
@@ -66,6 +72,9 @@ export default function MapComponent({ category }: { category: string }) {
                 ? "Schlissen..."
                 : "Siehe Beschreibung..."}
             </p>
+            <Link href={item.link} target="_blank" rel="noopener noreferrer">
+              Besuche Internetseite
+            </Link>
             <p
               id="shortDescription"
               className={`p-4 transition-all duration-500 ${

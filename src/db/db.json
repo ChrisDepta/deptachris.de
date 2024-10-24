@@ -174,13 +174,15 @@
     ]
   },
   "websites": {
-    "ncoffee": {
-      "id": 1,
-      "titel": "ncoffee.pl",
-      "link": "https://ncoffee.pl",
-      "image": "ncoffeeViev.webp",
-      "shortDescription": "ncoffee.pl ist eine Website für einen Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Zusätzlich bietet das Unternehmen Leasing von Geräten wie Kaffeemaschinen, Wasserspendern sowie Filtern für Leitungswasser an."
-    }
+    "ncoffee": [
+      {
+        "id": 1,
+        "titel": "ncoffee.pl",
+        "link": "https://ncoffee.pl",
+        "image": "ncoffeeViev.webp",
+        "shortDescription": "ncoffee.pl ist eine Website für einen Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Zusätzlich bietet das Unternehmen Leasing von Geräten wie Kaffeemaschinen, Wasserspendern sowie Filtern für Leitungswasser an."
+      }
+    ]
   },
   "services": {}
 }

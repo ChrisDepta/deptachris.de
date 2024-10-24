@@ -4,7 +4,6 @@ import Link from "next/link";
 import portrait from "../../../public/portrait.webp";
 import depidevLogo from "../../public/depidevLogoDark.webp";
 import AboutOne from "@/components/sections/about/aboutone";
-import Calculator from "@/components/sections/calc/calc";
 
 function HomeComponent() {
   return (

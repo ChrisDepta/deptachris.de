@@ -1,0 +1,186 @@
+{
+  "about": {
+    "uberMich": "Ich bin ein leidenschaftlicher und motivierter Webentwickler, der sich darauf konzentriert, die neuesten Technologien und Tools zu beherrschen. Seit 2012 beschäftige ich mich mit Webentwicklung, was als persönliches Lernprojekt begann. Ich habe mir selbst HTML5, CSS und SEO beigebracht, um meine ersten Webseiten zu erstellen. Seitdem erweitere ich kontinuierlich mein Wissen und habe im Jahr 2020 begonnen, JavaScript intensiv zu nutzen.",
+    "fokus": "Ich bin ein Entwickler, der die Umsetzung liebt und besonders gern an technischen Herausforderungen arbeitet. Mir macht es großen Spaß, mich in den Code zu vertiefen und effiziente Lösungen zu entwickeln. Der kreative Aspekt liegt für mich im Code, nicht im Design.",
+    "projekte": "Ich habe an einer Vielzahl von Projekten gearbeitet, von kleinen persönlichen Websites bis hin zu größeren Anwendungen. Diese Projekte haben mir geholfen, praktische Erfahrung mit JavaScript und modernem Front-End-Development zu sammeln.",
+    "warumIch": "Ich bin ständig auf der Suche nach neuen Herausforderungen und liebe es, mich in neue Technologien einzuarbeiten. Wenn Sie einen Entwickler suchen, der nicht nur Code schreibt, sondern auch eine Leidenschaft für kontinuierliches Lernen und Innovation mitbringt, dann bin ich die richtige Wahl."
+  },
+  "graphics": {
+    "blankenship": [
+      {
+        "id": 1,
+        "titel": "logo",
+        "image": "blankenshipViev.webp",
+        "shortDescription": "Das Logo zeigt im Hintergrund ein sportliches Auto, das Luxus und hohe Qualität suggeriert. Dieses Auto repräsentiert die Spezialisierung des Unternehmens auf Automobile und betont die Rolle eines Gutachters, der die Werte der Fahrzeuge bewertet. Die elegante Gestaltung des Logos vermittelt Professionalität und Expertise in der Automobilbewertung."
+      },
+      {
+        "id": 2,
+        "titel": "Baner",
+        "image": "blankenshipBaner.webp",
+        "shortDescription": "Der horizontale Banner zeigt ein elegantes Auto neben einem Gutachter, der ein Tablet in der Hand hält. Dies symbolisiert den modernen Ansatz zur Fahrzeugbewertung. Das professionelle Auftreten des Sachverständigen Blankenship betont die Genauigkeit und Zuverlässigkeit seiner Dienstleistungen und lädt zur Nutzung seiner Expertise ein."
+      },
+      {
+        "id": 3,
+        "titel": "werbung 1",
+        "image": "blankenshipWerbung1.webp",
+        "shortDescription": "Die Facebook-Werbung zeigt einen Gutachter, der ein beschädigtes Auto fotografiert. Sie richtet sich an Polen in Deutschland, die eine professionelle Fahrzeugbewertung nach einem Unfall benötigen. Der Sachverständige Blankenship bietet genaue Schadensbewertungen und Unterstützung bei Versicherungsfragen."
+      },
+      {
+        "id": 4,
+        "titel": "werbung 2",
+        "image": "blankenshipWerbung2.webp",
+        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+      }
+    ],
+    "damiano": [
+      {
+        "id": 1,
+        "titel": "logo",
+        "image": "damianoViev.webp",
+        "shortDescription": "Das Logo der Pizzeria Damiano, genannt Pizza Haus, wurde vollständig auf Grundlage spezifischer Kundenwünsche entworfen. Es zeigt ein stilisiertes Haus in Form einer Pizza, das eine Hand mit einem Daumen nach oben präsentiert. Dieses Design symbolisiert die Zufriedenheit und Qualität, die die Pizzeria ihren Kunden bietet."
+      },
+      {
+        "id": 2,
+        "titel": "flyer",
+        "image": "damianoFlyer.webp",
+        "shortDescription": "Die Flyer sind im Format 3 x A5 gefaltet im Wickelfalz und haben insgesamt 6 Seiten im Endformat A5. Die Broschüre enthält alle relevanten Informationen zur Pizzeria Damiano, einschließlich Adresse, aktuellen Aktionen und QR-Codes für die einfache Bestellung. Außerdem präsentiert sie das gesamte Menü und die verfügbaren Gerichte, um den Kunden einen umfassenden Überblick über das Angebot zu geben."
+      }
+    ],
+    "ncoffee": [
+      {
+        "id": 1,
+        "titel": "logo",
+        "image": "ncoffeeViev.webp",
+        "shortDescription": "Das einfache Logo in Form einer Kaffeetasse wurde für das Unternehmen Ncoffee entworfen. Es ist in verschiedenen Farbausführungen erhältlich und strahlt Eleganz aus. Das Design unterstreicht den spezifischen Profil des Unternehmens und vermittelt eine Verbindung zur Kaffeekultur."
+      },
+      {
+        "id": 2,
+        "titel": "Cerrado Etikette",
+        "image": "ncoffeeCerradoEtikette.webp",
+        "shortDescription": "Die Etikette für den handwerklich hergestellten Kaffee der Firma Ncoffee trägt den Namen Cerrado Single. Das elegante Design in Schwarz mit weißen Schriftzügen und goldenen Akzenten vermittelt einen hochwertigen Eindruck und spiegelt die Raffinesse des Produkts wider."
+      },
+      {
+        "id": 3,
+        "titel": "Cerrado Flyer",
+        "image": "ncoffeeCerradoflyer.webp",
+        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Cerrado Single von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+      },
+      {
+        "id": 4,
+        "titel": "Chemie Broschure",
+        "image": "ncoffeeChemiebroschure.webp",
+        "shortDescription": "Die Broschüre bietet umfassende Informationen über alle chemischen Produkte, die für die Wartung und Pflege von Kaffeemaschinen erforderlich sind. Dazu gehören Entkalkungstabletten, Reinigungsmittel und Pflegeprodukte, die die Lebensdauer der Geräte verlängern und die Kaffeequalität optimieren. Ansprechende Grafiken und klare Anleitungen helfen den Kunden, die richtige Wahl für ihre Bedürfnisse zu treffen."
+      },
+      {
+        "id": 5,
+        "titel": "Express Broschure",
+        "image": "ncoffeeExpressbroschure.webp",
+        "shortDescription": "Die Broschüre präsentiert die Auswahl an Kaffeeautomaten, die Ncoffee seinen Kunden entweder zum Kauf oder im Leasing anbietet. Sie enthält detaillierte Informationen zu jedem Modell, einschließlich technischer Spezifikationen, Funktionen und Vorteile. Ansprechende Bilder und klare Vergleiche helfen den Kunden, die ideale Maschine für ihre Bedürfnisse zu finden und die verschiedenen Optionen zur Finanzierung oder Miete zu verstehen."
+      },
+      {
+        "id": 6,
+        "titel": "Ncoffee Flyer",
+        "image": "ncoffeeFlyer.webp",
+        "shortDescription": "Die Ulotka im vertikalen A5-Format bietet einen umfassenden Überblick über das gesamte Angebot von Ncoffee. Sie enthält detaillierte Informationen zu allen Produkten, einschließlich Kaffees, chemischen Pflegeprodukten, Wasser und Kaffeemaschinen, die zum Verkauf oder im Leasing verfügbar sind. Die ansprechende Gestaltung und übersichtliche Struktur ermöglichen es den Kunden, schnell die gesuchten Informationen zu finden und die Vielfalt des Ncoffee-Angebots zu entdecken."
+      },
+      {
+        "id": 7,
+        "titel": "Kafe Broschure",
+        "image": "ncoffeeKafebroschure.webp",
+        "shortDescription": "Diese Broschüre präsentiert das gesamte Kaffeesortiment von Ncoffee. Sie stellt jede Mischung detailliert vor, einschließlich ihrer Geschmacksprofile, Röstgrade und Herkunft. Durch ansprechende Visualisierungen und informative Texte werden die Kunden eingeladen, die Vielfalt der Ncoffee-Kaffees zu entdecken und die perfekte Mischung für ihren Geschmack zu finden."
+      },
+      {
+        "id": 8,
+        "titel": "Kafe To Go",
+        "image": "ncoffeeKafetasse.webp",
+        "shortDescription": "Der To-Go-Becher für Ncoffee ist als Werbemittel konzipiert und eignet sich ideal für verschiedene Events sowie Kaffeebuden. Das moderne und ansprechende Design präsentiert das Ncoffee-Logo in auffälligen Farben und betont die Qualität und Frische der angebotenen Produkte. Mit einem praktischen Deckel und einem umweltfreundlichen Material ist der Becher nicht nur funktional, sondern auch nachhaltig und unterstreicht das Engagement von Ncoffee für umweltbewusste Kaffeekultur."
+      },
+      {
+        "id": 9,
+        "titel": "Menu",
+        "image": "ncoffeeMenu.webp",
+        "shortDescription": "Das Menükärtchen für den Tisch in der Café zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanilla Latte und Caramel Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
+      },
+      {
+        "id": 10,
+        "titel": "Menu Schwarz",
+        "image": "ncoffeeMenuBlack.webp",
+        "shortDescription": "Das Menükärtchen für den Tisch in der Café zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanilla Latte und Caramel Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
+      },
+      {
+        "id": 11,
+        "titel": "Prado Etikette",
+        "image": "ncoffeePradoEtikette.webp",
+        "shortDescription": "Die Etikette für den handwerklich hergestellten Kaffee der Firma Ncoffee trägt den Namen Prado Premium. Das elegante Design in Schwarz mit weißen Schriftzügen und goldenen Akzenten vermittelt einen hochwertigen Eindruck und spiegelt die Raffinesse des Produkts wider."
+      },
+      {
+        "id": 12,
+        "titel": "Vular Flyer hell",
+        "image": "ncoffeePradoflyer.webp",
+        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+      },
+      {
+        "id": 13,
+        "titel": "Ncoffee Visitenkarte",
+        "image": "ncoffeeVisitenkarte.webp",
+        "shortDescription": "Die Visitenkarte für Ncoffee ist in den markanten Farben des Unternehmens gestaltet und spiegelt das Branding wider. Das elegante Design kombiniert das Ncoffee-Logo mit klaren, modernen Schriftarten und bietet Platz für alle wesentlichen Kontaktdaten. Durch die ansprechende Farbpalette und hochwertige Materialien hebt sich die Visitenkarte von der Masse ab und vermittelt Professionalität sowie die Leidenschaft für hochwertigen Kaffee."
+      },
+      {
+        "id": 14,
+        "titel": "Vular Etikette",
+        "image": "ncoffeeVularEtikette.webp",
+        "shortDescription": "Die Etikette für den handwerklich hergestellten Kaffee der Firma Ncoffee trägt den Namen Vular Intensive Blend. Das elegante Design in Schwarz mit weißen Schriftzügen und goldenen Akzenten vermittelt einen hochwertigen Eindruck und spiegelt die Raffinesse des Produkts wider."
+      },
+      {
+        "id": 15,
+        "titel": "Vular Flyer dunkel",
+        "image": "ncoffeeVularflyer.webp",
+        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+      },
+      {
+        "id": 12,
+        "titel": "Lawendowy Zakatek",
+        "image": "ncoffeeZakatek.webp",
+        "shortDescription": "Das sehr einfache Logo für das Tochterunternehmen von Ncoffee, den Mini-Bar Imbiss namens Lawendowy Zakątek, ist in sanften Lavendeltönen gestaltet. Es zeigt stilisierte Lavendelblüten und vermittelt eine einladende Atmosphäre. Das schlichte Design unterstreicht die Verbindung zu hochwertigem Kaffee und einer gemütlichen Auszeit, die die Kunden im Lawendowym Zakątku erwarten können."
+      }
+    ],
+    "paluch": [
+      {
+        "id": 1,
+        "titel": "logo",
+        "image": "paluchViev.webp",
+        "shortDescription": "Das Logo für das polnische Bauunternehmen zeigt einen Igel in einem Papierhut. Das freundliche und einladende Design symbolisiert die Kreativität und Handwerkskunst des Unternehmens. Der Igel steht für Zuverlässigkeit und Stärke, während der Papierhut einen humorvollen Akzent setzt, der die Leidenschaft für das Bauwesen widerspiegelt."
+      },
+      {
+        "id": 2,
+        "titel": "visitenkarte",
+        "image": "paluchVisitenkarte.webp",
+        "shortDescription": "Die Visitenkarte für die Baufirma Paluch zeigt das Logo mit dem Igel in einem Papierhut. Im modernen Design sind die Kontaktdaten klar strukturiert und gut lesbar. Die Farbpalette strahlt Vertrauen und Professionalität aus, während die hochwertige Verarbeitung die Sorgfalt und Handwerkskunst des Unternehmens betont."
+      }
+    ],
+    "pisa": [
+      {
+        "id": 1,
+        "titel": "logo",
+        "image": "pisaViev.webp",
+        "shortDescription": "Die Visitenkarte für die Baufirma Paluch zeigt das Logo mit dem Igel in einem Papierhut. Im modernen Design sind die Kontaktdaten klar strukturiert und gut lesbar. Die Farbpalette strahlt Vertrauen und Professionalität aus, während die hochwertige Verarbeitung die Sorgfalt und Handwerkskunst des Unternehmens betont."
+      },
+      {
+        "id": 2,
+        "titel": "flyer",
+        "image": "pisaFlyer.webp",
+        "shortDescription": "Die Ulotka zeigt das gesamte Angebot der Pizzeria PISA, einschließlich Pizzen, Pasta, Vorspeisen und Desserts, mit appetitlichen Bildern und kurzen Beschreibungen. Aktuelle Angebote und spezielle Aktionen sind ebenfalls enthalten. Das übersichtliche Design lädt die Kunden ein, die italienische Küche in der Pizzeria PISA zu genießen."
+      }
+    ]
+  },
+  "websites": {
+    "ncoffee": {
+      "id": 1,
+      "titel": "ncoffee.pl",
+      "link": "https://ncoffee.pl",
+      "image": "ncoffeeViev.webp",
+      "shortDescription": "ncoffee.pl ist eine Website für einen Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Zusätzlich bietet das Unternehmen Leasing von Geräten wie Kaffeemaschinen, Wasserspendern sowie Filtern für Leitungswasser an."
+    }
+  },
+  "services": {}
+}

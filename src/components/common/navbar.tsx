@@ -12,41 +12,48 @@ function Nav() {
         <Image
           src={deptachrisLogo}
           alt="Opis obrazu" // Opis alternatywny dla dostępności
-          width={50} // Szerokość obrazu
-          height={50} // Wysokość obrazu
+          width={40} // Szerokość obrazu
+          height={40} // Wysokość obrazu
         />
-        <strong className="-ml-8 text-2xl">deptachris.de</strong>
+        <strong className="-ml-6 text-xl">deptachris</strong>
       </Link>
       <div className="flex justify-between items-center  ">
-        <ul className="flex text-xl mr-20">
+        <ul className="flex text-lg mr-24">
           <li>
             <Link
               href="/"
               className="py-5 px-12 hover:text-dcturkis textShadow ">
-              Home
+              Start
             </Link>
           </li>
           <li>
             <Link
               href="/about"
               className="py-5 px-12 hover:text-dcturkis textShadow">
-              About me
+              Über mich
             </Link>
           </li>
           <li>
             <Link
-              href="/projects"
+              href="/websites"
               className="py-5 px-12 hover:text-dcturkis textShadow">
-              Projects
+              Webseiten
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
-              href="/contact "
+              href="/graphics"
               className="py-5 px-12 hover:text-dcturkis textShadow">
-              Contact
+              Grafik
             </Link>
-          </li> */}
+          </li>
+          <li>
+            <Link
+              href="/services"
+              className="py-5 px-12 hover:text-dcturkis textShadow">
+              Leistungen
+            </Link>
+          </li>
         </ul>
         <div className="flex justify-center items-center w-auto h-full">
           <Link href="/contact" className="schreibeButton">

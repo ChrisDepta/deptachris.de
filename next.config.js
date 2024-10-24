@@ -1,8 +1,9 @@
-
-  /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverComponents: true, // Enable server components
-    serverActions: true, // Enable server actions
-}
- 
-module.exports = nextConfig
+  reactStrictMode: true,
+  experimental: {
+    // Upewnij się, że opcje są prawidłowo skonfigurowane
+    serverActions: true, // lub inna funkcja eksperymentalna
+  },
+};
+
+module.exports = nextConfig;

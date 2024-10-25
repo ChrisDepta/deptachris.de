@@ -63,9 +63,9 @@ export const autoAnswerTemplate = ({
 	  }
 	</style>
   </head>
-  <body style="background-color: #000;  margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: start; align-items: center;">
-	<div style="width: 100%; padding: 2rem; background-image: url("https://deptachris.de/bgLogo.webp");">
-	  <img src="https://deptachris.de/web1.jpeg" alt="web1" class="background-image">
+  <body style=" width: 100svw; background-color: #000;  margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: start; align-items: center;">
+	<div style="width: 100%; padding: 2rem;">
+	  <img src="https://deptachris.de/web1.webp" alt="web1" class="">
 	  <h1 style="color: #f48716; font-family: 'Roboto', Tahoma, Verdana, Segoe, sans-serif; font-size: 3rem; font-weight: 700; text-align: center;">
 		Hi ${name}!
 	  </h1>
@@ -75,15 +75,15 @@ export const autoAnswerTemplate = ({
 	  </div>
 	  <p class="message-text">Wenn du diese Nachricht nicht von dieser <strong class="link">${email}</strong><br/> E-Mail-Adresse gesendet hast, ignoriere sie bitte oder schreibe mir an diese Adresse. <strong class="link">dev@deptachris.de</strong></p>
 	  <div>
-		<img src="https://deptachris.de/simpleLogo.png" alt="simple logo" style="width: 25%;">
+		<img src="https://deptachris.de/simpleLogo.png" alt="simple logo" style="width: 15%;">
 		<div class="content-overlay">
 		  In meinem Angebot finden Sie noch viele weitere Leistungen!
 		  <a href="https://deptachris.de/services" class="link-button">siehe</a>
 		</div>
-		<img src="https://deptachris.de/web2.jpg" alt="web2" class="background-image" style="margin-top: -4rem;">
-		<div>
-		  <a href="https://facebook.com/deptachris" class="link-button"><img src="https://deptachris.de/fbIcon.webp" alt="fb logo" style="width: 20%;"></a>
-		  <a href="https://instagram.com/deptachris.de/" class="link-button"><img src="https://deptachris.de/instaIcon.webp" alt="insta logo" style="width: 20%;"></a>
+		<img src="https://deptachris.de/web2.webp" alt="web2" class="" style="margin-top: -4rem;">
+		<div style="width: 100%; hight: 10svh; display: flex; justify-content: center; align-items: center;">
+		  <a href="https://facebook.com/deptachris" class=""><img src="https://deptachris.de/fbIcon.webp" alt="fb logo" style="width: 20%;"></a>
+		  <a href="https://instagram.com/deptachris.de/" class=""><img src="https://deptachris.de/instaIcon.webp" alt="insta logo" style="width: 20%;"></a>
 		</div>
 	  </div>
 	</div>

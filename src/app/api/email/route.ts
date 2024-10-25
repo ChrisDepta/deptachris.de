@@ -18,10 +18,10 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
-    to: process.env.MY_EMAIL,
+    to: process.env.DC_EMAIL,
  
-    subject: `Wiadomość od ${name}`,
-    html: `<body><strong>Wiadomość od: ${name}</strong>,<br/><br/> <strong>Treść widomości:</strong><br/>${message}<br/><br/><strong>Aby odpowiedzieć kliknij w email:</strong> ${email} </body>`,
+    subject: `Nachricht von:  ${name}`,
+    html: `<body><strong>Nachricht von:  ${name}</strong>,<br/><br/> <strong>Nachricht Inhalt: </strong><br/>${message}<br/><br/><strong>Zum antworten klicke hier: </strong> ${email} </body>`,
   };
 
  
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: 'Wysłana' });
+    return NextResponse.json({ message: 'Gesendet' });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

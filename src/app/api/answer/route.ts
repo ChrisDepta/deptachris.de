@@ -28,7 +28,8 @@ export async function POST(request: NextRequest) {
         if (!err) {
           resolve('Wysłana');
         } else {
-          reject(err.message);
+          reject('Nie wysłano');
+          reject(err.message)
         }
       });
     });

@@ -1,9 +1,8 @@
+// @ts-check
+ 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    // Upewnij się, że opcje są prawidłowo skonfigurowane
-    serverActions: true, // lub inna funkcja eksperymentalna
-  },
-};
-
-module.exports = nextConfig;
+  /* config options here */
+}
+ 
+module.exports = nextConfig

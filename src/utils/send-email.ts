@@ -1,10 +1,11 @@
 import { FormData } from '@/components/sections/contact/contactForm';
+import { NextResponse } from 'next/server';
 import toast from 'react-hot-toast';
 
 export function sendEmail(data: FormData) {
   const apiEndpoint = '/api/email';
 
-  const loadingToastId = toast.loading('Wysyłanie...');
+  const loadingToastId = toast.loading('sending...');
 
   fetch(apiEndpoint, {
     method: 'POST',
@@ -19,9 +20,10 @@ export function sendEmail(data: FormData) {
       toast.success(response.message);
     })
     .catch((err) => {
-      toast.dismiss(loadingToastId);
-      toast.error(err);
+      console.error("Error sending email:", err);
+      return NextResponse.json({ error: err.message }, { status: 500 }); // Zwracanie błędu
     });
+    
 }
 
 // Dodaj funkcję do wysyłania kopii do nadawcy
@@ -31,12 +33,17 @@ function sendAnswerToSender(data: FormData) {
 
   fetch(copyEndpoint, {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json', // Ustaw nagłówek Content-Type
+    },
     body: JSON.stringify({ ...data, to: senderEmail }),
   })
-    .then((res) => res.json())
-    .then((response) => {
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  .then((res) => res.json())
+  .then((response) => {
+    // Obsługa odpowiedzi, jeśli to konieczne
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 }
+

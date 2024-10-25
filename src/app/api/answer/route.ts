@@ -16,9 +16,9 @@ export async function POST(request: NextRequest) {
   });
 
   const mailOptions: Mail.Options = {
-    from: process.env.MY_EMAIL,
+    from: process.env.DC_EMAIL,
     to,
-    subject: `Automatyczna odpowiedź od NCOFFEE`,
+    subject: `Automatische Antwort von deptachris.de`,
     html: compileTemplate(name, email, message),
   };
 
@@ -26,9 +26,9 @@ export async function POST(request: NextRequest) {
     new Promise<string>((resolve, reject) => {
       transport.sendMail(mailOptions, function (err) {
         if (!err) {
-          resolve('Wysłana');
+          resolve('Gesendet');
         } else {
-          reject('Nie wysłano');
+          reject('Nicht gesendet');
           reject(err.message)
         }
       });
@@ -43,11 +43,9 @@ export async function POST(request: NextRequest) {
 }
 
 function compileTemplate(name: string, email: string, message: string): string {
-  const template = Handlebars.compile(autoAnswerTemplate);
-  console.log(template);
-  return template({
-    name: name,
-    email: email,
-    message: message,
-  });
+  // Najpierw wywołujemy autoAnswerTemplate, aby uzyskać string
+  const templateString = autoAnswerTemplate({ name, email, message });
+  const template = Handlebars.compile(templateString); // Kompilacja szablonu z stringa
+  return template({ name, email, message }); // Użycie skompilowanego szablonu
 }
+

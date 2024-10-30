@@ -5,41 +5,55 @@ import deptachrisLogo from "../../../public/simpleLogo.png";
 import facebookLogo from "../../../public/fbIcon.webp";
 import linkedinLogo from "../../../public/Linkedin.webp";
 import githubLogo from "../../../public/gitHubWhite.webp";
+import instaLogo from "../../../public/instaIcon.webp";
+import ScrollToTopButton from "../elements/scrollTopButton";
 
 function Footer() {
   return (
-    <div className="flex flex-col w-screen justify-end items-center bg-black p-12 h-full ">
-      <div className=" flex items-end justify-evenly w-full">
-        <div className="flex items-center justify-center text-5xl font-extrabold ">
+    <div className=" min-h-[70vh] flex flex-col w-screen justify-end items-center bg-black p-12 pb-6 h-full">
+      <div className=" flex items-start justify-evenly w-full">
+        <div className="flex items-center justify-center text-4xl font-extrabold ">
           <Image
             src={deptachrisLogo}
             alt="homeLogo"
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             className="mr-[-15%]"
           />
           <span className="textShadow">deptachris.de</span>
         </div>
-        <div className="flex flex-col text-xl h-full justify-end">
+        <div className="flex flex-col text-sm h-full justify-end">
           <Link href="/" className="py-2 hover:text-dcturkis textShadow">
-            Home
+            Start
           </Link>
 
           <Link href="/about" className="py-2 hover:text-dcturkis textShadow">
-            About me
+            Über mich
           </Link>
 
           <Link
-            href="/projects"
+            href="/websites"
             className="py-2 hover:text-dcturkis textShadow">
-            Projects
+            Websites
+          </Link>
+
+          <Link
+            href="/graphics"
+            className="py-2 hover:text-dcturkis textShadow">
+            Graphics
+          </Link>
+
+          <Link
+            href="/services"
+            className="py-2 hover:text-dcturkis textShadow">
+            Leistungen
           </Link>
 
           <Link href="/contact" className="py-2 hover:text-dcturkis textShadow">
-            Contact
+            Kontakt
           </Link>
         </div>
-        <div className="flex flex-col text-2xl justify-end">
+        <div className="flex flex-col text-xlg justify-end">
           <Link
             href="https://www.facebook.com/profile.php?id=61566083339386"
             target="_blank"
@@ -54,14 +68,20 @@ function Footer() {
             />
             Facebook
           </Link>
-          {/* <Link
-          href="https://www.instagram.com/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="py-6 hover:text-dcturkis textShadow"
-        >
-          Instagram
-        </Link> */}
+          <Link
+            href="https://www.instagram.com/deptachris.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center py-4 hover:text-dcturkis textShadow ">
+            <Image
+              src={instaLogo}
+              alt="instaLogo"
+              width={30}
+              height={30}
+              className="mx-2"
+            />
+            Instagram
+          </Link>
           <Link
             href="https://www.linkedin.com/in/christoph-depta-09683221a/"
             target="_blank"
@@ -92,15 +112,18 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <div className="py-6">
-        <Link
-          href="/impressum"
-          className="px-12 hover:text-dcturkis textShadow">
-          impressum
-        </Link>
-        <Link href="/datenschutz" className=" hover:text-dcturkis textShadow">
-          Datenschutz
-        </Link>
+      <div className="pt-24 text-xs w-3/4 flex justify-between items-end">
+        <ScrollToTopButton />
+        <div>
+          <Link
+            href="/impressum"
+            className="px-12 hover:text-dcturkis textShadow">
+            impressum
+          </Link>
+          <Link href="/datenschutz" className=" hover:text-dcturkis textShadow">
+            Datenschutz
+          </Link>
+        </div>
       </div>
     </div>
   );

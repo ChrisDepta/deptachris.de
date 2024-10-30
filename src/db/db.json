@@ -30,6 +30,24 @@
         "titel": "werbung 2",
         "image": "blankenshipWerbung2.webp",
         "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+      },
+      {
+        "id": 5,
+        "titel": "baner Mobile",
+        "image": "blankenshipBanerMobile1.webp",
+        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+      },
+      {
+        "id": 6,
+        "titel": "baner Mobile",
+        "image": "blankenshipBanerMobile2.webp",
+        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+      },
+      {
+        "id": 7,
+        "titel": "baner Aside",
+        "image": "blankenshipBanerAside2.webp",
+        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
       }
     ],
     "damiano": [
@@ -138,7 +156,7 @@
         "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
       },
       {
-        "id": 12,
+        "id": 16,
         "titel": "Lawendowy Zakatek",
         "image": "ncoffeeZakatek.webp",
         "shortDescription": "Das sehr einfache Logo für das Tochterunternehmen von Ncoffee, den Mini-Bar Imbiss namens Lawendowy Zakątek, ist in sanften Lavendeltönen gestaltet. Es zeigt stilisierte Lavendelblüten und vermittelt eine einladende Atmosphäre. Das schlichte Design unterstreicht die Verbindung zu hochwertigem Kaffee und einer gemütlichen Auszeit, die die Kunden im Lawendowym Zakątku erwarten können."
@@ -186,6 +204,7 @@
   },
   "services": {},
   "impressum": {
+    "id": 1,
     "name": "Christoph Depta",
     "beruf": "Web Entwickler",
     "stadt": "Nürnberg",

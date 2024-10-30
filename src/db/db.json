@@ -184,5 +184,17 @@
       }
     ]
   },
-  "services": {}
+  "services": {},
+  "impressum": {
+    "name": "Christoph Depta",
+    "beruf": "Web Entwickler",
+    "stadt": "Nürnberg",
+    "land": "Deutschland",
+    "plz": "90482",
+    "strasse": "Sittenbacherstrase",
+    "strassenNr": "8",
+    "mail": "dev@deptachris.de",
+    "mobile": "+49 172 5378432",
+    "gesetz": "Inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV: Christoph Depta"
+  }
 }

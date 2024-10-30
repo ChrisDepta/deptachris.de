@@ -98,8 +98,8 @@ function Footer() {
           className="px-12 hover:text-dcturkis textShadow">
           impressum
         </Link>
-        <Link href="/agb" className=" hover:text-dcturkis textShadow">
-          AGB
+        <Link href="/datenschutz" className=" hover:text-dcturkis textShadow">
+          Datenschutz
         </Link>
       </div>
     </div>

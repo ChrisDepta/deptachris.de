@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,11 +24,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background-image: url(../../public/bgLogo.webp);
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: var(--background-start-rgb);
-    animation: backgroundZoomAndShake 100s infinite;
+  background-image: url(../../public/bgLogo.webp);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: var(--background-start-rgb);
+  animation: backgroundZoomAndShake 100s infinite;
 }
 
 @keyframes backgroundZoomAndShake {
@@ -55,12 +54,11 @@ body {
   }
 }
 
-
 button {
   margin: 0.2em;
   width: 2em;
   height: 2em;
-  border-radius: .3em;
+  border-radius: 0.3em;
   background-color: rgba(105, 23, 37, 0.6);
 }
 
@@ -84,9 +82,9 @@ h2 {
   text-shadow: 0 0 15px rgba(0, 247, 247, 0.9);
 }
 
- .schreibeButton{
+.schreibeButton {
   margin: 0 auto;
-  padding: 0.2em ;
+  padding: 0.2em;
   min-width: 150px;
   background: #1c1f2b;
   text-align: center;
@@ -103,14 +101,15 @@ h2 {
   box-shadow: 0 0 15px 5px rgba(0, 247, 247, 0.7);
 }
 
-@property --angle{
+@property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.schreibeButton::after, .schreibeButton::before{
-  content: '';
+.schreibeButton::after,
+.schreibeButton::before {
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -123,21 +122,22 @@ h2 {
   border-radius: 50px;
   animation: 3s spin linear infinite;
 }
-.schreibeButton::before{
+.schreibeButton::before {
   filter: blur(1.5rem);
   opacity: 0.9;
 }
-@keyframes spin{
-  from{
+@keyframes spin {
+  from {
     --angle: 0deg;
   }
-  to{
+  to {
     --angle: 360deg;
   }
 }
 
-.schreibeButton::after:hover, .schreibeButton::before:hover {
-  animation: 3s spin  backwards;
+.schreibeButton::after:hover,
+.schreibeButton::before:hover {
+  animation: 3s spin backwards;
 }
 
 /* Ukrycie scrollbara, ale zachowanie przewijania */
@@ -146,8 +146,9 @@ h2 {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Dla Internet Explorera i starszych Edge */
-  scrollbar-width: none;      /* Dla Firefox */
+  -ms-overflow-style: none; /* Dla Internet Explorera i starszych Edge */
+  scrollbar-width: none; /* Dla Firefox */
 }
-
-
+.h-screen-minus-200px {
+  height: calc(100vh - 200px);
+}

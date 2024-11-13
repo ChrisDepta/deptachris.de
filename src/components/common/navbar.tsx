@@ -49,9 +49,9 @@ function Nav() {
           </li>
           <li>
             <Link
-              href="/services"
+              href="/projects"
               className="py-5 px-12 hover:text-dcturkis textShadow">
-              Leistungen
+              Spiele
             </Link>
           </li>
         </ul>

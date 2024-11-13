@@ -44,9 +44,9 @@ function Footer() {
           </Link>
 
           <Link
-            href="/services"
+            href="/projects"
             className="py-2 hover:text-dcturkis textShadow">
-            Leistungen
+            Spiele
           </Link>
 
           <Link href="/contact" className="py-2 hover:text-dcturkis textShadow">

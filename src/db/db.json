@@ -3,7 +3,33 @@
     "uberMich": "Ich bin ein leidenschaftlicher und motivierter Webentwickler, der sich darauf konzentriert, die neuesten Technologien und Tools zu beherrschen. Seit 2012 beschäftige ich mich mit Webentwicklung, was als persönliches Lernprojekt begann. Ich habe mir selbst HTML5, CSS und SEO beigebracht, um meine ersten Webseiten zu erstellen. Seitdem erweitere ich kontinuierlich mein Wissen und habe im Jahr 2020 begonnen, JavaScript intensiv zu nutzen.",
     "fokus": "Ich bin ein Entwickler, der die Umsetzung liebt und besonders gern an technischen Herausforderungen arbeitet. Mir macht es großen Spaß, mich in den Code zu vertiefen und effiziente Lösungen zu entwickeln. Der kreative Aspekt liegt für mich im Code, nicht im Design.",
     "projekte": "Ich habe an einer Vielzahl von Projekten gearbeitet, von kleinen persönlichen Websites bis hin zu größeren Anwendungen. Diese Projekte haben mir geholfen, praktische Erfahrung mit JavaScript und modernem Front-End-Development zu sammeln.",
-    "warumIch": "Ich bin ständig auf der Suche nach neuen Herausforderungen und liebe es, mich in neue Technologien einzuarbeiten. Wenn Sie einen Entwickler suchen, der nicht nur Code schreibt, sondern auch eine Leidenschaft für kontinuierliches Lernen und Innovation mitbringt, dann bin ich die richtige Wahl."
+    "warumIch": "Ich bin ständig auf der Suche nach neuen Herausforderungen und liebe es, mich in neue Technologien einzuarbeiten. Wenn Sie einen Entwickler suchen, der nicht nur Code schreibt, sondern auch eine Leidenschaft für kontinuierliches Lernen und Innovation mitbringt, dann bin ich die richtige Wahl.",
+    "faehigkeiten": "Front-End: HTML5, CSS3, Tailwind, JavaScript (ES6+). <br /> Back-End: Node.js, Express. <br /> Werkzeuge: Git, Webpack, Visual Studio Code."
+  },
+  "projects": {
+    "spiele": [
+      {
+        "id": 1,
+        "titel": "Schnick Schnack Schnuck",
+        "shortDescription": "Stellt ein einfaches Spiel dar, das ich mithilfe von JavaScript auf Basis von HTML und CSS entwickelt habe. Dabei lag mein Fokus weniger auf dem Design, sondern vielmehr auf der Funktionalität und der technischen Umsetzung. Es war mir wichtig, die grundlegenden Mechaniken und Abläufe des Spiels zu programmieren und sicherzustellen, dass es reibungslos funktioniert, anstatt die visuelle Gestaltung in den Vordergrund zu stellen.",
+        "link": "/sss",
+        "image": "/sss.webp"
+      },
+      {
+        "id": 2,
+        "titel": "Glücksrad",
+        "shortDescription": "Ich habe auch ein Spiel entwickelt, das auf dem Prinzip eines Glücksrads basiert. Dabei geht es darum, dass der Spieler das Rad dreht und zufällige Ergebnisse erhält. Der Schwerpunkt lag auf der Programmierung der Zufallsmechanik und der Interaktivität, um ein spannendes Spielerlebnis zu schaffen.",
+        "link": "/luckyWheel",
+        "image": "/gluecksrad.webp"
+      },
+      {
+        "id": 3,
+        "titel": "Rechner",
+        "shortDescription": "Ich habe einen Taschenrechner mit HTML, CSS und JavaScript programmiert. Der Rechner ermöglicht grundlegende mathematische Operationen wie Addition, Subtraktion, Multiplikation und Division. Mein Ziel war es, eine intuitive und funktionale Anwendung zu schaffen, die einfache Berechnungen schnell und zuverlässig durchführt.",
+        "link": "/calc",
+        "image": "/rechner.webp"
+      }
+    ]
   },
   "graphics": {
     "blankenship": [
@@ -160,6 +186,12 @@
         "titel": "Lawendowy Zakatek",
         "image": "ncoffeeZakatek.webp",
         "shortDescription": "Das sehr einfache Logo für das Tochterunternehmen von Ncoffee, den Mini-Bar Imbiss namens Lawendowy Zakątek, ist in sanften Lavendeltönen gestaltet. Es zeigt stilisierte Lavendelblüten und vermittelt eine einladende Atmosphäre. Das schlichte Design unterstreicht die Verbindung zu hochwertigem Kaffee und einer gemütlichen Auszeit, die die Kunden im Lawendowym Zakątku erwarten können."
+      },
+      {
+        "id": 17,
+        "titel": "Ncoffee Angebot",
+        "image": "ncoffeeGanzeAngebot.webp",
+        "shortDescription": "Der Wickelfalz-Flyer im A5-Format von Ncoffee bietet auf sechs Seiten einen kompakten Überblick über das Angebot. In einem modernen, natürlichen Design gehalten, stellt der Flyer das breite Spektrum vor – von hochwertigen Kaffees und exklusiven Röstungen bis zum charmanten Mini-Bar-Konzept Lawendowy Zakątek. Kurze Texte und stimmungsvolle Bilder vermitteln neuen Kunden und Partnern auf einen Blick die Qualität und Vielfalt von Ncoffee und laden zu einer genussvollen Auszeit ein."
       }
     ],
     "paluch": [
@@ -192,13 +224,34 @@
     ]
   },
   "websites": {
-    "ncoffee": [
+    "myProjects": [
       {
         "id": 1,
         "titel": "ncoffee.pl",
         "link": "https://ncoffee.pl",
-        "image": "ncoffeeViev.webp",
+        "image": "ncoffeeHomepage.webp",
         "shortDescription": "ncoffee.pl ist eine Website für einen Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Zusätzlich bietet das Unternehmen Leasing von Geräten wie Kaffeemaschinen, Wasserspendern sowie Filtern für Leitungswasser an."
+      },
+      {
+        "id": 2,
+        "titel": "ChrisDesign",
+        "link": "https://webidew.vercel.app/",
+        "image": "chrisDesign.webp",
+        "shortDescription": "ChrisDesign* ist eine einfache und moderne Website, die in SASS, HTML und JavaScript erstellt wurde und so auf schnelle Ladezeiten und eine benutzerfreundliche Navigation setzt. Die Seite präsentiert die Dienstleistungen eines polnischen Unternehmens für Firmenkunden, das sich auf den Vertrieb von Kaffee und Getränkeautomaten sowie die Vermietung von Geräten wie Kaffeemaschinen und Wasserspendern spezialisiert hat. Als kreatives Extra bietet ChrisDesign das interaktive *Schnick Schnack Schnuck*-Spiel, das die Seite auflockert und Besucher zur Interaktion einlädt."
+      },
+      {
+        "id": 3,
+        "titel": "samuraj",
+        "link": "https://samuraj.vercel.app/",
+        "image": "samuraj.webp",
+        "shortDescription": "Die Webseite Samurai ist ein minimalistisches Portfolio-Projekt, das ausschließlich mit HTML und SASS gestaltet wurde und ohne JavaScript auskommt. Es entstand im Rahmen meines ersten Web-Kurses und repräsentiert die grundlegenden Fähigkeiten, die ich im Bereich Webdesign entwickelt habe. Die Seite zeigt ein simples, aber dennoch durchdachtes Design, das sich ideal für ein kompaktes Portfolio eignet."
+      },
+      {
+        "id": 4,
+        "titel": "topolski",
+        "link": "https://topolski.vercel.app/",
+        "image": "topolski.webp",
+        "shortDescription": "Die Webseite Topolski wurde für eine Firma entwickelt, die sich auf die Produktion und Montage maßgefertigter Möbel spezialisiert hat. Das Projekt wurde mit HTML, SASS und JavaScript realisiert und zeigt eine klare, moderne Struktur. Hier liegt der Fokus auf der Präsentation von Möbeln und Projektreferenzen, unterstützt durch einfache Animationen und interaktive Elemente, um das Nutzererlebnis ansprechend und informativ zu gestalten."
       }
     ]
   },

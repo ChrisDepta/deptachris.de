@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import db from "@/db/db.json";
 import Image from "next/image";
@@ -21,31 +22,33 @@ export default function MapGraphicsComponent({
 }: {
   category: string;
 }) {
-  // Typujemy db.graphics jako GraphicsData
   const graphics: GraphicsData = db.graphics;
-
-  // Pobranie danych na podstawie przekazanego propsa "category"
   const data = graphics[category];
 
-  // Sprawdzanie, czy dane istnieją
   if (!data) {
     return <p>Category {category} not exist</p>;
   }
 
-  // Przechowywanie id widocznych opisów w stanie
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [visibleDescriptionId, setVisibleDescriptionId] = useState<
     number | null
   >(null);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
-  // Funkcja obsługująca wyświetlanie opisu
   const showDescription = (id: number) => {
-    // Jeśli kliknięty element jest już widoczny, ukrywamy go, w przeciwnym razie pokazujemy
     setVisibleDescriptionId(visibleDescriptionId === id ? null : id);
   };
 
+  const openZoom = (image: string) => {
+    setZoomedImage(image);
+    setVisibleDescriptionId(null);
+  };
+
+  const closeZoom = () => {
+    setZoomedImage(null);
+  };
+
   return (
-    <div className="flex flex-wrap  w-3/4 justify-start items-start bg-black">
+    <div className="flex flex-wrap w-3/4 justify-start items-start bg-black">
       {data.map((item) => (
         <div
           key={item.id}
@@ -57,9 +60,10 @@ export default function MapGraphicsComponent({
             <Image
               src={`/${item.image}`}
               alt={item.titel}
-              layout="fill" // Umożliwia automatyczne dostosowanie rozmiaru
-              objectFit="cover" // Umożliwia przycięcie obrazu
-              className="absolute top-0 left-0 w-full h-full translate-y-0 hover:scale-105 hover:-translate-y-2 transition-all "
+              layout="fill"
+              objectFit="cover"
+              className="absolute top-0 left-0 w-full h-full transition-all duration-300 hover:scale-110 cursor-pointer"
+              onClick={() => openZoom(item.image)} // Open zoom with selected image
             />
           </div>
           <div className="shadow-2xl">
@@ -82,6 +86,29 @@ export default function MapGraphicsComponent({
           </div>
         </div>
       ))}
+
+      {/* Full-screen modal for zoomed image with scrollable support */}
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 backdrop-blur-lg"
+          onClick={closeZoom} // Close fullscreen when clicking outside image
+        >
+          <div
+            className="relative max-w-full max-h-full overflow-auto scrollbar-hide"
+            onClick={(e) => e.stopPropagation()} // Prevent modal close on image click
+          >
+            <Image
+              src={`/${zoomedImage}`}
+              alt="Fullscreen Image"
+              width={1000} // Set a max width for the image
+              height={1000} // Set a max height for the image
+              objectFit="contain"
+              className="cursor-pointer"
+              onClick={closeZoom}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -85,7 +85,7 @@ export default function ResendComponent() {
 
           {/* Treść karty */}
           <div className="relative p-6 text-white">
-            <h2 className="w-full text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-black/50 rounded-md shadow-md">
+            <h2 className="w-full text-[rgb(var(--accent-rgb))] text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
               {section.title}
             </h2>
             {/* Opis pokazuje się tylko po kliknięciu */}
@@ -96,7 +96,9 @@ export default function ResendComponent() {
                   dangerouslySetInnerHTML={{ __html: section.description }} // Umożliwia wyświetlanie HTML (np. <br>)
                 />
                 <Link href={section.link}>
-                  <h2 className="text-right mr-8">Mehr hier... </h2>
+                  <h2 className="text-right mr-8 text-[rgb(var(--accent-rgb))]">
+                    Mehr hier...{" "}
+                  </h2>
                 </Link>
               </>
             )}

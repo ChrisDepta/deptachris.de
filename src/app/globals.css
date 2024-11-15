@@ -2,18 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Kolory dla trybu jasnego */
+  --foreground-rgb: 0, 0, 0; /* Kolor tekstu */
+  --background-start-rgb: 214, 219, 220, 0.5; /* Początkowy gradient tła */
+  --background-end-rgb: 214, 219, 220; /* Końcowy gradient tła */
+  --accent-rgb: 0, 123, 123; /* Kolor akcentu light, np. przyciski */
+  --accent-light-rgb: 0, 123, 123, 0.6; /*Kolor akcentu dark*/
+  --border-rgb: 100, 100, 100, 0.2; /* Kolor obramowania */
+  --shadow-rgb: 100, 100, 100; /* Cień */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+[data-theme="dark"] {
+  /* Kolory dla trybu ciemnego */
+  --foreground-rgb: 255, 255, 255; /* Kolor tekstu */
+  --background-start-rgb: 0, 0, 0, 0.5; /* Początkowy gradient tła */
+  --background-end-rgb: 0, 0, 0; /* Końcowy gradient tła */
+  --accent-rgb: 0, 247, 247; /* Kolor akcentu */
+  --accent-light-rgb: 0, 247, 247; /*Kolor akcentu dark*/
+  --border-rgb: 0, 247, 247, 0.2; /* Kolor obramowania */
+  --shadow-rgb: 0, 247, 247; /* Cień */
 }
 
 body {
@@ -23,11 +32,10 @@ body {
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-end-rgb));
   background-image: url(../../public/bgLogo.webp);
   background-repeat: no-repeat;
   background-size: 150%;
-  background-position: var(--background-start-rgb);
   animation: backgroundZoomAndShake 100s infinite;
 }
 
@@ -64,13 +72,13 @@ button {
 
 h1 {
   font-size: xx-large;
-  color: #00f7f7;
+  color: rgb(var(--accent-rgb));
   margin: 0.7em auto;
 }
 
 h2 {
   font-size: x-large;
-  color: #00f7f7;
+  color: rgb(var(--accent-rgb));
   margin: 0.5em auto;
 }
 
@@ -79,17 +87,17 @@ h2 {
 }
 
 .textShadow:hover {
-  text-shadow: 0 0 15px rgba(0, 247, 247, 0.9);
+  text-shadow: 0 0 5px rgb(var(--accent-light-rgb));
 }
 
 .schreibeButton {
   margin: 0 auto;
   padding: 0.2em;
   min-width: 150px;
-  background: #1c1f2b;
+  background: rgb(var(--background-end-rgb));
   text-align: center;
   font-size: large;
-  color: #00f7f7;
+  color: rgb(var(--accent-rgb));
   border-radius: 50px;
   position: relative;
   letter-spacing: 2px;
@@ -98,7 +106,7 @@ h2 {
 
 .schreibeButton:hover {
   font-weight: bolder;
-  box-shadow: 0 0 15px 5px rgba(0, 247, 247, 0.7);
+  box-shadow: 0 0 15px 5px rgb(var(--accent-rgb));
 }
 
 @property --angle {
@@ -113,7 +121,7 @@ h2 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), #00f7f7, transparent);
+  background-image: conic-gradient(from var(--angle), rgb(var(--accent-rgb)), transparent);
   top: 50%;
   left: 50%;
   translate: -50% -50%;

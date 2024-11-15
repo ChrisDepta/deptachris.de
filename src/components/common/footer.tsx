@@ -1,16 +1,24 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import deptachrisLogo from "../../../public/simpleLogo.png";
-import facebookLogo from "../../../public/fbIcon.webp";
-import linkedinLogo from "../../../public/Linkedin.webp";
-import githubLogo from "../../../public/gitHubWhite.webp";
-import instaLogo from "../../../public/instaIcon.webp";
+import deptachrisLogo from "@/../public/simpleLogo.png";
+import facebookLogo from "@/../public/fbIcon.webp";
+import linkedinLogo from "@/../public/Linkedin.webp";
+import githubLogoLight from "@/../public/gitHubWhite.webp";
+import githubLogoDark from "@/../public/gitHubBlack.webp";
+import instaLogo from "@/../public/instaIcon.webp";
 import ScrollToTopButton from "../elements/scrollTopButton";
+import { useTheme } from "@/../ThemeContext";
+import ThemeToggle from "../elements/ThemeToggle";
 
-function Footer() {
+export default function Footer() {
+  // sprawdzam jaki jest Theme żeby móc zmienić logo na ciemne lub jasne przy użyciu useTheme
+  const { theme, changeTheme } = useTheme();
+  let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
+
   return (
-    <div className=" min-h-[70vh] flex flex-col w-screen justify-end items-center bg-black p-12 pb-6 h-full">
+    <div className=" min-h-[70vh] flex flex-col w-screen justify-end items-center bg-[rgb(var(--background-end-rgb))] p-12 pb-6 h-full">
       <div className=" flex items-start justify-evenly w-full">
         <div className="flex items-center justify-center text-4xl font-extrabold ">
           <Image
@@ -20,36 +28,44 @@ function Footer() {
             height={80}
             className="mr-[-15%]"
           />
-          <span className="textShadow">deptachris.de</span>
+          <span className="hover:text-[rgb(var(--accent-rgb))] textShadow">
+            deptachris.de
+          </span>
         </div>
         <div className="flex flex-col text-sm h-full justify-end">
-          <Link href="/" className="py-2 hover:text-dcturkis textShadow">
+          <Link
+            href="/"
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Start
           </Link>
 
-          <Link href="/about" className="py-2 hover:text-dcturkis textShadow">
+          <Link
+            href="/about"
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Über mich
           </Link>
 
           <Link
             href="/websites"
-            className="py-2 hover:text-dcturkis textShadow">
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Websites
           </Link>
 
           <Link
             href="/graphics"
-            className="py-2 hover:text-dcturkis textShadow">
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Graphics
           </Link>
 
           <Link
             href="/projects"
-            className="py-2 hover:text-dcturkis textShadow">
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Spiele
           </Link>
 
-          <Link href="/contact" className="py-2 hover:text-dcturkis textShadow">
+          <Link
+            href="/contact"
+            className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
             Kontakt
           </Link>
         </div>
@@ -58,7 +74,7 @@ function Footer() {
             href="https://www.facebook.com/profile.php?id=61566083339386"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center py-4 hover:text-dcturkis textShadow ">
+            className="flex items-center py-4 hover:text-[rgb(var(--accent-rgb))] textShadow ">
             <Image
               src={facebookLogo}
               alt="facebookLogo"
@@ -72,7 +88,7 @@ function Footer() {
             href="https://www.instagram.com/deptachris.de/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center py-4 hover:text-dcturkis textShadow ">
+            className="flex items-center py-4 hover:text-[rgb(var(--accent-rgb))] textShadow ">
             <Image
               src={instaLogo}
               alt="instaLogo"
@@ -86,7 +102,7 @@ function Footer() {
             href="https://www.linkedin.com/in/christoph-depta-09683221a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center py-4 hover:text-dcturkis textShadow ">
+            className="flex items-center py-4 hover:text-[rgb(var(--accent-rgb))] textShadow ">
             <Image
               src={linkedinLogo}
               alt="linkedinLogo"
@@ -100,7 +116,7 @@ function Footer() {
             href="https://github.com/ChrisDepta"
             target="_blank"
             rel="noopener noreferrer"
-            className=" flex items-center py-4 hover:text-dcturkis textShadow ">
+            className=" flex items-center py-4 hover:text-[rgb(var(--accent-rgb))] textShadow ">
             <Image
               src={githubLogo}
               alt="githubLogo"
@@ -112,15 +128,18 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <div className="pt-24 text-xs w-3/4 flex justify-between items-end">
+      <div className="pb-4 pt-24 text-xs w-3/4 flex justify-between items-end">
         <ScrollToTopButton />
+        <ThemeToggle />
         <div>
           <Link
             href="/impressum"
-            className="px-12 hover:text-dcturkis textShadow">
+            className="px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">
             impressum
           </Link>
-          <Link href="/datenschutz" className=" hover:text-dcturkis textShadow">
+          <Link
+            href="/datenschutz"
+            className=" hover:text-[rgb(var(--accent-rgb))] textShadow">
             Datenschutz
           </Link>
         </div>
@@ -128,5 +147,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer;

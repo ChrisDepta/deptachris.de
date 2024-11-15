@@ -15,7 +15,7 @@ const ScrollToTopButton: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className=" pb-0 text-4xl text-dcturkis text-extrabold cursor-pointer bg-transparent hover:text-white hover:shadow-2xl hover:scale-125 transition-all duration-500">
+      className=" pb-0 text-2xl text-[rgb(var(--accent-rgb))] font-extrabold border-t border-[rgb(var(--border-rgb))] bg-[rgb(var(--bacground-end-rgb))] shadow-lg shadow-[rgb(var(--shadow-rgb))] hover:scale-125 transition-all duration-500 ">
       ↑
     </button>
   );

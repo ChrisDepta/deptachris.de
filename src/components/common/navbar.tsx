@@ -22,35 +22,35 @@ function Nav() {
           <li>
             <Link
               href="/"
-              className="py-5 px-12 hover:text-dcturkis textShadow ">
+              className="py-5 px-12 hover:text-[rgb(var(--accent-rgb))] textShadow ">
               Start
             </Link>
           </li>
           <li>
             <Link
               href="/about"
-              className="py-5 px-12 hover:text-dcturkis textShadow">
+              className="py-5 px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">
               Über mich
             </Link>
           </li>
           <li>
             <Link
               href="/websites"
-              className="py-5 px-12 hover:text-dcturkis textShadow">
+              className="py-5 px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">
               Webseiten
             </Link>
           </li>
           <li>
             <Link
               href="/graphics"
-              className="py-5 px-12 hover:text-dcturkis textShadow">
+              className="py-5 px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">
               Grafik
             </Link>
           </li>
           <li>
             <Link
               href="/projects"
-              className="py-5 px-12 hover:text-dcturkis textShadow">
+              className="py-5 px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">
               Spiele
             </Link>
           </li>

@@ -40,11 +40,11 @@ export default function ChrisComponent() {
 
   return (
     <div
-      className="h-screen-minus-200px w-full rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-black/20 via-black to-black relative overflow-hidden border border-dcturkis/20"
+      className="h-screen-minus-200px w-full rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
       onMouseMove={handleMouseMove}>
       {/* Efekt świetlnego neonu pod kursorem */}
       <div
-        className="pointer-events-none absolute bg-dcturkis rounded-full opacity-75 blur-xl transition-transform duration-100"
+        className="pointer-events-none absolute bg-[rgb(var(--accent-rgb))] rounded-full opacity-75 blur-xl transition-transform duration-100"
         style={{
           width: "50px",
           height: "50px",
@@ -55,20 +55,21 @@ export default function ChrisComponent() {
           }px)`,
         }}
       />
-
       {/* Portret */}
-      <div className="relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-dcturkis mb-12">
+      <div className="relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
         <Image
           src={portrait}
           alt="User portrait"
           className="rounded-full"
-          width={350}
-          height={350}
+          width={300}
+          height={300}
         />
       </div>
-      <h1 className="text-6xl font-extrabold mb-2">Christoph Depta</h1>
-      <h2>Software Entwickler</h2>
-      <p className="text-xl w-2/3 text-center mt-2">
+      <h1 className="text-6xl text-[rgb(var(--accent-rgb))] font-extrabold mb-2">
+        Christoph Depta
+      </h1>
+      <h2 className="text-[rgb(var(--accent-rgb))]">Software Entwickler</h2>
+      <p className="text-xl  w-2/3 text-center mt-2">
         {`„Als Frontend-Entwickler aus Leidenschaft finde ich wahres Glück in der Kunst der Umsetzung und dem Leben von Ideen durch Code – denn wenn der Code läuft, läuft auch mein Herz.“`}
       </p>
     </div>

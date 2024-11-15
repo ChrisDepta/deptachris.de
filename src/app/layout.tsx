@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/../ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={inter.className}>
-        <div className="min-h-screen overflow-x-hidden flex flex-col items-center">
-          {children}
-        </div>
+        <ThemeProvider>
+          <div className="min-h-screen overflow-x-hidden flex flex-col items-center">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

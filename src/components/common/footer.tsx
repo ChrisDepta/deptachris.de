@@ -14,25 +14,25 @@ import ThemeToggle from "../elements/ThemeToggle";
 
 export default function Footer() {
   // sprawdzam jaki jest Theme żeby móc zmienić logo na ciemne lub jasne przy użyciu useTheme
-  const { theme, changeTheme } = useTheme();
+  const { theme } = useTheme();
   let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
 
   return (
     <div className=" min-h-[70vh] flex flex-col w-screen justify-end items-center bg-[rgb(var(--background-end-rgb))] p-12 pb-6 h-full">
-      <div className=" flex items-start justify-evenly w-full">
-        <div className="flex items-center justify-center text-4xl font-extrabold ">
+      <div className=" flex flex-wrap items-start justify-between pr-8 md:pr-0 md:justify-evenly w-full">
+        <div className="flex items-center justify-center text-4xl font-extrabold basis-full md:basis-1/3 lg:basis-1/2">
           <Image
             src={deptachrisLogo}
             alt="homeLogo"
             width={80}
             height={80}
-            className="mr-[-15%]"
+            className="mr-[-15%] xl:mr-[-5%]"
           />
           <span className="hover:text-[rgb(var(--accent-rgb))] textShadow">
-            deptachris.de
+            deptachris
           </span>
         </div>
-        <div className="flex flex-col text-sm h-full justify-end">
+        <div className="flex flex-col text-lg h-full justify-end mt-12 md:mt-0 basis-1/3 md:basis-1/4">
           <Link
             href="/"
             className="py-2 hover:text-[rgb(var(--accent-rgb))] textShadow">
@@ -69,7 +69,7 @@ export default function Footer() {
             Kontakt
           </Link>
         </div>
-        <div className="flex flex-col text-xlg justify-end">
+        <div className="flex flex-col text-xl justify-end mt-12 md:mt-0 basis-1/3 md:basis-1/4">
           <Link
             href="https://www.facebook.com/profile.php?id=61566083339386"
             target="_blank"
@@ -128,10 +128,10 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="pb-4 pt-24 text-xs w-3/4 flex justify-between items-end">
+      <div className="pb-4 pt-24 text-xs w-full 2xl:w-3/4 flex justify-between items-end flex-wrap">
         <ScrollToTopButton />
         <ThemeToggle />
-        <div>
+        <div className=" basis-full md:basis-1/4 pt-12 md:pt-0">
           <Link
             href="/impressum"
             className="px-12 hover:text-[rgb(var(--accent-rgb))] textShadow">

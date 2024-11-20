@@ -48,11 +48,11 @@ export default function MapGraphicsComponent({
   };
 
   return (
-    <div className="flex flex-wrap w-3/4 justify-start items-start bg-black">
+    <div className="flex flex-wrap w-3/4 justify-start items-start bg-[rgb(var(--background-start-rgb))]">
       {data.map((item) => (
         <div
           key={item.id}
-          className="p-2 border border-white/10 bg-black shadow-md basis-1/5 overflow-hidden">
+          className="p-2 border border-[rgb(var(--border-rgb))] bg-[rgb(var(--background-end-rgb))] shadow-md basis-1/5 overflow-hidden">
           <p className="my-2 font-semibold text-xl first-letter:uppercase">
             {item.titel}
           </p>
@@ -67,16 +67,16 @@ export default function MapGraphicsComponent({
             />
           </div>
           <div className="shadow-2xl">
-            <p
-              className="p-6 hover:text-dcturkis textShadow hover:scale-105 hover:pb-4 transition-all cursor-pointer"
+            <h3
+              className="p-6 hover:text-[rgb(var(--foreground-rgb))] textShadow hover:scale-105 hover:pb-4 transition-all cursor-pointer"
               onClick={() => showDescription(item.id)}>
               {visibleDescriptionId === item.id
                 ? "Schlissen..."
                 : "Siehe Beschreibung..."}
-            </p>
+            </h3>
             <p
               id="shortDescription"
-              className={`p-4 transition-all duration-500 ${
+              className={`p-4 transition-all duration-500 text-[rgb(var(--foreground-rgb))] ${
                 visibleDescriptionId === item.id
                   ? "block translate-y-0"
                   : "hidden translate-y-full"

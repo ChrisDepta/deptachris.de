@@ -35,7 +35,7 @@ body {
     rgb(var(--background-end-rgb));
   background-image: url(../../public/bgLogo.webp);
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: 200%;
   animation: backgroundZoomAndShake 100s infinite;
 }
 
@@ -82,6 +82,12 @@ h2 {
   margin: 0.5em auto;
 }
 
+h3 {
+  font-size: medium;
+  color: rgb(var(--accent-rgb));
+  margin: 0.3em auto;
+}
+
 .textShadow {
   transition: all 0.3s;
 }
@@ -121,7 +127,11 @@ h2 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: conic-gradient(from var(--angle), rgb(var(--accent-rgb)), transparent);
+  background-image: conic-gradient(
+    from var(--angle),
+    rgb(var(--accent-rgb)),
+    transparent
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;

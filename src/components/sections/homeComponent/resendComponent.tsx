@@ -66,9 +66,11 @@ export default function ResendComponent() {
         <div
           key={section.id}
           onClick={() => toggleSection(section.id)}
-          className={`min-h-[30vh] relative cursor-pointer overflow-hidden shadow-dcturkis-xl transition-transform duration-300 border border-dcturkis/10 ${
+          className={` w-full min-h-[30vh] relative cursor-pointer overflow-hidden shadow-dcturkis-xl transition-transform duration-300 border border-[rgb(var(--border-rgb))]  ${
             expandedSection === section.id ? "" : ""
-          } ${section.id === 5 ? "w-full col-span-2" : ""}`}>
+          }
+             ${section.id === sections.length ? "md:col-span-2" : ""} 
+          `}>
           {/* Obrazek sekcji z powiększeniem po kliknięciu */}
           <Image
             src={section.imageSrc}
@@ -79,13 +81,11 @@ export default function ResendComponent() {
               expandedSection === section.id ? "transform scale-125" : ""
             }`}
           />
-
           {/* Overlay na obrazku */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75"></div>
-
           {/* Treść karty */}
           <div className="relative p-6 text-white">
-            <h2 className="w-full text-[rgb(var(--accent-rgb))] text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
+            <h2 className="w-full text-[rgb(var(--accent-rgb))] text-xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-2 lg:px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
               {section.title}
             </h2>
             {/* Opis pokazuje się tylko po kliknięciu */}
@@ -96,7 +96,7 @@ export default function ResendComponent() {
                   dangerouslySetInnerHTML={{ __html: section.description }} // Umożliwia wyświetlanie HTML (np. <br>)
                 />
                 <Link href={section.link}>
-                  <h2 className="text-right mr-8 text-[rgb(var(--accent-rgb))]">
+                  <h2 className="text-xl md:text-auto text-right mr-8 text-[rgb(var(--accent-rgb))]">
                     Mehr hier...{" "}
                   </h2>
                 </Link>

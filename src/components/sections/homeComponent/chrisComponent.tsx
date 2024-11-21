@@ -56,20 +56,22 @@ export default function ChrisComponent() {
         }}
       />
       {/* Portret */}
-      <div className="relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
+      <div className=" w-[60%] md:w-auto relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
         <Image
           src={portrait}
           alt="User portrait"
-          className="rounded-full"
+          className="rounded-full "
           width={300}
           height={300}
         />
       </div>
-      <h1 className="text-6xl text-[rgb(var(--accent-rgb))] font-extrabold mb-2">
+      <h1 className="text-3xl md:text-4xl xl:text-6xl text-[rgb(var(--accent-rgb))] font-extrabold mb-0 md:mb-2">
         Christoph Depta
       </h1>
-      <h2 className="text-[rgb(var(--accent-rgb))]">Software Entwickler</h2>
-      <p className="text-xl  w-2/3 text-center mt-2">
+      <h2 className="text-lg md:text-2xl lg:text-4xl text-[rgb(var(--accent-rgb))]">
+        Software Entwickler
+      </h2>
+      <p className=" text-md md:text-lg lg:text-xl w-4/5 md:w-2/3 text-center mt-2">
         {`„Als Frontend-Entwickler aus Leidenschaft finde ich wahres Glück in der Kunst der Umsetzung und dem Leben von Ideen durch Code – denn wenn der Code läuft, läuft auch mein Herz.“`}
       </p>
     </div>

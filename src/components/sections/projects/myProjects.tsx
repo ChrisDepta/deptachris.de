@@ -24,12 +24,12 @@ export default function MyProjects() {
   const sections: Section[] = db.projects.spiele;
 
   return (
-    <div className="w-[90%] md:w-[80%] m-auto my-16 grid grid-cols-1 md:grid-cols-2 gap-8 pt-48">
+    <div className="w-full md:w-[90%] xl:w-[80%] m-auto my-16 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 pt-0 md:pt-48">
       {sections.map((section) => (
         <div
           key={section.id}
           onClick={() => toggleSection(section.id)}
-          className={`min-h-[20vh] relative cursor-pointer rounded-lg overflow-hidden shadow-dcturkis-xl transition-transform duration-300 border border-dcturkis/10 ${
+          className={`min-h-[20vh] relative cursor-pointer md:rounded-lg overflow-hidden shadow-[rgb(var(--accent-rgb))]-xl transition-transform duration-300 border border-dcturkis/10 ${
             expandedSection === section.id ? "transform scale-105" : ""
           }`}>
           {/* Obrazek sekcji */}
@@ -46,7 +46,7 @@ export default function MyProjects() {
 
           {/* Treść karty */}
           <div className="relative p-6 text-white">
-            <h2 className="text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-black/50 rounded-md shadow-md">
+            <h2 className="text-2xl xl:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
               {section.titel}
             </h2>
             {/* Opis pokazuje się tylko po kliknięciu */}
@@ -59,7 +59,7 @@ export default function MyProjects() {
             {expandedSection === section.id && (
               <Link href={section.link}>
                 <h2
-                  className="text-xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-black/50 rounded-md shadow-md hover:scale-105 hover:shadow-2xl"
+                  className="text-xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md hover:scale-105 hover:shadow-2xl"
                   // Umożliwia wyświetlanie HTML (np. <br>)
                 >
                   Siehe hier...

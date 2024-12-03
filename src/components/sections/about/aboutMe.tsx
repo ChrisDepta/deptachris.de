@@ -59,7 +59,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="w-[90%] md:w-[80%] m-auto my-16 grid grid-cols-1 md:grid-cols-2  pt-48">
+    <div className="w-screen md:w-[90%] xl:w-[80%] m-auto my-16 grid grid-cols-1 md:grid-cols-2 pt-0 md:pt-48">
       {sections.map((section) => (
         <div
           key={section.id}
@@ -86,7 +86,7 @@ export default function AboutMe() {
 
           {/* Treść karty */}
           <div className="relative p-6 text-white">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-black/50 rounded-md shadow-md">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
               {section.title}
             </h2>
             {/* Opis pokazuje się tylko po kliknięciu */}

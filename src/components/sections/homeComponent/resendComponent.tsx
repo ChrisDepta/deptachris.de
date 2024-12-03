@@ -84,7 +84,7 @@ export default function ResendComponent() {
           {/* Overlay na obrazku */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75"></div>
           {/* Treść karty */}
-          <div className="relative p-6 text-white">
+          <div className="relative p-6 text-[rgb(var(--foreground-rgb))]">
             <h2 className="w-full text-[rgb(var(--accent-rgb))] text-xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-2 lg:px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
               {section.title}
             </h2>
@@ -96,7 +96,7 @@ export default function ResendComponent() {
                   dangerouslySetInnerHTML={{ __html: section.description }} // Umożliwia wyświetlanie HTML (np. <br>)
                 />
                 <Link href={section.link}>
-                  <h2 className="text-xl md:text-auto text-right mr-8 text-[rgb(var(--accent-rgb))]">
+                  <h2 className="w-fill text-[rgb(var(--accent-rgb))] text-xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-2 lg:px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
                     Mehr hier...{" "}
                   </h2>
                 </Link>

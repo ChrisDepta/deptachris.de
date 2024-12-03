@@ -50,11 +50,11 @@ export default function MapWebsitesComponent({
   };
 
   return (
-    <div className="flex flex-wrap w-3/4 justify-start items-start bg-[rgb(var(--background-start-rgb))]">
+    <div className="flex flex-wrap w-full xl:w-3/4 justify-start items-start bg-[rgb(var(--background-start-rgb))]">
       {data.map((item) => (
         <div
           key={item.id}
-          className="p-2 border border-[rgb(var(--border-rgb))] bg-[rgb(var(--background-end-rgb))] shadow-md basis-1/5 overflow-hidden">
+          className="p-2 border border-[rgb(var(--border-rgb))] bg-[rgb(var(--background-end-rgb))] shadow-md basis-full md:basis-1/3 xl:basis-1/5 overflow-hidden">
           <p className="my-2 font-semibold text-xl first-letter:uppercase">
             {item.titel}
           </p>

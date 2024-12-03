@@ -8,6 +8,7 @@
   --foreground-rgb: 0, 0, 0; /* Kolor tekstu */
   --background-start-rgb: 214, 219, 220, 0.5; /* Początkowy gradient tła */
   --background-end-rgb: 214, 219, 220; /* Końcowy gradient tła */
+  --background-light-rgb: 214, 219, 220, 0.7; /* tło z przezroczystością */
   --accent-rgb: 0, 123, 123; /* Kolor akcentu light, np. przyciski */
   --accent-light-rgb: 0, 123, 123, 0.6; /*Kolor akcentu dark*/
   --border-rgb: 100, 100, 100, 0.2; /* Kolor obramowania */
@@ -19,6 +20,7 @@
   --foreground-rgb: 255, 255, 255; /* Kolor tekstu */
   --background-start-rgb: 0, 0, 0, 0.5; /* Początkowy gradient tła */
   --background-end-rgb: 0, 0, 0; /* Końcowy gradient tła */
+  --background-light-rgb: 0, 0, 0, 0.7; /* tło z przezroczystością */
   --accent-rgb: 0, 247, 247; /* Kolor akcentu */
   --accent-light-rgb: 0, 247, 247; /*Kolor akcentu dark*/
   --border-rgb: 0, 247, 247, 0.2; /* Kolor obramowania */
@@ -99,10 +101,10 @@ h3 {
 .schreibeButton {
   margin: 0 auto;
   padding: 0.2em;
-  min-width: 150px;
+  min-width: 100px;
   background: rgb(var(--background-end-rgb));
   text-align: center;
-  font-size: large;
+  font-size: small;
   color: rgb(var(--accent-rgb));
   border-radius: 50px;
   position: relative;
@@ -169,4 +171,44 @@ h3 {
 }
 .h-screen-minus-200px {
   height: calc(100vh - 200px);
+}
+
+.trigger {
+  position: absolute;
+  margin: 10px;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  
+  
+}
+
+.bars {
+width: 60px;
+cursor: pointer;
+}
+.bars .line {
+fill: none;
+stroke: rgb(var(--accent-rgb));
+stroke-width: 4;
+stroke-linecap: square;
+transition: stroke-dasharray 700ms,  stroke-dashoffset 700ms;
+}
+.bars .line.top {
+stroke-dasharray: 40 172;
+}
+.bars .line.middle {
+stroke-dasharray: 40 111;
+}
+.bars .line.bottom {
+stroke-dasharray: 40 172;
+}
+.bars.active .top {
+stroke-dashoffset: -132px;
+}
+.bars.active .middle {
+stroke-dashoffset: -71px;
+}
+.bars.active .bottom {
+stroke-dashoffset: -132px;
 }

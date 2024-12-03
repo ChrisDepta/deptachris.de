@@ -4,7 +4,7 @@ export default function atenschutzComponent() {
   const data = content.impressum;
 
   return (
-    <div className="min-h-screen w-3/4 bg-black p-24 text-sm flex flex-col justify-evenly items-start">
+    <div className="min-h-screen w-full xl:w-3/4 text-[rgb(var(--foreground-rgb))] bg-[rgb(var(--background-end-rgb))] px-8 py-24 md:p-24 text-sm flex flex-col justify-evenly items-start">
       <div>
         <h2>Datenschutzerklärung</h2>
         <p className="p-2">
@@ -19,14 +19,16 @@ export default function atenschutzComponent() {
       </div>
       <div>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2 text-xl">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             1.
           </strong>
           Verantwortlicher Verantwortlich für die Datenverarbeitung im
           Zusammenhang mit dem Kontaktformular ist:
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2">Herr: </strong>
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2">
+            Herr:{" "}
+          </strong>
           {data.name}
         </p>
         <p className="p-2">
@@ -37,17 +39,19 @@ export default function atenschutzComponent() {
           {data.strasse} {data.strassenNr}
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2">E-mail:</strong>
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2">
+            E-mail:
+          </strong>
           {data.mail}
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2">
             Mobile:{" "}
           </strong>
           {data.mobile}
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2 text-xl">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             2.
           </strong>
           Erhebung und Verarbeitung personenbezogener Daten Wenn Sie das
@@ -58,7 +62,7 @@ export default function atenschutzComponent() {
           Datenbank gespeichert.
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2 text-xl">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             3.
           </strong>
           Zweck der Datenverarbeitung Die von Ihnen im Kontaktformular
@@ -67,7 +71,7 @@ export default function atenschutzComponent() {
           Dritte erfolgt nicht.
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2 text-xl">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             4.
           </strong>
           Speicherdauer Die über das Kontaktformular erhaltenen Daten werden nur
@@ -77,7 +81,7 @@ export default function atenschutzComponent() {
           entgegenstehen.
         </p>
         <p className="p-2">
-          <strong className="text-dcturkis font-extrabold mr-2 text-xl">
+          <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             5.
           </strong>
           Ihre Rechte Sie haben das Recht, jederzeit Auskunft über die bei uns

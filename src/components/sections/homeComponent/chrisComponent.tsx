@@ -40,7 +40,7 @@ export default function ChrisComponent() {
 
   return (
     <div
-      className="h-screen-minus-200px w-full rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
+      className="h-screen-minus-200px py-4 w-full xl:rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
       onMouseMove={handleMouseMove}>
       {/* Efekt świetlnego neonu pod kursorem */}
       <div
@@ -71,8 +71,8 @@ export default function ChrisComponent() {
       <h2 className="text-lg md:text-2xl lg:text-4xl text-[rgb(var(--accent-rgb))]">
         Software Entwickler
       </h2>
-      <p className=" text-md md:text-lg lg:text-xl w-4/5 md:w-2/3 text-center mt-2">
-        {`„Als Frontend-Entwickler aus Leidenschaft finde ich wahres Glück in der Kunst der Umsetzung und dem Leben von Ideen durch Code – denn wenn der Code läuft, läuft auch mein Herz.“`}
+      <p className=" text-xl md:text-xl lg:text-2xl w-4/5 md:w-2/3 text-center mt-2">
+        {`„Als leidenschaftlicher Frontend-Entwickler finde ich wahre Erfüllung in der Kunst, Ideen durch Code zum Leben zu erwecken – denn wenn der Code läuft, schlägt mein Herz höher.“`}
       </p>
     </div>
   );

@@ -173,42 +173,44 @@ h3 {
   height: calc(100vh - 200px);
 }
 
+.h-screen-minus-80px {
+  height: calc(100vh - 80px);
+}
+
 .trigger {
   position: absolute;
   margin: 10px;
   z-index: 5;
   right: 0;
   top: 0;
-  
-  
 }
 
 .bars {
-width: 60px;
-cursor: pointer;
+  width: 60px;
+  cursor: pointer;
 }
 .bars .line {
-fill: none;
-stroke: rgb(var(--accent-rgb));
-stroke-width: 4;
-stroke-linecap: square;
-transition: stroke-dasharray 700ms,  stroke-dashoffset 700ms;
+  fill: none;
+  stroke: rgb(var(--accent-rgb));
+  stroke-width: 4;
+  stroke-linecap: square;
+  transition: stroke-dasharray 700ms, stroke-dashoffset 700ms;
 }
 .bars .line.top {
-stroke-dasharray: 40 172;
+  stroke-dasharray: 40 172;
 }
 .bars .line.middle {
-stroke-dasharray: 40 111;
+  stroke-dasharray: 40 111;
 }
 .bars .line.bottom {
-stroke-dasharray: 40 172;
+  stroke-dasharray: 40 172;
 }
 .bars.active .top {
-stroke-dashoffset: -132px;
+  stroke-dashoffset: -132px;
 }
 .bars.active .middle {
-stroke-dashoffset: -71px;
+  stroke-dashoffset: -71px;
 }
 .bars.active .bottom {
-stroke-dashoffset: -132px;
+  stroke-dashoffset: -132px;
 }

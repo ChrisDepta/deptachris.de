@@ -40,23 +40,23 @@ export default function ChrisComponent() {
 
   return (
     <div
-      className="h-screen-minus-200px py-4 w-full xl:rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
+      className=" py-12 w-full xl:rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
       onMouseMove={handleMouseMove}>
       {/* Efekt świetlnego neonu pod kursorem */}
       <div
-        className="pointer-events-none absolute bg-[rgb(var(--accent-rgb))] rounded-full opacity-75 blur-xl transition-transform duration-100"
+        className=" hidden md:block pointer-events-none absolute bg-[rgb(var(--accent-rgb))] rounded-full opacity-75 blur-xl transition-transform duration-100"
         style={{
           width: "50px",
           height: "50px",
           transform: `translate(${
-            cursorPosition.x - 0.5 * windowSize.width
+            cursorPosition.x + 5 - 0.5 * windowSize.width
           }px, ${
-            cursorPosition.y - 100 - 0.5 * windowSize.height + scrollPosition
+            cursorPosition.y - 195 - 0.5 * windowSize.height + scrollPosition
           }px)`,
         }}
       />
       {/* Portret */}
-      <div className=" w-[60%] md:w-auto relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
+      <div className=" w-[40%] md:w-auto relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
         <Image
           src={portrait}
           alt="User portrait"

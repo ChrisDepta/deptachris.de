@@ -3,6 +3,14 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
+import Link from "next/link";
+import Image from "next/image";
+import facebookLogo from "@/../public/fbIcon.webp";
+import instaLogo from "@/../public/instaIcon.webp";
+import linkedinLogo from "@/../public/Linkedin.webp";
+import githubLogoLight from "@/../public/gitHubWhite.webp";
+import githubLogoDark from "@/../public/gitHubBlack.webp";
+import { useTheme } from "../../../../ThemeContext";
 
 export type FormData = {
   name: string;
@@ -12,6 +20,9 @@ export type FormData = {
 
 const ContactForm: FC = () => {
   const { register, handleSubmit } = useForm<FormData>();
+
+  const { theme } = useTheme();
+  let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
 
   function onSubmit(data: FormData) {
     sendEmail(data);
@@ -25,14 +36,68 @@ const ContactForm: FC = () => {
         <p className="pb-4 border-b-2 border-[rgb(var(--accent-rgb))]">
           90482 Nürnberg
         </p>
-        <h1 className="text-2xl font-extrabold pb-4 pt-4 ">Contact</h1>
+        <h1 className="text-2xl font-extrabold pb-4 pt-4 ">Kontakt</h1>
         <p>tel. +49 1725378432</p>
         <p className="pb-4 border-b-2 border-[rgb(var(--accent-rgb))]">
           email. dev(@)deptachris.de
         </p>
-        <h1 className="text-2xl font-extrabold pb-4 pt-4">Social</h1>
-        <p>facebook</p>
-        <p>instagram</p>
+        <h1 className="text-2xl font-extrabold pb-4 pt-4">Soziale Medien</h1>
+        <Link
+          href="https://www.facebook.com/profile.php?id=61566083339386"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center py-2 hover:text-[rgb(var(--accent-rgb))] textShadow ">
+          <Image
+            src={facebookLogo}
+            alt="facebookLogo"
+            width={30}
+            height={30}
+            className="mx-2"
+          />
+          Facebook
+        </Link>
+        <Link
+          href="https://www.instagram.com/deptachris.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center py-2 hover:text-[rgb(var(--accent-rgb))] textShadow ">
+          <Image
+            src={instaLogo}
+            alt="instaLogo"
+            width={30}
+            height={30}
+            className="mx-2"
+          />
+          Instagram
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/christoph-depta-09683221a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center py-2 hover:text-[rgb(var(--accent-rgb))] textShadow ">
+          <Image
+            src={linkedinLogo}
+            alt="linkedinLogo"
+            width={30}
+            height={30}
+            className="mx-2"
+          />
+          LinkedIn
+        </Link>
+        <Link
+          href="https://github.com/ChrisDepta"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" flex items-center py-2 hover:text-[rgb(var(--accent-rgb))] textShadow ">
+          <Image
+            src={githubLogo}
+            alt="githubLogo"
+            width={30}
+            height={30}
+            className="mx-2"
+          />
+          Github
+        </Link>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -41,11 +106,11 @@ const ContactForm: FC = () => {
           <label
             htmlFor="name"
             className="mb-3 block text-base font-medium text-[rgb(var(--accent-rgb))]">
-            Full Name
+            Name und Vorname
           </label>
           <input
             type="text"
-            placeholder="Full Name"
+            placeholder="Dein Name..."
             className="w-80 xl:w-96 rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[rgb(var(--accent-rgb))] focus:shadow-md"
             {...register("name", { required: true })}
           />
@@ -54,7 +119,7 @@ const ContactForm: FC = () => {
           <label
             htmlFor="email"
             className="mb-3 block text-base font-medium text-[rgb(var(--accent-rgb))]">
-            Email Address
+            E-Mail-Adresse
           </label>
           <input
             type="email"
@@ -67,18 +132,18 @@ const ContactForm: FC = () => {
           <label
             htmlFor="message"
             className="mb-3 block text-base font-medium text-[rgb(var(--accent-rgb))]">
-            Message
+            Nachricht
           </label>
           <textarea
             rows={4}
-            placeholder="Type your message"
+            placeholder="Schreibe deine Nachricht..."
             className="w-80 md:w-80 xl:w-96 resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[rgb(var(--accent-rgb))] focus:shadow-md"
             {...register("message", { required: true })}></textarea>
         </div>
         <div>
           {/* <button className="rounded-md text-xl font-extrabold bg-gradient-to-br from-dcblue via-dcturkis to-dcturkis  hover:bg-gradient-to-tl py-2 px-6 text-white outline-none w-auto h-auto transition-colors hover:scale-105">
            */}
-          <button className="schreibeButton">Submit</button>
+          <button className="schreibeButton">Senden</button>
         </div>
       </form>
     </div>

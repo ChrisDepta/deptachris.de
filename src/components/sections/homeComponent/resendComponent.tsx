@@ -22,7 +22,7 @@ export default function ResendComponent() {
   // Sekcje jako tablica obiektów
   const sections: Section[] = [
     {
-      title: "Über mich...",
+      title: "Über mich",
       description:
         "Hier haben Sie die Möglichkeit, mehr über mich zu erfahren – wer ich bin, welche Leidenschaften mich antreiben und womit ich mich beruflich beschäftige.",
       imageSrc: "/uberMich.webp", // Przykładowe źródło zdjęcia
@@ -30,7 +30,7 @@ export default function ResendComponent() {
       link: "/about",
     },
     {
-      title: "Meine Webseiten...",
+      title: "Meine Webseiten",
       description:
         "Entdecken Sie hier meine Projekte im Bereich Webentwicklung und lassen Sie sich von meinen Arbeiten inspirieren.",
       imageSrc: "/technischeFahigkeiten.webp", // Przykładowe źródło zdjęcia
@@ -38,7 +38,7 @@ export default function ResendComponent() {
       link: "/websites",
     },
     {
-      title: "Meine Grafiken...",
+      title: "Meine Grafiken",
       description:
         "Hier präsentiere ich Ihnen eine Auswahl meiner grafischen Projekte, die meine Kreativität und mein Können widerspiegeln.",
       imageSrc: "/focus.webp", // Przykładowe źródło zdjęcia
@@ -46,7 +46,7 @@ export default function ResendComponent() {
       link: "/graphics",
     },
     {
-      title: "Meine kleine Spiele...",
+      title: "Meine kleine Spiele",
       description:
         "Eine Sammlung kleiner Spiele, die ich mit Leidenschaft und technischem Know-how entwickelt habe.",
       imageSrc: "/projekte.webp", // Przykładowe źródło zdjęcia
@@ -54,7 +54,7 @@ export default function ResendComponent() {
       link: "/projects",
     },
     {
-      title: "Kontaktiere mit mir...",
+      title: "Kontaktiere mit mir",
       description:
         "Erfahren Sie hier, wie Sie mich erreichen können, und treten Sie unkompliziert mit mir in Kontakt.",
       imageSrc: "/warumIch.webp", // Przykładowe źródło zdjęcia

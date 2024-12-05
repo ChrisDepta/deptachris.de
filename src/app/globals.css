@@ -169,13 +169,6 @@ h3 {
   -ms-overflow-style: none; /* Dla Internet Explorera i starszych Edge */
   scrollbar-width: none; /* Dla Firefox */
 }
-.h-screen-minus-200px {
-  height: calc(100vh - 200px);
-}
-
-.h-screen-minus-80px {
-  height: calc(100vh - 80px);
-}
 
 .trigger {
   position: absolute;

@@ -22,8 +22,8 @@ export default function atenschutzComponent() {
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             1.
           </strong>
-          Verantwortlicher Verantwortlich für die Datenverarbeitung im
-          Zusammenhang mit dem Kontaktformular ist:
+          Verantwortlicher für die Datenverarbeitung im Zusammenhang mit dem
+          Kontaktformular ist:
         </p>
         <p className="p-2">
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2">
@@ -54,7 +54,7 @@ export default function atenschutzComponent() {
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             2.
           </strong>
-          Erhebung und Verarbeitung personenbezogener Daten Wenn Sie das
+          Erhebung und Verarbeitung personenbezogener Daten: Wenn Sie das
           Kontaktformular auf unserer Website verwenden, erfassen wir nur die
           personenbezogenen Daten, die Sie uns zur Verfügung stellen. In der
           Regel sind dies Ihr Name und Ihre E-Mail-Adresse. Diese Daten dienen
@@ -65,7 +65,7 @@ export default function atenschutzComponent() {
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             3.
           </strong>
-          Zweck der Datenverarbeitung Die von Ihnen im Kontaktformular
+          Zweck der Datenverarbeitung: Die von Ihnen im Kontaktformular
           angegebenen personenbezogenen Daten werden ausschließlich für die
           Bearbeitung Ihrer Anfrage verwendet. Eine Weitergabe Ihrer Daten an
           Dritte erfolgt nicht.
@@ -74,8 +74,8 @@ export default function atenschutzComponent() {
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             4.
           </strong>
-          Speicherdauer Die über das Kontaktformular erhaltenen Daten werden nur
-          so lange aufbewahrt, wie es für die Bearbeitung Ihrer Anfrage
+          Speicherdauer: Die über das Kontaktformular erhaltenen Daten werden
+          nur so lange aufbewahrt, wie es für die Bearbeitung Ihrer Anfrage
           erforderlich ist. Nach Abschluss der Kommunikation werden Ihre Daten
           gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen
           entgegenstehen.
@@ -84,7 +84,7 @@ export default function atenschutzComponent() {
           <strong className="text-[rgb(var(--accent-rgb))] font-extrabold mr-2 text-xl">
             5.
           </strong>
-          Ihre Rechte Sie haben das Recht, jederzeit Auskunft über die bei uns
+          Ihre Rechte: Sie haben das Recht, jederzeit Auskunft über die bei uns
           gespeicherten personenbezogenen Daten zu erhalten sowie das Recht auf
           Berichtigung, Löschung und Einschränkung der Verarbeitung dieser
           Daten. Sie können Ihre Einwilligung zur Verarbeitung der Daten

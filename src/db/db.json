@@ -61,19 +61,19 @@
         "id": 5,
         "titel": "baner Mobile",
         "image": "blankenshipBanerMobile1.webp",
-        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+        "shortDescription": "Der Banner für die mobile Version der Website zeigt ein Smartphone in horizontaler Position, auf dessen Bildschirm ein Auto sowie der Name 'KFZ-Blankenship' zu sehen sind. Die Werbung richtet sich an Autofahrer in Nürnberg, die auf der Suche nach einem zuverlässigen Sachverständigen für Fahrzeugbewertung und Schadensanalyse sind. Blankenship bietet schnelle und professionelle Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
       },
       {
         "id": 6,
         "titel": "baner Mobile",
         "image": "blankenshipBanerMobile2.webp",
-        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+        "shortDescription": "Der Banner für die mobile Version der Website zeigt ein Smartphone in horizontaler Position, auf dessen Bildschirm ein Auto sowie der Name 'KFZ-Blankenship' zu sehen sind. Die Werbung richtet sich an Autofahrer in Nürnberg, die auf der Suche nach einem zuverlässigen Sachverständigen für Fahrzeugbewertung und Schadensanalyse sind. Blankenship bietet schnelle und professionelle Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
       },
       {
         "id": 7,
         "titel": "baner Aside",
         "image": "blankenshipBanerAside2.webp",
-        "shortDescription": "Die Facebook-Werbung zeigt eine Frau, die neben ihrem beschädigten Auto hockt und einen Gutachter anruft. Die Anzeige richtet sich an Polen in Deutschland, die nach einem Unfall eine schnelle und professionelle Fahrzeugbewertung benötigen. Der Sachverständige Blankenship bietet verlässliche Unterstützung bei der Schadensbewertung und Versicherungsabwicklung."
+        "shortDescription": "Dieser klassische Aside auf der Website ist eine Werbung für den Kfz-Sachverständigen Blankenship. Die Anzeige hebt die wichtigsten Leistungen hervor: professionelle Fahrzeugbewertung, Schadensanalyse, Unterstützung bei der Versicherungsabwicklung und schnelle Gutachten-Erstellung. Ideal für alle, die eine zuverlässige Expertise in Nürnberg suchen."
       }
     ],
     "damiano": [
@@ -87,7 +87,7 @@
         "id": 2,
         "titel": "flyer",
         "image": "damianoFlyer.webp",
-        "shortDescription": "Die Flyer sind im Format 3 x A5 gefaltet im Wickelfalz und haben insgesamt 6 Seiten im Endformat A5. Die Broschüre enthält alle relevanten Informationen zur Pizzeria Damiano, einschließlich Adresse, aktuellen Aktionen und QR-Codes für die einfache Bestellung. Außerdem präsentiert sie das gesamte Menü und die verfügbaren Gerichte, um den Kunden einen umfassenden Überblick über das Angebot zu geben."
+        "shortDescription": "Die Flyer sind im Format 3 x A5 gefalzt im Wickelfalz und haben insgesamt 6 Seiten im Endformat A5. Die Broschüre enthält alle relevanten Informationen zur Pizzeria Damiano, einschließlich Adresse, aktuellen Aktionen und QR-Codes für die einfache Bestellung. Außerdem präsentiert sie das gesamte Menü und die verfügbaren Gerichte, um den Kunden einen umfassenden Überblick über das Angebot zu geben."
       }
     ],
     "ncoffee": [
@@ -95,7 +95,7 @@
         "id": 1,
         "titel": "logo",
         "image": "ncoffeeViev.webp",
-        "shortDescription": "Das einfache Logo in Form einer Kaffeetasse wurde für das Unternehmen Ncoffee entworfen. Es ist in verschiedenen Farbausführungen erhältlich und strahlt Eleganz aus. Das Design unterstreicht den spezifischen Profil des Unternehmens und vermittelt eine Verbindung zur Kaffeekultur."
+        "shortDescription": "Das einfache Logo in Form einer Kaffeetasse wurde für das Unternehmen Ncoffee entworfen. Es ist in verschiedenen Farbausführungen erhältlich und strahlt Eleganz aus. Das Design unterstreicht das spezifische Profil des Unternehmens und vermittelt eine Verbindung zur Kaffeekultur."
       },
       {
         "id": 2,
@@ -107,7 +107,7 @@
         "id": 3,
         "titel": "Cerrado Flyer",
         "image": "ncoffeeCerradoflyer.webp",
-        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Cerrado Single von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+        "shortDescription": "Die horizontal gefaltete A5-Flyer beschreibt alle Vorzüge der Kaffee-Mischung Cerrado Single von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
       },
       {
         "id": 4,
@@ -143,13 +143,13 @@
         "id": 9,
         "titel": "Menu",
         "image": "ncoffeeMenu.webp",
-        "shortDescription": "Das Menükärtchen für den Tisch in der Café zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanilla Latte und Caramel Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
+        "shortDescription": "Das Menükärtchen für den Tisch in den Kaffee zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanille Latte und Karamell Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
       },
       {
         "id": 10,
         "titel": "Menu Schwarz",
         "image": "ncoffeeMenuBlack.webp",
-        "shortDescription": "Das Menükärtchen für den Tisch in der Café zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanilla Latte und Caramel Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
+        "shortDescription": "Das Menükärtchen für den Tisch in den Kaffee zeigt alle Kaffeesorten, die Ncoffee anbietet. Es umfasst klassische Getränke wie Espresso, Americano und Cappuccino sowie verschiedene Latte-Varianten wie Latte Macchiato, Vanille Latte und Karamell Latte. Zudem sind alternative Zubereitungsmethoden wie Cold Brew und Nitro Coffee aufgeführt. Das übersichtliche Layout und appetitliche Bilder laden die Kunden ein, jedes Getränk auszuprobieren."
       },
       {
         "id": 11,
@@ -161,7 +161,7 @@
         "id": 12,
         "titel": "Vular Flyer hell",
         "image": "ncoffeePradoflyer.webp",
-        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+        "shortDescription": "Die horizontal gefalzte A5-Flyer beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
       },
       {
         "id": 13,
@@ -179,19 +179,19 @@
         "id": 15,
         "titel": "Vular Flyer dunkel",
         "image": "ncoffeeVularflyer.webp",
-        "shortDescription": "Die horizontal gefaltete A5-Ultka beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
+        "shortDescription": "Die horizontal gefaltete A5-Flyer beschreibt alle Vorzüge der Kaffee-Mischung Vular Blend von Ncoffee. Sie hebt die wichtigsten Eigenschaften hervor, einschließlich der Geschmacksnuancen, der Säure, des Röstgrads und weiterer geschmacklicher Merkmale. Das ansprechende Design informiert die Kunden umfassend über die Qualität und Einzigartigkeit dieser Röstung."
       },
       {
         "id": 16,
         "titel": "Lawendowy Zakatek",
         "image": "ncoffeeZakatek.webp",
-        "shortDescription": "Das sehr einfache Logo für das Tochterunternehmen von Ncoffee, den Mini-Bar Imbiss namens Lawendowy Zakątek, ist in sanften Lavendeltönen gestaltet. Es zeigt stilisierte Lavendelblüten und vermittelt eine einladende Atmosphäre. Das schlichte Design unterstreicht die Verbindung zu hochwertigem Kaffee und einer gemütlichen Auszeit, die die Kunden im Lawendowym Zakątku erwarten können."
+        "shortDescription": "Das sehr einfache Logo für das Tochterunternehmen von Ncoffee, den Mini-Bar-Imbiss namens Lavendel-Ecke. Es ist in sanften Lavendeltönen gestaltet. Es zeigt stilisierte Lavendelblüten und vermittelt eine einladende Atmosphäre. Das schlichte Design unterstreicht die Verbindung zu hochwertigem Kaffee und einer gemütlichen Auszeit, die die Kunden in der Lavendel-Ecke erwarten können."
       },
       {
         "id": 17,
         "titel": "Ncoffee Angebot",
         "image": "ncoffeeGanzeAngebot.webp",
-        "shortDescription": "Der Wickelfalz-Flyer im A5-Format von Ncoffee bietet auf sechs Seiten einen kompakten Überblick über das Angebot. In einem modernen, natürlichen Design gehalten, stellt der Flyer das breite Spektrum vor – von hochwertigen Kaffees und exklusiven Röstungen bis zum charmanten Mini-Bar-Konzept Lawendowy Zakątek. Kurze Texte und stimmungsvolle Bilder vermitteln neuen Kunden und Partnern auf einen Blick die Qualität und Vielfalt von Ncoffee und laden zu einer genussvollen Auszeit ein."
+        "shortDescription": "Der Wickelfalz-Flyer im A5-Format von Ncoffee bietet auf sechs Seiten einen kompakten Überblick über das Angebot. In einem modernen, natürlichen Design gehalten, stellt der Flyer das breite Spektrum vor – von hochwertigen Kaffees und exklusiven Röstungen bis zum charmanten Mini-Bar-Konzept Lavendel-Ecke. Kurze Texte und stimmungsvolle Bilder vermitteln neuen Kunden und Partnern auf einen Blick die Qualität und Vielfalt von Ncoffee und laden zu einer genussvollen Auszeit ein."
       }
     ],
     "paluch": [
@@ -213,13 +213,13 @@
         "id": 1,
         "titel": "logo",
         "image": "pisaViev.webp",
-        "shortDescription": "Die Visitenkarte für die Baufirma Paluch zeigt das Logo mit dem Igel in einem Papierhut. Im modernen Design sind die Kontaktdaten klar strukturiert und gut lesbar. Die Farbpalette strahlt Vertrauen und Professionalität aus, während die hochwertige Verarbeitung die Sorgfalt und Handwerkskunst des Unternehmens betont."
+        "shortDescription": "Das Logo für die Pizzeria Pisa zeigt den Namen in einer einfachen Schriftart und die markante schiefe Türme von Pisa, die als zentrales Element integriert sind. Das minimalistische Design setzt auf klare Linien und eine schwarz-weiße Farbpalette mit einem dezenten Rahmen. Die schlichte Gestaltung und die klare Verbindung zur berühmten Sehenswürdigkeit unterstreichen die Authentizität und das italienische Flair der Pizzeria."
       },
       {
         "id": 2,
         "titel": "flyer",
         "image": "pisaFlyer.webp",
-        "shortDescription": "Die Ulotka zeigt das gesamte Angebot der Pizzeria PISA, einschließlich Pizzen, Pasta, Vorspeisen und Desserts, mit appetitlichen Bildern und kurzen Beschreibungen. Aktuelle Angebote und spezielle Aktionen sind ebenfalls enthalten. Das übersichtliche Design lädt die Kunden ein, die italienische Küche in der Pizzeria PISA zu genießen."
+        "shortDescription": "Die A5-faltbare Broschüre für die Pizzeria Pisa präsentiert die gesamte Angebotspalette des Restaurants. Im minimalistischen Design mit schwarzem Hintergrund, weißen Schriftzügen und roten dekorativen Akzenten, hebt sich das eigens gestaltete Logo mit der schiefen Turm von Pisa hervor. Auf den sechs Seiten werden die verschiedenen Pizzasorten, Vorspeisen, Getränke und spezielle Angebote klar strukturiert und ansprechend dargestellt, um den authentischen italienischen Geschmack und die hohe Qualität der Pizzeria zu unterstreichen."
       }
     ]
   },
@@ -237,7 +237,7 @@
         "titel": "ChrisDesign",
         "link": "https://webidew.vercel.app/",
         "image": "chrisDesign.webp",
-        "shortDescription": "ChrisDesign* ist eine einfache und moderne Website, die in SASS, HTML und JavaScript erstellt wurde und so auf schnelle Ladezeiten und eine benutzerfreundliche Navigation setzt. Die Seite präsentiert die Dienstleistungen eines polnischen Unternehmens für Firmenkunden, das sich auf den Vertrieb von Kaffee und Getränkeautomaten sowie die Vermietung von Geräten wie Kaffeemaschinen und Wasserspendern spezialisiert hat. Als kreatives Extra bietet ChrisDesign das interaktive *Schnick Schnack Schnuck*-Spiel, das die Seite auflockert und Besucher zur Interaktion einlädt."
+        "shortDescription": "ChrisDesign* ist eine einfache und moderne Website, die in SASS, HTML und JavaScript erstellt wurde und so auf schnelle Ladezeiten und eine benutzerfreundliche Navigation setzt. Die Seite präsentiert die Dienstleistungen eines polnischen Unternehmens für Firmenkunden, das sich auf den Vertrieb von Kaffee- und Getränkeautomaten sowie die Vermietung von Geräten wie Kaffeemaschinen und Wasserspendern spezialisiert hat. Als kreatives Extra bietet Chris Design das interaktive *Schnick Schnack Schnuck*-Spiel, das die Seite auflockert und Besucher zur Interaktion einlädt."
       },
       {
         "id": 3,

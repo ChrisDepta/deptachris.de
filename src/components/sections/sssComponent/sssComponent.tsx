@@ -69,8 +69,8 @@ const IndexPage = () => {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">
-      <div className="wrap bg-opacity-40 backdrop-blur-lg w-full max-w-[50vw] max-h-[70vh] rounded-3xl shadow-2xl shadow-dcturkis p-8 flex flex-wrap">
-        <h1 className="basis-full text-center text-4xl mb-6 text-white font-semibold tracking-wide">
+      <div className="wrap bg-opacity-40 backdrop-blur-lg w-[90%] xl:max-w-[50vw] xl:max-h-[70vh] rounded-3xl shadow-2xl shadow-dcturkis p-8 flex flex-wrap">
+        <h1 className="basis-full text-center text-lg md:text-2xl xl:text-4xl mb-6 text-white font-semibold tracking-wide">
           SCHNICK SCHNACK SCHNUCK
         </h1>
 
@@ -120,13 +120,13 @@ const IndexPage = () => {
           </div>
         </div>
 
-        <div className="select flex flex-col items-center flex-basis-2/3 grow">
+        <div className="select flex flex-col items-center basis-full xl:basis-1/2 grow">
           <h3 className="text-xl my-5 text-white">Wähle eine Geste!</h3>
           <div className="flex justify-center gap-5 mb-5">
             {images.map((image) => (
               <div
                 key={image.option}
-                className="relative w-36 m-3 cursor-pointer rounded-lg shadow-md transition-transform transform hover:scale-105"
+                className="relative w-24 md:w-36 m-auto cursor-pointer rounded-lg shadow-md transition-transform transform hover:scale-105"
                 onClick={() => humanChoice(image.option)}>
                 <Image
                   src={image.src}

@@ -71,7 +71,7 @@ export default function ChrisComponent() {
       <h2 className="text-lg md:text-2xl lg:text-4xl text-[rgb(var(--accent-rgb))]">
         Software Entwickler
       </h2>
-      <p className=" text-xl md:text-xl lg:text-2xl w-4/5 md:w-2/3 text-center mt-2">
+      <p className=" text-lg md:text-xl lg:text-2xl w-4/5 md:w-2/3 text-center mt-2">
         {`„Als leidenschaftlicher Frontend-Entwickler finde ich wahre Erfüllung in der Kunst, Ideen durch Code zum Leben zu erwecken – denn wenn der Code läuft, schlägt mein Herz höher.“`}
       </p>
     </div>

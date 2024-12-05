@@ -3,8 +3,8 @@
     "uberMich": "Ich bin ein leidenschaftlicher und motivierter Webentwickler, der sich darauf konzentriert, die neuesten Technologien und Tools zu beherrschen. Seit 2012 beschäftige ich mich mit der Webentwicklung, die ursprünglich als persönliches Lernprojekt begann. Ich habe mir selbst HTML5, CSS und SEO beigebracht, um meine ersten Webseiten zu erstellen. Seitdem erweitere ich kontinuierlich mein Wissen und habe im Jahr 2020 begonnen, JavaScript intensiv zu nutzen.",
     "fokus": "Ich bin ein Entwickler, der die Umsetzung von Ideen liebt und besonders gern an technischen Herausforderungen arbeitet. Es macht mir großen Spaß, mich in den Code zu vertiefen und effiziente Lösungen zu entwickeln. Der kreative Aspekt liegt für mich im Code, nicht im Design.",
     "projekte": "Ich habe an einer Vielzahl von Projekten gearbeitet, von kleinen persönlichen Webseiten bis hin zu größeren Anwendungen. Diese Projekte haben mir geholfen, praktische Erfahrungen mit JavaScript und modernem Front-End-Development zu sammeln.",
-    "warumIch": "Ich bin ständig auf der Suche nach neuen Herausforderungen und liebe es, mich in neue Technologien einzuarbeiten. Wenn Sie einen Entwickler suchen, der nicht nur Code schreibt, sondern auch eine Leidenschaft für kontinuierliches Lernen und Innovation mitbringt, dann bin ich die richtige Wahl.",
-    "faehigkeiten": "Front-End: HTML5, CSS3, Tailwind, JavaScript (ES6+). <br /> Back-End: Node.js, Express. <br /> Werkzeuge: Git, Webpack, Visual Studio Code."
+    "warumIch": "Ich bin ständig auf der Suche nach neuen Herausforderungen und liebe es, mich in neue Technologien einzuarbeiten. Wenn Sie einen Entwickler suchen, welcher nicht nur an Code schreibt, sondern auch eine Leidenschaft für kontinuierliches Lernen und Innovation mitbringt, dann bin ich die richtige Wahl.",
+    "faehigkeiten": "Front-End: HTML5, CSS3, Tailwind, JavaScript (ES6+) Next.js. <br /> Back-End: Next.js, MySQL. <br /> Werkzeuge: Git, Webpack, Visual Studio Code."
   },
   "projects": {
     "spiele": [

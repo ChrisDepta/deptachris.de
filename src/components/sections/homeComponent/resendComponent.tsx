@@ -46,7 +46,7 @@ export default function ResendComponent() {
       link: "/graphics",
     },
     {
-      title: "Meine kleine Spiele",
+      title: "Meine kleinen Spiele",
       description:
         "Eine Sammlung kleiner Spiele, die ich mit Leidenschaft und technischem Know-how entwickelt habe.",
       imageSrc: "/projekte.webp", // Przykładowe źródło zdjęcia
@@ -54,7 +54,7 @@ export default function ResendComponent() {
       link: "/projects",
     },
     {
-      title: "Kontaktiere mit mir",
+      title: "Kontaktieren Sie mich",
       description:
         "Erfahren Sie hier, wie Sie mich erreichen können, und treten Sie unkompliziert mit mir in Kontakt.",
       imageSrc: "/warumIch.webp", // Przykładowe źródło zdjęcia

@@ -4,7 +4,7 @@ import ResendComponent from "./resendComponent";
 
 function HomeComponent() {
   return (
-    <div className="w-full xl:w-3/4 flex flex-col items-center justify-start pt-20 md:pt-[200px]">
+    <div className="w-full flex flex-col items-center justify-start">
       <ChrisComponent />
       <ResendComponent />
     </div>

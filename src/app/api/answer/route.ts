@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   });
 
   const mailOptions: Mail.Options = {
-    from: process.env.DC_EMAIL,
+    from: process.env.MY_EMAIL,
     to,
     subject: `Automatische Antwort von deptachris.de`,
     html: compileTemplate(name, email, message),

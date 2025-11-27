@@ -1,79 +1,105 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
 import portrait from "@/../public/portrait.webp";
 
 export default function ChrisComponent() {
-  const [cursorPosition, setCursorPosition] = useState({ x: -100, y: -100 });
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    // Ustawienie rozmiarów okna po stronie klienta
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-      };
-
-      const handleScroll = () => {
-        setScrollPosition(window.scrollY);
-      };
-
-      window.addEventListener("resize", handleResize);
-      window.addEventListener("scroll", handleScroll);
-
-      // Ustawienie początkowej wartości
-      handleResize();
-      handleScroll();
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div
-      className="py-12 w-full xl:rounded-t-3xl flex flex-col items-center justify-center bg-gradient-to-b from-[rgb(var(--background-start-rgb))] via-[rgb(var(--background-end-rgb))] to-[rgb(var(--background-end-rgb))] relative overflow-hidden border border-[rgb(var(--border-rgb))]"
-      onMouseMove={handleMouseMove}>
-      {/* Efekt świetlnego neonu pod kursorem */}
-      <div
-        className="hidden md:block pointer-events-none absolute bg-[rgb(var(--accent-rgb))] rounded-full opacity-75 blur-xl transition-transform duration-100"
-        style={{
-          width: "50px",
-          height: "50px",
-          transform: `translate(${
-            cursorPosition.x - 0.5 * windowSize.width
-          }px, ${
-            cursorPosition.y - 50 + scrollPosition - 0.5 * windowSize.height
-          }px)`, // Poprawka obliczeń dla kursora
-        }}
-      />
-      {/* Portret */}
-      <div className="w-[40%] md:w-auto relative z-5 p-8 bg-opacity-50 backdrop-blur-lg rounded-full shadow-lg shadow-[rgb(var(--accent-rgb))] mb-12">
-        <Image
-          src={portrait}
-          alt="User portrait"
-          className="rounded-full"
-          width={300}
-          height={300}
-        />
-      </div>
-      <h1 className="text-3xl md:text-4xl xl:text-6xl text-[rgb(var(--accent-rgb))] font-extrabold mb-0 md:mb-2">
-        Christoph Depta
-      </h1>
-      <h2 className="text-lg md:text-2xl lg:text-4xl text-[rgb(var(--accent-rgb))]">
-        Software Entwickler
-      </h2>
-      <p className="text-lg md:text-xl lg:text-2xl w-4/5 md:w-2/3 text-center mt-2">
-        {`„Als leidenschaftlicher Frontend-Entwickler finde ich wahre Erfüllung in der Kunst, Ideen durch Code zum Leben zu erwecken – denn wenn der Code läuft, schlägt mein Herz höher.“`}
-      </p>
-    </div>
+    <section 
+      ref={containerRef}
+      className="h-screen flex items-end justify-center px-6 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/20"
+    >
+      <motion.div 
+        style={{ y, opacity }}
+        className="w-full max-w-4xl mx-auto mb-[10vh]"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-12"
+        >
+          {/* Portrait - Większe zdjęcie */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto"
+          >
+            <Image
+              src={portrait}
+              alt="Christoph Depta - Frontend Entwickler"
+              fill
+              className="rounded-full object-cover ring-1 ring-primary/50 shadow-xl"
+              sizes="(max-width: 768px) 256px, 320px"
+              priority
+            />
+          </motion.div>
+
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <motion.h1 
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight overflow-hidden"
+            >
+              <motion.span
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="inline-block"
+              >
+                Christoph
+              </motion.span>
+              {" "}
+              <motion.span
+                initial={{ y: 100, opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="inline-block text-primary"
+              >
+                Depta
+              </motion.span>
+            </motion.h1>
+            
+            <motion.h2 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="text-xl md:text-2xl text-muted-foreground font-medium"
+            >
+              Frontend Entwickler & UI/UX Designer
+            </motion.h2>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            >
+              Ich erschaffe digitale Erlebnisse, die begeistern und funktionieren. 
+              Mit Leidenschaft für Code und einem Auge für Details verwandle ich Ideen in moderne, benutzerfreundliche Webanwendungen.
+            </motion.p>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 }

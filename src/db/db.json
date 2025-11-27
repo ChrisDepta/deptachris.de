@@ -7,29 +7,6 @@
     "faehigkeiten": "Front-End: HTML5, CSS3, Tailwind, JavaScript (ES6+) Next.js. <br /> Back-End: Next.js, MySQL. <br /> Werkzeuge: Git, Webpack, Visual Studio Code."
   },
   "projects": {
-    "spiele": [
-      {
-        "id": 1,
-        "titel": "Schnick Schnack Schnuck",
-        "shortDescription": "Es handelt sich um ein einfaches Spiel, das ich mithilfe von JavaScript auf Basis von HTML und CSS entwickelt habe. Mein Fokus lag dabei weniger auf dem Design, sondern vielmehr auf der Funktionalität und der technischen Umsetzung. Es war mir wichtig, die grundlegenden Mechaniken und Abläufe des Spiels zu programmieren und sicherzustellen, dass es reibungslos funktioniert, anstatt die visuelle Gestaltung in den Vordergrund zu stellen.",
-        "link": "/sss",
-        "image": "/sss.webp"
-      },
-      {
-        "id": 2,
-        "titel": "Glücksrad",
-        "shortDescription": "Ich habe auch ein Spiel entwickelt, das auf dem Prinzip eines Glücksrads basiert. Der Spieler dreht das Rad und erhält zufällige Ergebnisse. Der Fokus lag auf der Programmierung der Zufallsmechanik und der Interaktivität, um ein spannendes und unterhaltsames Spielerlebnis zu schaffen.",
-        "link": "/luckyWheel",
-        "image": "/gluecksrad.webp"
-      },
-      {
-        "id": 3,
-        "titel": "Rechner",
-        "shortDescription": "Ich habe einen Taschenrechner mit HTML, CSS und JavaScript entwickelt. Der Rechner ermöglicht grundlegende mathematische Operationen wie Addition, Subtraktion, Multiplikation und Division. Mein Ziel war es, eine intuitive und funktionale Anwendung zu schaffen, die einfache Berechnungen schnell und zuverlässig durchführt.",
-        "link": "/calc",
-        "image": "/rechner.webp"
-      }
-    ]
   },
   "graphics": {
     "blankenship": [
@@ -234,24 +211,17 @@
       },
       {
         "id": 2,
-        "titel": "ChrisDesign",
-        "link": "https://webidew.vercel.app/",
-        "image": "chrisDesign.webp",
-        "shortDescription": "ChrisDesign* ist eine einfache und moderne Website, die in SASS, HTML und JavaScript erstellt wurde und so auf schnelle Ladezeiten und eine benutzerfreundliche Navigation setzt. Die Seite präsentiert die Dienstleistungen eines polnischen Unternehmens für Firmenkunden, das sich auf den Vertrieb von Kaffee- und Getränkeautomaten sowie die Vermietung von Geräten wie Kaffeemaschinen und Wasserspendern spezialisiert hat. Als kreatives Extra bietet Chris Design das interaktive *Schnick Schnack Schnuck*-Spiel, das die Seite auflockert und Besucher zur Interaktion einlädt."
+        "titel": "Wozniak SHK",
+        "link": "https://wozniak-shk.de/",
+        "image": "wozniak-shk.webp",
+        "shortDescription": "Wozniak SHK ist eine professionelle Firmenwebsite für einen Dienstleister im Bereich Sanitär, Heizung und Lüftung, entwickelt mit Next.js. Die moderne und responsive Website präsentiert umfassende SHK-Dienstleistungen mit Fokus auf Benutzerfreundlichkeit und schnelle Ladezeiten. Das Design unterstreicht die Professionalität und Kompetenz des Unternehmens in der Gebäudetechnik."
       },
       {
         "id": 3,
-        "titel": "samuraj",
-        "link": "https://samuraj.vercel.app/",
-        "image": "samuraj.webp",
-        "shortDescription": "Die Webseite Samurai ist ein minimalistisches Portfolio-Projekt, das ausschließlich mit HTML und SASS gestaltet wurde und ohne JavaScript auskommt. Es entstand im Rahmen meines ersten Web-Kurses und repräsentiert die grundlegenden Fähigkeiten, die ich im Bereich Webdesign entwickelt habe. Die Seite zeigt ein simples, aber dennoch durchdachtes Design, das sich ideal für ein kompaktes Portfolio eignet."
-      },
-      {
-        "id": 4,
-        "titel": "topolski",
-        "link": "https://topolski.vercel.app/",
-        "image": "topolski.webp",
-        "shortDescription": "Die Webseite Topolski wurde für eine Firma entwickelt, die sich auf die Produktion und Montage maßgefertigter Möbel spezialisiert hat. Das Projekt wurde mit HTML, SASS und JavaScript realisiert und zeigt eine klare, moderne Struktur. Hier liegt der Fokus auf der Präsentation von Möbeln und Projektreferenzen, unterstützt durch einfache Animationen und interaktive Elemente, um das Nutzererlebnis ansprechend und informativ zu gestalten."
+        "titel": "ArborLim",
+        "link": "https://arborlim.de/",
+        "image": "arborlim.webp",
+        "shortDescription": "ArborLim ist eine moderne Firmenwebsite für ein deutsches Baumpflegeunternehmen, entwickelt mit Next.js und Tailwind CSS. Die Anwendung nutzt PostgreSQL als Datenbank, Docker für Container-Management und MinIO für effizientes File-Storage. Das responsive Design präsentiert professionelle Baumpflegedienste mit optimaler Performance und Benutzerfreundlichkeit."
       }
     ]
   },

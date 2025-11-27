@@ -149,7 +149,7 @@ export const autoAnswerTemplate = ({
 	  <!-- Informacje o kontakcie -->
 	  <tr>
 		<td class="message-text" style="font-size: 0.9rem;">
-		  <p>Wenn du diese Nachricht nicht von dieser <strong>${email}</strong> E-Mail-Adresse gesendet hast, ignoriere sie bitte oder schreibe mir an diese Adresse: <strong>dev@deptachris.de</strong></p>
+		  <p>Wenn du diese Nachricht nicht von dieser <strong>${email}</strong> E-Mail-Adresse gesendet hast, ignoriere sie bitte oder schreibe mir an diese Adresse: <strong>${process.env.DC_EMAIL}</strong></p>
 		</td>
 	  </tr>
   

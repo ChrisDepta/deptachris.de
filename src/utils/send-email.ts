@@ -2,12 +2,12 @@ import { FormData } from '@/components/sections/contact/contactForm';
 import { NextResponse } from 'next/server';
 import toast from 'react-hot-toast';
 
-export function sendEmail(data: FormData) {
+export function sendEmail(data: FormData): Promise<void> {
   const apiEndpoint = '/api/email';
 
   const loadingToastId = toast.loading('sending...');
 
-  fetch(apiEndpoint, {
+  return fetch(apiEndpoint, {
     method: 'POST',
     body: JSON.stringify(data),
   })
@@ -21,7 +21,9 @@ export function sendEmail(data: FormData) {
     })
     .catch((err) => {
       console.error("Error sending email:", err);
-      return NextResponse.json({ error: err.message }, { status: 500 }); // Zwracanie błędu
+      toast.dismiss(loadingToastId);
+      toast.error('Błąd podczas wysyłania wiadomości');
+      throw err; // Rzuć błąd dalej, żeby async/await w formularzu mógł go złapać
     });
     
 }

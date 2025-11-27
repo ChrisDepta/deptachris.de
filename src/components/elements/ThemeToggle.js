@@ -1,11 +1,8 @@
 "use client";
 // components/ThemeToggle.js
 import { useTheme } from '@/../ThemeContext';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import system from "@/../public/system.png";
-import dunkel from "@/../public/dunkel.png";
-import hell from "@/../public/hell.png";
+import { useState } from 'react';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
 const ThemeToggle = () => {
   const { theme, changeTheme } = useTheme(); // theme z kontekstu i funkcja do zmiany motywu
@@ -23,33 +20,44 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div className="align-center z-10 flex shadow-lg shadow-[rgb(var(--shadow-rgb))] p-2 rounded-md border-t border-[rgb(var(--border-rgb))]">
+    <div className="flex items-center gap-1 p-2 rounded-lg bg-card border border-border shadow-sm">
       <button
-        className={`bg-[rgb(var(--accent-light-rgb))] flex items-center justify-center transition-all duration-300 ${
-          buttonTheme === 'light' ? 'scale-125' : 'hover:scale-125'
+        className={`p-2 rounded-md transition-all duration-300 ${
+          buttonTheme === 'light' 
+            ? 'bg-primary text-primary-foreground shadow-md' 
+            : 'hover:bg-secondary text-foreground hover:text-primary'
         }`}
         onClick={() => handleThemeChange('light')}
         disabled={buttonTheme === 'light'}
+        aria-label="Light mode"
       >
-        <Image src={hell} alt="light mode" />
+        <Sun className="w-4 h-4" />
       </button>
+      
       <button
-        className={`bg-[rgb(var(--accent-light-rgb))] flex items-center justify-center mx-2 transition-all duration-300 ${
-          buttonTheme === 'dark' ? 'scale-125' : 'hover:scale-125'
+        className={`p-2 rounded-md transition-all duration-300 ${
+          buttonTheme === 'dark' 
+            ? 'bg-primary text-primary-foreground shadow-md' 
+            : 'hover:bg-secondary text-foreground hover:text-primary'
         }`}
         onClick={() => handleThemeChange('dark')}
         disabled={buttonTheme === 'dark'}
+        aria-label="Dark mode"
       >
-        <Image src={dunkel} alt="dark mode" />
+        <Moon className="w-4 h-4" />
       </button>
+      
       <button
-        className={`bg-[rgb(var(--accent-light-rgb))] flex items-center justify-center transition-all duration-300 ${
-          buttonTheme === 'system' ? 'scale-125' : 'hover:scale-125'
+        className={`p-2 rounded-md transition-all duration-300 ${
+          buttonTheme === 'system' 
+            ? 'bg-primary text-primary-foreground shadow-md' 
+            : 'hover:bg-secondary text-foreground hover:text-primary'
         }`}
         onClick={() => handleThemeChange('system')}
         disabled={buttonTheme === 'system'}
+        aria-label="System theme"
       >
-        <Image src={system} alt="system theme" />
+        <Monitor className="w-4 h-4" />
       </button>
     </div>
   );

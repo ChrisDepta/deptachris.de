@@ -1,111 +1,161 @@
 "use client";
-import React, { useState } from "react";
+
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 type Section = {
   title: string;
   description: string;
-  imageSrc: string; // Dodano dla zdjęć w sekcjach
+  imageSrc: string;
   id: number;
   link: string;
 };
 
 export default function ResendComponent() {
-  const [expandedSection, setExpandedSection] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: true, margin: "-10%" });
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 0.6], [150, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
-  // Funkcja do przełączania sekcji
-  const toggleSection = (section: number) => {
-    setExpandedSection(expandedSection === section ? null : section);
-  };
-
-  // Sekcje jako tablica obiektów
   const sections: Section[] = [
     {
       title: "Über mich",
-      description:
-        "Hier haben Sie die Möglichkeit, mehr über mich zu erfahren – wer ich bin, welche Leidenschaften mich antreiben und womit ich mich beruflich beschäftige.",
-      imageSrc: "/uberMich.webp", // Przykładowe źródło zdjęcia
+      description: "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften.",
+      imageSrc: "/uberMich.webp",
       id: 1,
       link: "/about",
     },
     {
       title: "Meine Webseiten",
-      description:
-        "Entdecken Sie hier meine Projekte im Bereich Webentwicklung und lassen Sie sich von meinen Arbeiten inspirieren.",
-      imageSrc: "/technischeFahigkeiten.webp", // Przykładowe źródło zdjęcia
+      description: "Entdecken Sie meine Webentwicklungsprojekte und lassen Sie sich inspirieren.",
+      imageSrc: "/technischeFahigkeiten.webp",
       id: 2,
       link: "/websites",
     },
     {
       title: "Meine Grafiken",
-      description:
-        "Hier präsentiere ich Ihnen eine Auswahl meiner grafischen Projekte, die meine Kreativität und mein Können widerspiegeln.",
-      imageSrc: "/focus.webp", // Przykładowe źródło zdjęcia
+      description: "Eine Auswahl meiner kreativen grafischen Arbeiten und Designs.",
+      imageSrc: "/focus.webp",
       id: 3,
       link: "/graphics",
     },
     {
-      title: "Meine kleinen Spiele",
-      description:
-        "Eine Sammlung kleiner Spiele, die ich mit Leidenschaft und technischem Know-how entwickelt habe.",
-      imageSrc: "/projekte.webp", // Przykładowe źródło zdjęcia
+      title: "Kontakt",
+      description: "Treten Sie mit mir in Kontakt für Ihr nächstes Projekt.",
+      imageSrc: "/warumIch.webp",
       id: 4,
-      link: "/projects",
-    },
-    {
-      title: "Kontaktieren Sie mich",
-      description:
-        "Erfahren Sie hier, wie Sie mich erreichen können, und treten Sie unkompliziert mit mir in Kontakt.",
-      imageSrc: "/warumIch.webp", // Przykładowe źródło zdjęcia
-      id: 5,
       link: "/contact",
     },
   ];
 
   return (
-    <div className="w-full m-auto grid grid-cols-1 md:grid-cols-2">
-      {sections.map((section) => (
-        <div
-          key={section.id}
-          onClick={() => toggleSection(section.id)}
-          className={` w-full min-h-[30vh] relative cursor-pointer overflow-hidden shadow-[rgb(var(--accent-rgb))]-xl transition-transform duration-300 border border-[rgb(var(--border-rgb))] 
-             ${section.id === sections.length ? "md:col-span-2" : ""} 
-          `}>
-          {/* Obrazek sekcji z powiększeniem po kliknięciu */}
-          <Image
-            src={section.imageSrc}
-            alt={`${section.title} Image`}
-            layout="fill"
-            objectFit="cover"
-            className={`opacity-70 hover:opacity-90 transition-all duration-700 ${
-              expandedSection === section.id ? "transform scale-125" : ""
-            }`}
-          />
-          {/* Overlay na obrazku */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-75"></div>
-          {/* Treść karty */}
-          <div className="relative p-6 text-[rgb(var(--foreground-rgb))] flex flex-col">
-            <h2 className="w-full text-[rgb(var(--accent-rgb))] text-xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-2 lg:px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
-              {section.title}
-            </h2>
-            {/* Opis pokazuje się tylko po kliknięciu */}
-            {expandedSection === section.id && (
-              <>
-                <p
-                  className="my-8 grow-0 text:lg md:text-xl text-[rgb(var(--foreground-rgb))] transition-opacity duration-500 ease-in-out backdrop-blur-xl inline-block px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md"
-                  dangerouslySetInnerHTML={{ __html: section.description }} // Umożliwia wyświetlanie HTML (np. <br>)
+    <motion.section 
+      ref={containerRef}
+      style={{ y, opacity }}
+      className="py-8 px-6 relative z-10 bg-background -mt-12"
+    >
+      {/* Section Header - Z animacją */}
+      <motion.div 
+        initial={{ opacity: 0, y: 60 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        className="text-center mb-16 -mt-8"
+      >
+        <motion.h2 
+          initial={{ opacity: 0, y: 80 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6 overflow-hidden"
+        >
+          <motion.span
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            className="inline-block"
+          >
+            Meine
+          </motion.span>
+          {" "}
+          <motion.span
+            initial={{ y: 100, opacity: 0, scale: 0.8 }}
+            animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 100, opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+            className="inline-block text-primary"
+          >
+            Expertise
+          </motion.span>
+        </motion.h2>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+          className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+        >
+          Entdecken Sie meine Arbeitsbereiche und Projekte
+        </motion.p>
+      </motion.div>
+        <div className="w-full max-w-6xl mx-auto">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sections.map((section, index) => (
+            <motion.div
+              key={section.id}
+              initial={{ opacity: 0, y: 100 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              transition={{ 
+                duration: 1, 
+                delay: index * 0.1,
+                ease: "easeOut"
+              }}
+              className="card group overflow-hidden flex flex-col h-full"
+            >
+              {/* Card Image */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={section.imageSrc}
+                  alt={section.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <Link href={section.link}>
-                  <h2 className="w-fill grow-0 text-[rgb(var(--accent-rgb))] text-xl lg:text-3xl font-semibold mb-2 backdrop-blur-xl inline-block px-2 lg:px-6 py-2 bg-[rgb(var(--background-start-rgb))] rounded-md shadow-md">
-                    Mehr hier...{" "}
-                  </h2>
-                </Link>
-              </>
-            )}
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  {section.title}
+                </h3>
+                
+                <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
+                  {section.description}
+                </p>
+                
+                <div className="mt-auto">
+                  <Link href={section.link}>
+                    <motion.button 
+                      whileHover={{ x: 5 }}
+                      className="btn-primary inline-flex items-center gap-2"
+                    >
+                      Mehr erfahren
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </motion.button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
           </div>
         </div>
-      ))}
-    </div>
+    </motion.section>
   );
 }

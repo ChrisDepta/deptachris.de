@@ -18,7 +18,7 @@ export default function Footer() {
   let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
 
   return (
-    <div className="min-h-[40vh] flex flex-col w-screen justify-end items-center bg-[hsl(var(--background))] border-t border-[hsl(var(--border))] p-6 md:p-12 pb-6 h-full">
+    <div className="min-h-[40vh] flex flex-col w-screen justify-end items-center bg-[hsl(var(--background))] border-t border-[hsl(var(--border))] p-6 md:p-12 pb-6 h-full mt-20">
       
       {/* Logo na górze na małych ekranach */}
       <Link

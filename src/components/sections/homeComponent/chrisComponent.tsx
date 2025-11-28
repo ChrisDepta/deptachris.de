@@ -28,21 +28,21 @@ export default function ChrisComponent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center space-y-12"
+          className="text-center space-y-6 md:space-y-12"
         >
-          {/* Portrait - Większe zdjęcie */}
+          {/* Portrait - Ukryte na mobile */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto"
+            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto hidden md:block"
           >
             <Image
               src={portrait}
               alt="Christoph Depta - Frontend Entwickler"
               fill
               className="rounded-full object-cover ring-1 ring-primary/50 shadow-xl"
-              sizes="(max-width: 768px) 256px, 320px"
+              sizes="320px"
               priority
             />
           </motion.div>
@@ -58,7 +58,7 @@ export default function ChrisComponent() {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight overflow-hidden"
+              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight overflow-hidden"
             >
               <motion.span
                 initial={{ y: 100, opacity: 0 }}
@@ -83,7 +83,7 @@ export default function ChrisComponent() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="text-xl md:text-2xl text-muted-foreground font-medium"
+              className="text-lg md:text-2xl text-muted-foreground font-medium"
             >
               Frontend Entwickler & UI/UX Designer
             </motion.h2>
@@ -92,7 +92,7 @@ export default function ChrisComponent() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4"
             >
               Ich erschaffe digitale Erlebnisse, die begeistern und funktionieren. 
               Mit Leidenschaft für Code und einem Auge für Details verwandle ich Ideen in moderne, benutzerfreundliche Webanwendungen.

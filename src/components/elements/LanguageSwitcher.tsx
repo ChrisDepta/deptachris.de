@@ -16,6 +16,18 @@ export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const [currentLang, setCurrentLang] = useState(i18n.language);
+
+  // Update currentLang when i18n.language changes
+  useEffect(() => {
+    const handleLangChange = (lng: string) => {
+      setCurrentLang(lng);
+    };
+    i18n.on('languageChanged', handleLangChange);
+    return () => {
+      i18n.off('languageChanged', handleLangChange);
+    };
+  }, [i18n]);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -28,7 +40,7 @@ export default function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [open]);
 
-  const current = languages.find(l => l.code === i18n.language) || languages[0];
+  const current = languages.find(l => l.code === currentLang) || languages[0];
   const otherLangs = languages.filter(l => l.code !== current.code);
 
   return (

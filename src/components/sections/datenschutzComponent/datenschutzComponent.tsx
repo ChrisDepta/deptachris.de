@@ -8,7 +8,7 @@ export default function DatenschutzComponent() {
   const data = content.impressum;
 
   return (
-    <section className="flex flex-col items-center justify-center w-full min-h-screen py-24 px-2 md:px-0 bg-gradient-to-br from-white via-white to-primary/5 dark:from-background dark:via-background dark:to-primary/5">
+    <section className="flex flex-col items-center justify-center w-full min-h-screen py-24 px-2 md:px-0 bg-gradient-to-br from-transparent via-transparent to-primary/5">
       <h1 className="text-5xl md:text-6xl py-8 font-black text-primary dark:text-cyan-300 mb-8 text-center tracking-tight drop-shadow-lg font-sans z-30 relative" style={{ letterSpacing: "-0.03em", marginTop: "2.5rem" }}>
         {t("footer.datenschutzPage.title")}
       </h1>

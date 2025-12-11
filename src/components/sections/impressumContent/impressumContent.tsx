@@ -8,7 +8,7 @@ export default function Impressum() {
   const data = content.impressum;
 
   return (
-    <section className="flex flex-col items-center justify-center w-full min-h-screen py-12 px-2 md:px-0 bg-gradient-to-br from-white via-slate-50 to-slate-200 dark:from-background dark:via-background dark:to-slate-900">
+    <section className="flex flex-col items-center justify-center w-full min-h-screen py-12 px-2 md:px-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 dark:from-transparent dark:via-transparent dark:to-primary/5">
       <h1 className="text-5xl md:text-6xl font-black text-primary dark:text-cyan-300 mb-8 text-center tracking-tight drop-shadow-lg font-sans" style={{ letterSpacing: "-0.03em" }}>
         {t("footer.impressumPage.ownerTitle")}
       </h1>

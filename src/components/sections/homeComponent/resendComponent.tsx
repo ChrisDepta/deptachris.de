@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,43 +14,44 @@ type Section = {
   link: string;
 };
 
-export default function ResendComponent() {
+const ResendComponent: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-10%" });
-  
+  const { t } = useTranslation();
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 0.6], [150, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   const sections: Section[] = [
     {
-      title: "Über mich",
-      description: "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften.",
+      title: t("resend.about.title", "Über mich"),
+      description: t("resend.about.description", "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften."),
       imageSrc: "/uberMich.webp",
       id: 1,
       link: "/about",
     },
     {
-      title: "Meine Webseiten",
-      description: "Entdecken Sie meine Webentwicklungsprojekte und lassen Sie sich inspirieren.",
+      title: t("resend.websites.title", "Meine Webseiten"),
+      description: t("resend.websites.description", "Entdecken Sie meine Webentwicklungsprojekte und lassen Sie sich inspirieren."),
       imageSrc: "/technischeFahigkeiten.webp",
       id: 2,
       link: "/websites",
     },
     {
-      title: "Meine Grafiken",
-      description: "Eine Auswahl meiner kreativen grafischen Arbeiten und Designs.",
+      title: t("resend.graphics.title", "Meine Grafiken"),
+      description: t("resend.graphics.description", "Eine Auswahl meiner kreativen grafischen Arbeiten und Designs."),
       imageSrc: "/focus.webp",
       id: 3,
       link: "/graphics",
     },
     {
-      title: "Kontakt",
-      description: "Treten Sie mit mir in Kontakt für Ihr nächstes Projekt.",
+      title: t("resend.contact.title", "Kontakt"),
+      description: t("resend.contact.description", "Treten Sie mit mir in Kontakt für Ihr nächstes Projekt."),
       imageSrc: "/warumIch.webp",
       id: 4,
       link: "/contact",
@@ -81,7 +83,7 @@ export default function ResendComponent() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
             className="inline-block"
           >
-            Meine
+            {t("resend.header.main", "Meine")}
           </motion.span>
           {" "}
           <motion.span
@@ -90,7 +92,7 @@ export default function ResendComponent() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
             className="inline-block text-primary"
           >
-            Expertise
+            {t("resend.header.highlight", "Expertise")}
           </motion.span>
         </motion.h2>
         
@@ -100,7 +102,7 @@ export default function ResendComponent() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
           className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
         >
-          Entdecken Sie meine Arbeitsbereiche und Projekte
+          {t("resend.header.description", "Entdecken Sie meine Arbeitsbereiche und Projekte")}
         </motion.p>
       </motion.div>
         <div className="w-full max-w-6xl mx-auto">
@@ -144,7 +146,7 @@ export default function ResendComponent() {
                       whileHover={{ x: 5 }}
                       className="btn-primary inline-flex items-center gap-2"
                     >
-                      Mehr erfahren
+                      {t("resend.card.button", "Mehr erfahren")}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -158,4 +160,6 @@ export default function ResendComponent() {
         </div>
     </motion.section>
   );
-}
+};
+
+export default ResendComponent;

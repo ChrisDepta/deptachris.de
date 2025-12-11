@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
 import deptachrisLogo from "@/../public/simpleLogo.png";
@@ -16,9 +17,10 @@ export default function Footer() {
   // sprawdzam jaki jest Theme żeby móc zmienić logo na ciemne lub jasne przy użyciu useTheme
   const { theme } = useTheme();
   let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
+  const { t } = useTranslation();
 
   return (
-    <div className="min-h-[40vh] flex flex-col w-screen justify-end items-center bg-[hsl(var(--background))] border-t border-[hsl(var(--border))] p-6 md:p-12 pb-6 h-full mt-20">
+    <div className="min-h-[40vh] flex flex-col w-screen justify-end items-center bg-[hsl(var(--background))] border-t border-[hsl(var(--border))] p-6 md:p-12 pb-6 h-full">
       
       {/* Logo na górze na małych ekranach */}
       <Link
@@ -32,7 +34,7 @@ export default function Footer() {
             alt="homeLogo"
             width={60}
             height={60}
-            className="rounded-xl group-hover:rotate-3 transition-transform duration-200"
+            className="h-auto rounded-xl group-hover:rotate-3 transition-transform duration-200"
           />
         </div>
         <span className="bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
@@ -66,31 +68,31 @@ export default function Footer() {
           <Link
             href="/"
             className="py-2 hover:text-primary transition-colors textShadow">
-            Start
+            {t("footer.navigation.home")}
           </Link>
 
           <Link
             href="/about"
             className="py-2 hover:text-primary transition-colors textShadow">
-            Über mich
+            {t("footer.navigation.about")}
           </Link>
 
           <Link
             href="/websites"
             className="py-2 hover:text-primary transition-colors textShadow">
-            Websites
+            {t("footer.navigation.websites")}
           </Link>
 
           <Link
             href="/graphics"
             className="py-2 hover:text-primary transition-colors textShadow">
-            Graphics
+            {t("footer.navigation.graphics")}
           </Link>
 
           <Link
             href="/contact"
             className="py-2 hover:text-primary transition-colors textShadow">
-            Kontakt
+            {t("footer.navigation.contact")}
           </Link>
         </div>
         
@@ -108,7 +110,7 @@ export default function Footer() {
               height={24}
               className="mr-3 md:mr-2"
             />
-            Facebook
+            {t("footer.social.facebook")}
           </Link>
           <Link
             href="https://www.instagram.com/deptachris.de/"
@@ -122,7 +124,7 @@ export default function Footer() {
               height={24}
               className="mr-3 md:mr-2"
             />
-            Instagram
+            {t("footer.social.instagram")}
           </Link>
           <Link
             href="https://www.linkedin.com/in/christoph-depta-09683221a/"
@@ -136,7 +138,7 @@ export default function Footer() {
               height={24}
               className="mr-3 md:mr-2"
             />
-            LinkedIn
+            {t("footer.social.linkedin")}
           </Link>
           <Link
             href="https://github.com/ChrisDepta"
@@ -150,7 +152,7 @@ export default function Footer() {
               height={24}
               className="mr-3 md:mr-2"
             />
-            Github
+            {t("footer.social.github")}
           </Link>
         </div>
       </div>
@@ -162,12 +164,12 @@ export default function Footer() {
           <Link
             href="/impressum"
             className="hover:text-primary transition-colors textShadow">
-            Impressum
+            {t("footer.legal.impressum")}
           </Link>
           <Link
             href="/datenschutz"
             className="hover:text-primary transition-colors textShadow">
-            Datenschutz
+            {t("footer.legal.datenschutz")}
           </Link>
         </div>
       </div>

@@ -1,8 +1,9 @@
 "use client";
 import db from "@/db/db.json";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Interfejs dla każdego projektu
 interface ProjectItem {
@@ -24,12 +25,25 @@ export default function MapGraphicsComponent({
 }) {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
-  
+  const { t, i18n } = useTranslation();
+
+
   const graphics: GraphicsData = db.graphics;
   const data = graphics[category];
 
+  // Helper to get translated card data by index (translation.json uses 1-based index and 'description')
+  const getCardTranslation = (index: number) => ({
+    title: t(`graphicsSection.cards.${category}.${index + 1}.title`),
+    description: t(`graphicsSection.cards.${category}.${index + 1}.description`)
+  });
+
+  // Force re-render on language change
+  useEffect(() => {
+    // This empty effect ensures the component re-renders on language change
+  }, [i18n.language]);
+
   if (!data) {
-    return <p>Category {category} not exist</p>;
+    return <p>{t('graphicsSection.categoryNotExist', { category })}</p>;
   }
 
   const openZoom = (image: string) => {
@@ -56,74 +70,80 @@ export default function MapGraphicsComponent({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full" key={i18n.language}>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {data.map((item, index) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.6, delay: index * 0.05 }}
-            whileHover={{ y: -8 }}
-            className="card group overflow-hidden flex flex-col h-full border border-primary/20"
-          >
-            {/* Image at top */}
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src={`/${item.image}`}
-                alt={item.titel}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                onClick={() => openZoom(item.image)}
-              />
-            </div>
-            
-            {/* Content below image */}
-            <div className="p-4 flex flex-col flex-grow">
-              <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
-                {item.titel}
-              </h3>
-              
-              <div className="text-muted-foreground text-sm mb-4 leading-relaxed flex-grow">
-                {expandedCards.has(item.id) ? (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {item.shortDescription}
-                  </motion.div>
-                ) : (
-                  <p>{truncateText(item.shortDescription)}</p>
-                )}
-                
-                {item.shortDescription.length > 80 && (
-                  <motion.button
-                    onClick={() => toggleDescription(item.id)}
-                    whileHover={{ scale: 1.02 }}
-                    className="text-primary hover:text-primary/80 text-xs mt-2 font-medium transition-colors"
-                  >
-                    {expandedCards.has(item.id) ? 'Weniger anzeigen' : 'Mehr lesen'}
-                  </motion.button>
-                )}
+        {data.map((item, index) => {
+          const translation = getCardTranslation(index);
+          return (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              whileHover={{ y: -8 }}
+              className="card group overflow-hidden flex flex-col h-full border border-primary/20"
+            >
+              {/* Image at top */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={`/${item.image}`}
+                  alt={translation.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className= "h-auto object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  onClick={() => openZoom(item.image)}
+                />
               </div>
-              
-              <motion.button 
-                onClick={() => openZoom(item.image)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="btn-primary w-full px-3 py-2 rounded-lg font-medium text-sm mt-auto inline-flex items-center justify-center gap-2"
-              >
-                Vorschau
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </motion.button>
-            </div>
-          </motion.div>
-        ))}
+
+              {/* Content below image */}
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
+                  {translation.title}
+                </h3>
+
+                <div className="text-muted-foreground text-sm mb-4 leading-relaxed flex-grow">
+                  {expandedCards.has(item.id) ? (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                        {translation.description}
+                    </motion.div>
+                  ) : (
+                      <p>{truncateText(translation.description)}</p>
+                  )}
+
+                    {translation.description.length > 80 && (
+                    <motion.button
+                      onClick={() => toggleDescription(item.id)}
+                      whileHover={{ scale: 1.02 }}
+                      className="text-primary hover:text-primary/80 text-xs mt-2 font-medium transition-colors"
+                    >
+                      {expandedCards.has(item.id)
+                        ? t('graphicsSection.card.less', 'Show less')
+                        : t('graphicsSection.card.more', 'Read more')}
+                    </motion.button>
+                  )}
+                </div>
+
+                <motion.button
+                  onClick={() => openZoom(item.image)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="btn-primary w-full px-3 py-2 rounded-lg font-medium text-sm mt-auto inline-flex items-center justify-center gap-2"
+                >
+                  {t('graphicsSection.card.preview', 'Preview')}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </motion.button>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Modern zoom modal */}
@@ -148,11 +168,11 @@ export default function MapGraphicsComponent({
               whileTap={{ scale: 0.9 }}
               className="absolute -top-12 right-0 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-lg font-semibold z-10 transition-colors"
             >
-              ✕ Schließen
+              ✕ {t('graphicsSection.card.close', 'Close')}
             </motion.button>
             <Image
               src={`/${zoomedImage}`}
-              alt="Vollbild Vorschau"
+              alt={t('graphicsSection.card.fullscreenPreview', 'Fullscreen preview')}
               width={1200}
               height={800}
               className="rounded-xl shadow-2xl object-contain max-h-[90vh]"

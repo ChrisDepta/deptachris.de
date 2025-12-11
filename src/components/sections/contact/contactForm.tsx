@@ -12,6 +12,7 @@ import linkedinLogo from "@/../public/Linkedin.webp";
 import githubLogoLight from "@/../public/gitHubWhite.webp";
 import githubLogoDark from "@/../public/gitHubBlack.webp";
 import { useTheme } from "../../../../ThemeContext";
+import { useTranslation } from "react-i18next";
 
 export type FormData = {
   name: string;
@@ -21,14 +22,13 @@ export type FormData = {
 
 const ContactForm: FC = () => {
   const { register, handleSubmit, reset } = useForm<FormData>();
-
   const { theme } = useTheme();
+  const { t } = useTranslation();
   let githubLogo = theme === "dark" ? githubLogoLight : githubLogoDark;
 
   async function onSubmit(data: FormData) {
     try {
       await sendEmail(data);
-      // Reset formularza po pomyślnym wysłaniu
       reset();
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -55,27 +55,24 @@ const ContactForm: FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="inline-block text-primary"
           >
-            Kontakt
+            {t('contactSection.title')}
           </motion.span>
         </motion.h1>
-        
         <motion.h2 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-xl md:text-2xl text-muted-foreground font-medium"
         >
-          Lassen Sie uns zusammenarbeiten
+          {t('contactSection.subtitle')}
         </motion.h2>
-        
         <motion.p 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
         >
-          Haben Sie ein spannendes Projekt im Kopf? Ich freue mich darauf, Ihre Ideen in moderne, 
-          benutzerfreundliche Webanwendungen zu verwandeln. Kontaktieren Sie mich für ein unverbindliches Gespräch!
+          {t('contactSection.description')}
         </motion.p>
       </motion.div>
       
@@ -90,29 +87,29 @@ const ContactForm: FC = () => {
           aria-label="Kontaktinformationen"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8" id="contact-info">
-            Chris Depta
+            {t('contactSection.infoCard.name')}
           </h2>
           
           <div className="space-y-8">
             <div className="bg-secondary/30 rounded-2xl p-6 border border-primary/20">
-              <h3 className="text-xl font-bold text-primary mb-4">Adresse</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">{t('contactSection.infoCard.addressTitle')}</h3>
               <address className="not-italic text-foreground space-y-1">
-                <p>Sittenbacherstrasse 8</p>
-                <p>90482 Nürnberg</p>
+                <p>{t('contactSection.infoCard.addressStreet')}</p>
+                <p>{t('contactSection.infoCard.addressCity')}</p>
               </address>
             </div>
             
             <div className="bg-secondary/30 rounded-2xl p-6 border border-primary/20">
-              <h3 className="text-xl font-bold text-primary mb-4">Kontakt</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">{t('contactSection.infoCard.contactTitle')}</h3>
               <div className="space-y-3">
                 <p>
-                  <span className="sr-only">Telefonnummer: </span>
+                  <span className="sr-only">{t('contactSection.infoCard.phone')}: </span>
                   <a href="tel:+491725378432" className="text-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
                     📞 +49 172 5378432
                   </a>
                 </p>
                 <p>
-                  <span className="sr-only">E-Mail-Adresse: </span>
+                  <span className="sr-only">{t('contactSection.infoCard.email')}: </span>
                   <a href="mailto:dev@deptachris.de" className="text-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
                     📧 dev@deptachris.de
                   </a>
@@ -121,14 +118,14 @@ const ContactForm: FC = () => {
             </div>
             
             <div className="bg-secondary/30 rounded-2xl p-6 border border-primary/20">
-              <h3 className="text-xl font-bold text-primary mb-4">Soziale Medien</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">{t('contactSection.infoCard.socialTitle')}</h3>
               <nav aria-label="Soziale Medien Links" className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Link
                   href="https://www.facebook.com/profile.php?id=61566083339386"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-xl bg-secondary/20 hover:bg-primary/10 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary group"
-                  aria-label="Besuche mein Facebook Profil (öffnet in neuem Fenster)">
+                  aria-label="Facebook">
                   <Image
                     src={facebookLogo}
                     alt=""
@@ -137,14 +134,14 @@ const ContactForm: FC = () => {
                     className="group-hover:scale-110 transition-transform duration-300"
                     role="presentation"
                   />
-                  <span className="font-medium">Facebook</span>
+                  <span className="font-medium">{t('contactSection.infoCard.facebook')}</span>
                 </Link>
                 <Link
                   href="https://www.instagram.com/deptachris.de/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-xl bg-secondary/20 hover:bg-primary/10 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary group"
-                  aria-label="Besuche mein Instagram Profil (öffnet in neuem Fenster)">
+                  aria-label="Instagram">
                   <Image
                     src={instaLogo}
                     alt=""
@@ -153,14 +150,14 @@ const ContactForm: FC = () => {
                     className="group-hover:scale-110 transition-transform duration-300"
                     role="presentation"
                   />
-                  <span className="font-medium">Instagram</span>
+                  <span className="font-medium">{t('contactSection.infoCard.instagram')}</span>
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/christoph-depta-09683221a/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-xl bg-secondary/20 hover:bg-primary/10 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary group"
-                  aria-label="Besuche mein LinkedIn Profil (öffnet in neuem Fenster)">
+                  aria-label="LinkedIn">
                   <Image
                     src={linkedinLogo}
                     alt=""
@@ -169,14 +166,14 @@ const ContactForm: FC = () => {
                     className="group-hover:scale-110 transition-transform duration-300"
                     role="presentation"
                   />
-                  <span className="font-medium">LinkedIn</span>
+                  <span className="font-medium">{t('contactSection.infoCard.linkedin')}</span>
                 </Link>
                 <Link
                   href="https://github.com/ChrisDepta"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-xl bg-secondary/20 hover:bg-primary/10 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary group"
-                  aria-label="Besuche mein GitHub Profil (öffnet in neuem Fenster)">
+                  aria-label="GitHub">
                   <Image
                     src={githubLogo}
                     alt=""
@@ -185,7 +182,7 @@ const ContactForm: FC = () => {
                     className="group-hover:scale-110 transition-transform duration-300"
                     role="presentation"
                   />
-                  <span className="font-medium">GitHub</span>
+                  <span className="font-medium">{t('contactSection.infoCard.github')}</span>
                 </Link>
               </nav>
             </div>
@@ -200,7 +197,7 @@ const ContactForm: FC = () => {
           className="card rounded-3xl p-8 lg:p-10 shadow-xl border border-primary/20 backdrop-blur-sm"
         >
           <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-8">
-            Schreiben Sie mir
+            {t('contactSection.formCard.title')}
           </h2>
           
           <form
@@ -215,16 +212,16 @@ const ContactForm: FC = () => {
                 htmlFor="name"
                 className="block text-lg font-semibold text-primary mb-3"
               >
-                Name und Vorname <span aria-label="Pflichtfeld" className="text-red-500">*</span>
+                {t('contactSection.formCard.nameLabel')} <span aria-label="Pflichtfeld" className="text-red-500">*</span>
               </label>
               <input
                 id="name"
                 type="text"
-                placeholder="Ihr vollständiger Name..."
+                placeholder={t('contactSection.formCard.namePlaceholder')}
                 className="w-full rounded-2xl border border-primary/20 bg-secondary/30 py-4 px-6 text-lg font-medium text-foreground placeholder:text-muted-foreground outline-none focus:border-primary focus:bg-secondary/50 focus:shadow-lg focus:ring-4 focus:ring-primary/20 hover:border-primary/40 transition-all duration-300 backdrop-blur-sm"
                 aria-required="true"
                 aria-describedby="name-error"
-                {...register("name", { required: "Name ist erforderlich" })}
+                {...register("name", { required: t('contactSection.formCard.nameLabel') + ' ' + t('contactSection.formCard.title') })}
               />
             </div>
             
@@ -233,20 +230,20 @@ const ContactForm: FC = () => {
                 htmlFor="email"
                 className="block text-lg font-semibold text-primary mb-3"
               >
-                E-Mail-Adresse <span aria-label="Pflichtfeld" className="text-red-500">*</span>
+                {t('contactSection.formCard.emailLabel')} <span aria-label="Pflichtfeld" className="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 type="email"
-                placeholder="ihre.email@domain.com"
+                placeholder={t('contactSection.formCard.emailPlaceholder')}
                 className="w-full rounded-2xl border border-primary/20 bg-secondary/30 py-4 px-6 text-lg font-medium text-foreground placeholder:text-muted-foreground outline-none focus:border-primary focus:bg-secondary/50 focus:shadow-lg focus:ring-4 focus:ring-primary/20 hover:border-primary/40 transition-all duration-300 backdrop-blur-sm"
                 aria-required="true"
                 aria-describedby="email-error"
                 {...register("email", { 
-                  required: "E-Mail ist erforderlich",
+                  required: t('contactSection.formCard.emailLabel') + ' ' + t('contactSection.formCard.title'),
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Ungültige E-Mail-Adresse"
+                    message: t('contactSection.formCard.emailLabel')
                   }
                 })}
               />
@@ -257,16 +254,16 @@ const ContactForm: FC = () => {
                 htmlFor="message"
                 className="block text-lg font-semibold text-primary mb-3"
               >
-                Nachricht <span aria-label="Pflichtfeld" className="text-red-500">*</span>
+                {t('contactSection.formCard.messageLabel')} <span aria-label="Pflichtfeld" className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
                 rows={6}
-                placeholder="Teilen Sie mir Ihre Ideen und Wünsche mit..."
+                placeholder={t('contactSection.formCard.messagePlaceholder')}
                 className="w-full resize-none rounded-2xl border border-primary/20 bg-secondary/30 py-4 px-6 text-lg font-medium text-foreground placeholder:text-muted-foreground outline-none focus:border-primary focus:bg-secondary/50 focus:shadow-lg focus:ring-4 focus:ring-primary/20 hover:border-primary/40 transition-all duration-300 backdrop-blur-sm"
                 aria-required="true"
                 aria-describedby="message-error"
-                {...register("message", { required: "Nachricht ist erforderlich" })}
+                {...register("message", { required: t('contactSection.formCard.messageLabel') + ' ' + t('contactSection.formCard.title') })}
               />
             </div>
             
@@ -277,10 +274,10 @@ const ContactForm: FC = () => {
               className="btn-primary w-full text-lg py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/30"
               aria-describedby="submit-description"
             >
-              Nachricht senden →
+              {t('contactSection.formCard.submit')}
             </motion.button>
             <p id="submit-description" className="sr-only">
-              Formular absenden um Nachricht zu versenden
+              {t('contactSection.formCard.submitDescription')}
             </p>
           </form>
         </motion.div>

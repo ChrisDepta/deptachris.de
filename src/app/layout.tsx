@@ -1,7 +1,11 @@
 import "./globals.css";
+// i18n import removed to avoid server-side error
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/../ThemeContext";
 import type { Metadata, Viewport } from 'next';
+import Navbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -112,7 +116,10 @@ export default function RootLayout({
           </a>
           <div className="min-h-screen overflow-x-hidden flex flex-col items-center">
             <main id="main-content">
+              <Toaster position="top-right" />
+              <Navbar />
               {children}
+              <Footer />
             </main>
           </div>
         </ThemeProvider>

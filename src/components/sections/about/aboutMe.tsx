@@ -3,17 +3,21 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import db from "@/db/db.json";
+import { useTranslation } from "react-i18next";
 
 type Section = {
   title: string;
   description: string;
+  moreInfo?: string;
   imageSrc: string; // Dodano dla zdjęć w sekcjach
   id: string;
   key: number;
 };
 
-export default function AboutMe() {
+ export default function AboutMe(){
+
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const { t } = useTranslation();
 
   // Funkcja do przełączania sekcji
   const toggleSection = (section: string) => {
@@ -23,41 +27,48 @@ export default function AboutMe() {
   // Sekcje jako tablica obiektów
   const sections: Section[] = [
     {
-      title: "Über mich",
-      description: db.about.uberMich,
+      title: t("about.sections.uberMich.title", "Über mich"),
+      description: t("about.sections.uberMich.description"),
+      moreInfo: t("about.sections.uberMich.moreInfo", ""),
       imageSrc: "/uberMich.webp",
       id: "uberMich",
       key: 1,
     },
     {
-      title: "Technische Fähigkeiten",
-      description: db.about.faehigkeiten,
-      imageSrc: "/technischeFahigkeiten.webp", // Przykładowe źródło zdjęcia
+      title: t("about.sections.faehigkeiten.title", "Technische Fähigkeiten"),
+      description: t("about.sections.faehigkeiten.description"),
+      moreInfo: t("about.sections.faehigkeiten.moreInfo", ""),
+      imageSrc: "/technischeFahigkeiten.webp",
       id: "technischeFahigkeiten",
       key: 2,
     },
     {
-      title: "Meine Herangehensweise",
-      description: db.about.fokus,
-      imageSrc: "/focus.webp", // Przykładowe źródło zdjęcia
+      title: t("about.sections.fokus.title", "Meine Herangehensweise"),
+      description: t("about.sections.fokus.description"),
+      moreInfo: t("about.sections.fokus.moreInfo", ""),
+      imageSrc: "/focus.webp",
       id: "fokus",
       key: 3,
     },
     {
-      title: "Projekte und Erfahrungen",
-      description: db.about.projekte,
-      imageSrc: "/projekte.webp", // Przykładowe źródło zdjęcia
+      title: t("about.sections.projekte.title", "Projekte und Erfahrungen"),
+      description: t("about.sections.projekte.description"),
+      moreInfo: t("about.sections.projekte.moreInfo", ""),
+      imageSrc: "/projekte.webp",
       id: "projekte",
       key: 4,
     },
     {
-      title: "Warum ich?",
-      description: db.about.warumIch,
-      imageSrc: "/warumIch.webp", // Przykładowe źródło zdjęcia
+      title: t("about.sections.warumIch.title", "Warum ich?"),
+      description: t("about.sections.warumIch.description"),
+      moreInfo: t("about.sections.warumIch.moreInfo", ""),
+      imageSrc: "/warumIch.webp",
       id: "warumIch",
       key: 5,
     },
   ];
+
+ 
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-16">
@@ -79,7 +90,7 @@ export default function AboutMe() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="inline-block"
           >
-            Über
+            {t("about.header.main", "Über")}
           </motion.span>
           {" "}
           <motion.span
@@ -88,7 +99,7 @@ export default function AboutMe() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="inline-block text-primary"
           >
-            mich
+            {t("about.header.highlight", "mich")}
           </motion.span>
         </motion.h1>
         
@@ -98,7 +109,7 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-xl md:text-2xl text-muted-foreground font-medium"
         >
-          Frontend Entwickler & Webdesigner aus Nürnberg
+          {t("about.header.subtitle", "Frontend Entwickler & Webdesigner aus Nürnberg")}
         </motion.h2>
         
         <motion.p 
@@ -107,8 +118,7 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
         >
-          Entdecken Sie meinen Werdegang, meine technischen Fähigkeiten und die Leidenschaft, 
-          die mich jeden Tag dazu antreibt, moderne und benutzerfreundliche Webanwendungen zu entwickeln.
+          {t("about.header.description", "Entdecken Sie meinen Werdegang, meine technischen Fähigkeiten und die Leidenschaft, die mich jeden Tag dazu antreibt, moderne und benutzerfreundliche Webanwendungen zu entwickeln.")}
         </motion.p>
       </motion.div>
       
@@ -155,7 +165,7 @@ export default function AboutMe() {
                 >
                   <div 
                     className="text-muted-foreground leading-relaxed prose prose-sm max-w-none prose-p:mb-3"
-                    dangerouslySetInnerHTML={{ __html: section.description }}
+                    dangerouslySetInnerHTML={{ __html: section.moreInfo && section.moreInfo.length > 0 ? section.moreInfo : section.description }}
                   />
                 </motion.div>
               ) : (
@@ -172,7 +182,7 @@ export default function AboutMe() {
                   whileHover={{ x: 5 }}
                   className="btn-primary inline-flex items-center gap-2"
                 >
-                  {expandedSection === section.id ? 'Weniger anzeigen' : 'Mehr erfahren'}
+                  {expandedSection === section.id ? t("about.card.less", "Weniger anzeigen") : t("about.card.more", "Mehr erfahren")}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path 
                       strokeLinecap="round" 

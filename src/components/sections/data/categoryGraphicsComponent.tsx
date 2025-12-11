@@ -1,16 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
 import MapComponent from "@/components/sections/data/mapGraphicsComponent";
+import { useTranslation } from "react-i18next";
 
 const categories = [
-  { key: "ncoffee", title: "Kaffee und Getränkelieferant - NCOFFEE" },
-  { key: "blankenship", title: "Sachverständigenbüro - Blankenship" },
-  { key: "damiano", title: "Pizzeria - Damiano" },
-  { key: "paluch", title: "Bauunternehmen - Paluch" },
-  { key: "pisa", title: "Pizzeria - Pisa" }
+  { key: "ncoffee" },
+  { key: "blankenship" },
+  { key: "damiano" },
+  { key: "paluch" },
+  { key: "pisa" }
 ];
 
 export default function CategoryComponent() {
+  const { t, i18n } = useTranslation();
+  
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 mt-32 min-h-screen">
       <motion.div 
@@ -31,7 +34,7 @@ export default function CategoryComponent() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="inline-block"
           >
-            Meine
+            {t('graphicsSection.titleMain')}
           </motion.span>
           {" "}
           <motion.span
@@ -40,7 +43,7 @@ export default function CategoryComponent() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="inline-block text-primary"
           >
-            Grafiken
+            {t('graphicsSection.titleHighlight')}
           </motion.span>
         </motion.h1>
         
@@ -50,18 +53,15 @@ export default function CategoryComponent() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-xl md:text-2xl text-muted-foreground font-medium"
         >
-          Kreative Designs & Visuelle Identitäten
+          {t('graphicsSection.subtitle')}
         </motion.h2>
-        
         <motion.p 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
         >
-          Eine Sammlung meiner grafischen Arbeiten für verschiedene Branchen und Kunden. 
-          Von Logos und Corporate Design bis hin zu Werbematerialien – jedes Design wurde mit Fokus auf 
-          Markenidentität und visuelle Wirkung entwickelt.
+          {t('graphicsSection.description')}
         </motion.p>
       </motion.div>
       
@@ -83,7 +83,7 @@ export default function CategoryComponent() {
               className="text-center"
             >
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4 leading-tight">
-                {category.title}
+                {t(`graphicsSection.categories.${category.key}`)}
               </h2>
               <motion.div 
                 initial={{ width: 0 }}
@@ -93,7 +93,7 @@ export default function CategoryComponent() {
                 className="h-1 bg-primary mx-auto rounded-full"
               ></motion.div>
             </motion.div>
-            <MapComponent category={category.key} />
+            <MapComponent key={i18n.language + category.key} category={category.key} />
           </motion.section>
         ))}
       </div>

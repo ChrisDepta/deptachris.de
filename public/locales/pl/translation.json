@@ -1,0 +1,283 @@
+{
+  "contactSection": {
+    "title": "Kontakt",
+    "subtitle": "Nawiążmy współpracę",
+    "description": "Masz ciekawy projekt? Chętnie zamienię Twoje pomysły w nowoczesne, przyjazne użytkownikom aplikacje webowe. Skontaktuj się ze mną na niezobowiązującą rozmowę!",
+    "infoCard": {
+      "name": "Chris Depta",
+      "addressTitle": "Adres",
+      "addressStreet": "Sittenbacherstrasse 8",
+      "addressCity": "90482 Nürnberg",
+      "contactTitle": "Kontakt",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "socialTitle": "Media społecznościowe",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "formCard": {
+      "title": "Napisz do mnie",
+      "nameLabel": "Imię i nazwisko",
+      "namePlaceholder": "Twoje imię i nazwisko...",
+      "emailLabel": "Adres e-mail",
+      "emailPlaceholder": "twoj.email@domena.com",
+      "messageLabel": "Wiadomość",
+      "messagePlaceholder": "Opisz swój pomysł lub zapytanie...",
+      "submit": "Wyślij wiadomość →",
+      "submitDescription": "Wyślij formularz, aby przesłać wiadomość"
+    }
+  },
+  "home": {
+    "title": "Strona główna",
+    "description": "Witamy na stronie głównej!"
+  },
+  "about": {
+    "title": "O mnie",
+    "description": "Opis o mnie po polsku.",
+    "header": {
+      "main": "O",
+      "highlight": "mnie",
+      "subtitle": "Frontend Developer & Webdesigner z Norymbergi",
+      "description": "Poznaj moją ścieżkę zawodową, umiejętności techniczne i pasję, która napędza mnie do tworzenia nowoczesnych, przyjaznych użytkownikom aplikacji webowych każdego dnia."
+    },
+    "sections": {
+      "uberMich": {
+        "title": "O mnie",
+        "description": "Dowiedz się więcej o mojej ścieżce zawodowej i pasjach.",
+        "moreInfo": "Mam solidne doświadczenie w tworzeniu stron internetowych, specjalizuję się w nowoczesnych frameworkach JavaScript oraz projektowaniu UI/UX. Moja droga zawodowa zaczęła się od pasji do technologii i kreatywności, co pozwoliło mi realizować różnorodne projekty dla klientów z wielu branż. Cenię czysty kod, dostępność i ciągły rozwój."
+      },
+      "faehigkeiten": {
+        "title": "Umiejętności techniczne",
+        "description": "Moje kluczowe umiejętności i narzędzia.",
+        "moreInfo": "Znam React, Next.js, TypeScript i Tailwind CSS. W moim zestawie narzędzi są także Node.js, REST API oraz narzędzia projektowe jak Figma. Skupiam się na budowaniu skalowalnych, łatwych w utrzymaniu i atrakcyjnych wizualnie aplikacji webowych."
+      },
+      "fokus": {
+        "title": "Moje podejście",
+        "description": "Jak podchodzę do projektów i pracy z klientem.",
+        "moreInfo": "Stawiam na podejście zorientowane na użytkownika, blisko współpracuję z klientami, aby zrozumieć ich potrzeby i dostarczyć rozwiązania przekraczające oczekiwania. Komunikacja, przejrzystość i elastyczność to podstawa mojego stylu pracy."
+      },
+      "projekte": {
+        "title": "Projekty i doświadczenie",
+        "description": "Wybrane projekty i doświadczenia zawodowe.",
+        "moreInfo": "W moim portfolio są sklepy internetowe, strony firmowe i interaktywne panele. Każdy projekt pokazuje moje zaangażowanie w jakość, innowacyjność i satysfakcję klienta."
+      },
+      "warumIch": {
+        "title": "Dlaczego ja?",
+        "description": "Dlaczego warto ze mną współpracować.",
+        "moreInfo": "Łączę wiedzę techniczną, kreatywność i rzetelność. Moim celem jest realizacja Twoich celów biznesowych poprzez skuteczne rozwiązania cyfrowe i sprawną współpracę."
+      }
+    },
+    "card": {
+      "more": "Dowiedz się więcej",
+      "less": "Pokaż mniej"
+    }
+  },
+  "hero": {
+    "firstname": "Christoph",
+    "lastname": "Depta",
+    "subtitle": "Frontend Developer & UI/UX Designer",
+    "description": "Tworzę cyfrowe doświadczenia, które zachwycają i działają. Z pasją do kodu i dbałością o szczegóły zamieniam pomysły w nowoczesne, przyjazne użytkownikom aplikacje internetowe."
+  },
+  "navbar": {
+    "home": "Start",
+    "about": "O mnie",
+    "websites": "Strony www",
+    "graphics": "Grafika",
+    "contact": "Kontakt"
+  },
+  "resend": {
+    "about": {
+      "title": "O mnie",
+      "description": "Dowiedz się więcej o mojej ścieżce zawodowej i pasjach."
+    },
+    "websites": {
+      "title": "Moje strony www",
+      "description": "Poznaj moje projekty webowe i zainspiruj się."
+    },
+    "graphics": {
+      "title": "Moje grafiki",
+      "description": "Wybrane kreatywne prace graficzne i projekty."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Skontaktuj się ze mną w sprawie swojego projektu."
+    },
+    "header": {
+      "main": "Moja",
+      "highlight": "Ekspertyza",
+      "description": "Poznaj moje obszary pracy i projekty"
+    },
+    "card": {
+      "button": "Dowiedz się więcej"
+    }
+  },
+  "websitesSection": {
+    "header": {
+      "main": "Moje",
+      "highlight": "strony www",
+      "subtitle": "Nowoczesne aplikacje webowe z Next.js i innymi.",
+      "description": "Wybrane zrealizowane projekty webowe – od stron firmowych po zaawansowane aplikacje internetowe. Każdy projekt powstał z użyciem najnowszych technologii takich jak Next.js, React, Tailwind CSS oraz różnych rozwiązań backendowych, aby zapewnić najlepszą wydajność i doświadczenie użytkownika."
+    },
+    "card": {
+      "preview": "Podgląd",
+      "visit": "Odwiedź stronę",
+      "close": "Zamknij"
+    },
+    "projects": {
+      "ncoffee": {
+        "title": "ncoffee.pl",
+        "shortDescription": "ncoffee.pl to strona internetowa dystrybutora kawy i innych napojów w Polsce, specjalizującego się w klientach biznesowych. Firma oferuje również leasing urządzeń takich jak ekspresy do kawy, dystrybutory wody oraz filtry do wody."
+      },
+      "wozniak": {
+        "title": "Wozniak SHK",
+        "shortDescription": "Wozniak SHK to profesjonalna strona firmowa dla dostawcy usług z zakresu sanitariatów, ogrzewania i wentylacji, stworzona w Next.js. Nowoczesna i responsywna witryna prezentuje kompleksowe usługi SHK z naciskiem na wygodę użytkownika i szybkie ładowanie. Projekt podkreśla profesjonalizm i kompetencje firmy w branży techniki budowlanej."
+      },
+      "arborlim": {
+        "title": "ArborLim",
+        "shortDescription": "ArborLim to nowoczesna strona firmowa niemieckiej firmy zajmującej się pielęgnacją drzew, stworzona w Next.js i Tailwind CSS. Aplikacja korzysta z bazy danych PostgreSQL, Dockera do zarządzania kontenerami oraz MinIO do wydajnego przechowywania plików. Responsywny design prezentuje profesjonalne usługi pielęgnacji drzew z optymalną wydajnością i wygodą użytkowania."
+      }
+    }
+  },
+  "footer": {
+      "impressumPage": {
+        "ownerTitle": "Właściciel",
+        "nameLabel": "Imię i nazwisko:",
+        "professionLabel": "Zawód:",
+        "addressTitle": "Adres",
+        "countryLabel": "Kraj:",
+        "cityLabel": "Miasto:",
+        "streetLabel": "Ulica:",
+        "contactTitle": "Dane kontaktowe",
+        "emailLabel": "E-mail:",
+        "mobileLabel": "Telefon:",
+        "responsibleTitle": "Osoba odpowiedzialna"
+      },
+      "datenschutzPage": {
+        "title": "Polityka prywatności",
+        "intro1": "Cieszymy się z Twojego zainteresowania naszą stroną internetową. Ochrona Twoich danych osobowych jest dla nas ważna.",
+        "intro2": "Poniżej informujemy, w jaki sposób przetwarzamy Twoje dane osobowe w związku z formularzem kontaktowym.",
+        "responsible": "Osobą odpowiedzialną za przetwarzanie danych w związku z formularzem kontaktowym jest:",
+        "mrLabel": "Pan: ",
+        "emailLabel": "E-mail:",
+        "mobileLabel": "Telefon: ",
+        "dataCollection": "Zbieranie i przetwarzanie danych osobowych: Korzystając z formularza kontaktowego na naszej stronie, zbieramy tylko te dane osobowe, które nam podasz. Zazwyczaj jest to Twoje imię i adres e-mail. Dane te służą wyłącznie do obsługi Twojego zapytania i nie są przechowywane w bazie danych.",
+        "purpose": "Cel przetwarzania danych: Dane osobowe podane w formularzu kontaktowym są wykorzystywane wyłącznie do obsługi Twojego zapytania. Twoje dane nie są przekazywane osobom trzecim.",
+        "storage": "Okres przechowywania: Dane otrzymane przez formularz kontaktowy są przechowywane tylko tak długo, jak jest to konieczne do obsługi Twojego zapytania. Po zakończeniu komunikacji Twoje dane zostaną usunięte, o ile nie istnieją prawne okresy przechowywania.",
+        "rights": "Twoje prawa: Masz prawo w każdej chwili uzyskać informacje o przechowywanych przez nas danych osobowych, a także prawo do ich poprawiania, usuwania i ograniczenia przetwarzania. Możesz w każdej chwili cofnąć zgodę na przetwarzanie danych. Skontaktuj się w tym celu z powyższym adresem. --- Pamiętaj, że ta polityka prywatności ma charakter ogólny. Zaleca się konsultację z prawnikiem, aby upewnić się, że spełnia ona aktualne wymagania prawne."
+  },
+    "navigation": {
+      "home": "Start",
+      "about": "O mnie",
+      "websites": "Strony www",
+      "graphics": "Grafika",
+      "contact": "Kontakt"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "github": "Github"
+    },
+    "legal": {
+      "impressum": "Impressum",
+      "datenschutz": "Polityka prywatności"
+    }
+  },
+  "graphicsSection": {
+      "titleMain": "Moje",
+      "titleHighlight": "Grafiki",
+      "subtitle": "Kreatywne projekty i identyfikacje wizualne",
+      "description": "Kolekcja moich prac graficznych dla różnych branż i klientów. Od logotypów i identyfikacji wizualnej po materiały reklamowe – każdy projekt powstał z myślą o tożsamości marki i sile wizualnej.",
+      "categories": {
+        "ncoffee": "Dostawca kawy i napojów - NCOFFEE",
+        "blankenship": "Biuro rzeczoznawcy - Blankenship",
+        "damiano": "Pizzeria - Damiano",
+        "paluch": "Firma budowlana - Paluch",
+        "pisa": "Pizzeria - Pisa"
+      }, 
+      "cards": {
+        "blankenship": {
+          "1": {
+            "title": "Logo",
+            "description": "Logo przedstawia sportowy samochód w tle, sugerując luksus i wysoką jakość. Samochód symbolizuje specjalizację firmy w branży motoryzacyjnej i podkreśla rolę rzeczoznawcy, który wycenia pojazdy. Elegancki design podkreśla profesjonalizm i ekspertyzę w wycenie samochodów."
+          },
+          "2": {
+            "title": "Baner",
+            "description": "Poziomy baner przedstawia elegancki samochód obok rzeczoznawcy trzymającego tablet. Symbolizuje to nowoczesne podejście do wyceny pojazdów. Profesjonalny wizerunek Blankenshipa podkreśla dokładność i niezawodność jego usług oraz zachęca do skorzystania z jego ekspertyzy."
+          },
+          "3": {
+            "title": "Reklama 1",
+            "description": "Reklama na Facebooku pokazuje rzeczoznawcę fotografującego uszkodzony samochód. Skierowana jest do Polaków w Niemczech, którzy potrzebują profesjonalnej wyceny pojazdu po wypadku. Blankenship oferuje precyzyjne oceny szkód i wsparcie w sprawach ubezpieczeniowych."
+          },
+          "4": {
+            "title": "Reklama 2",
+            "description": "Reklama na Facebooku pokazuje kobietę kucającą przy uszkodzonym aucie i dzwoniącą do rzeczoznawcy. Reklama skierowana do Polaków w Niemczech, którzy po wypadku potrzebują szybkiej i profesjonalnej wyceny pojazdu. Blankenship oferuje niezawodne wsparcie przy ocenie szkód i obsłudze ubezpieczeniowej."
+          },
+          "5": {
+            "title": "Baner mobilny",
+            "description": "Baner dla wersji mobilnej strony pokazuje smartfon w poziomie, na ekranie samochód i nazwę 'KFZ-Blankenship'. Reklama skierowana do kierowców z Norymbergi szukających rzetelnego rzeczoznawcy do wyceny i analizy szkód. Blankenship oferuje szybkie i profesjonalne wsparcie przy ocenie szkód i obsłudze ubezpieczeniowej."
+          },
+          "6": {
+            "title": "Baner mobilny",
+            "description": "Baner dla wersji mobilnej strony pokazuje smartfon w poziomie, na ekranie samochód i nazwę 'KFZ-Blankenship'. Reklama skierowana do kierowców z Norymbergi szukających rzetelnego rzeczoznawcy do wyceny i analizy szkód. Blankenship oferuje szybkie i profesjonalne wsparcie przy ocenie szkód i obsłudze ubezpieczeniowej."
+          },
+          "7": {
+            "title": "Baner boczny",
+            "description": "Klasyczny baner boczny na stronie to reklama rzeczoznawcy samochodowego Blankenship. Baner podkreśla główne usługi: profesjonalna wycena pojazdów, analiza szkód, wsparcie przy obsłudze ubezpieczeniowej i szybkie sporządzanie raportów. Idealny dla każdego, kto szuka rzetelnej ekspertyzy w Norymberdze."
+          }
+        },
+        "damiano": {
+          "1": {
+            "title": "Logo",
+            "description": "Logo pizzerii Damiano, zwanej Pizza Haus, zostało zaprojektowane całkowicie według indywidualnych wytycznych klienta. Przedstawia stylizowany dom w kształcie pizzy oraz rękę z uniesionym kciukiem. Ten projekt symbolizuje satysfakcję i jakość, jaką pizzeria oferuje swoim klientom."
+          },
+          "2": {
+            "title": "Ulotka",
+            "description": "Ulotki są w formacie 3 x A5 składane w harmonijkę i mają łącznie 6 stron w formacie A5. Broszura zawiera wszystkie istotne informacje o pizzerii Damiano, w tym adres, aktualne promocje i kody QR do łatwego zamawiania. Przedstawia także pełne menu i dostępne dania, dając klientom kompleksowy przegląd oferty."
+          }
+        },
+        "ncoffee": {
+          "1": { "title": "Logo", "description": "Proste logo w kształcie filiżanki kawy zostało zaprojektowane dla firmy Ncoffee. Występuje w różnych wersjach kolorystycznych i emanuje elegancją. Projekt podkreśla specyfikę firmy i nawiązuje do kultury picia kawy." },
+          "2": { "title": "Etykieta Cerrado", "description": "Etykieta rzemieślniczej kawy firmy Ncoffee nosi nazwę Cerrado Single. Elegancki projekt w czerni z białymi napisami i złotymi akcentami sprawia wrażenie produktu premium i odzwierciedla jego wyrafinowanie." },
+          "3": { "title": "Ulotka Cerrado", "description": "Składana poziomo ulotka A5 opisuje wszystkie zalety mieszanki kawy Cerrado Single od Ncoffee. Podkreśla najważniejsze cechy, w tym nuty smakowe, kwasowość, stopień palenia i inne walory. Atrakcyjny projekt przekazuje klientom pełną informację o jakości i wyjątkowości tej kawy." },
+          "4": { "title": "Broszura chemiczna", "description": "Broszura zawiera kompleksowe informacje o wszystkich środkach chemicznych potrzebnych do konserwacji i pielęgnacji ekspresów do kawy. Obejmuje tabletki odkamieniające, środki czyszczące i pielęgnacyjne, które wydłużają żywotność urządzeń i poprawiają jakość kawy. Atrakcyjne grafiki i jasne instrukcje pomagają klientom wybrać odpowiednie produkty do swoich potrzeb." },
+          "5": { "title": "Broszura Express", "description": "Broszura prezentuje wybór ekspresów do kawy, które Ncoffee oferuje do zakupu lub w leasingu. Zawiera szczegółowe informacje o każdym modelu, w tym specyfikacje techniczne, funkcje i zalety. Atrakcyjne zdjęcia i przejrzyste porównania pomagają klientom znaleźć idealny ekspres do swoich potrzeb i zrozumieć różne opcje finansowania lub wynajmu." },
+          "6": { "title": "Ulotka Ncoffee", "description": "Pionowa ulotka A5 daje pełny przegląd całej oferty Ncoffee. Zawiera szczegółowe informacje o wszystkich produktach, w tym kawach, środkach do pielęgnacji, wodzie i ekspresach dostępnych w sprzedaży lub leasingu. Przejrzysty układ i atrakcyjna szata graficzna pozwalają klientom szybko znaleźć potrzebne informacje i odkryć różnorodność oferty Ncoffee." },
+          "7": { "title": "Broszura kawowa", "description": "Ta broszura prezentuje pełną ofertę kaw Ncoffee. Każda mieszanka jest szczegółowo opisana, w tym profil smakowy, stopień palenia i pochodzenie. Atrakcyjne wizualizacje i treści zachęcają klientów do odkrywania różnorodności kaw Ncoffee i znalezienia idealnej mieszanki dla siebie." },
+          "8": { "title": "Kawa na wynos", "description": "Kubek na wynos dla Ncoffee został zaprojektowany jako gadżet reklamowy i idealnie sprawdza się na różnych eventach oraz stoiskach z kawą. Nowoczesny i atrakcyjny design prezentuje logo Ncoffee w wyrazistych kolorach i podkreśla jakość oraz świeżość oferowanych produktów. Praktyczna pokrywka i ekologiczny materiał sprawiają, że kubek jest nie tylko funkcjonalny, ale i przyjazny środowisku, podkreślając zaangażowanie Ncoffee w ekologiczną kulturę picia kawy." },
+          "9": { "title": "Menu", "description": "Karta menu na stolik w kawiarni prezentuje wszystkie rodzaje kaw oferowanych przez Ncoffee. Obejmuje klasyczne napoje jak espresso, americano i cappuccino oraz różne warianty latte, np. latte macchiato, waniliowe latte i karmelowe latte. Wymienione są także alternatywne metody parzenia, takie jak cold brew i nitro coffee. Przejrzysty układ i apetyczne zdjęcia zachęcają klientów do spróbowania każdego napoju." },
+          "10": { "title": "Menu czarne", "description": "Karta menu na stolik w kawiarni prezentuje wszystkie rodzaje kaw oferowanych przez Ncoffee. Obejmuje klasyczne napoje jak espresso, americano i cappuccino oraz różne warianty latte, np. latte macchiato, waniliowe latte i karmelowe latte. Wymienione są także alternatywne metody parzenia, takie jak cold brew i nitro coffee. Przejrzysty układ i apetyczne zdjęcia zachęcają klientów do spróbowania każdego napoju." },
+          "11": { "title": "Etykieta Prado", "description": "Etykieta rzemieślniczej kawy firmy Ncoffee nosi nazwę Prado Premium. Elegancki projekt w czerni z białymi napisami i złotymi akcentami sprawia wrażenie produktu premium i odzwierciedla jego wyrafinowanie." },
+          "12": { "title": "Ulotka Vular jasna", "description": "Składana poziomo ulotka A5 opisuje wszystkie zalety mieszanki kawy Vular Blend od Ncoffee. Podkreśla najważniejsze cechy, w tym nuty smakowe, kwasowość, stopień palenia i inne walory. Atrakcyjny projekt przekazuje klientom pełną informację o jakości i wyjątkowości tej kawy." },
+          "13": { "title": "Wizytówka Ncoffee", "description": "Wizytówka Ncoffee została zaprojektowana w charakterystycznych kolorach firmy i odzwierciedla branding. Elegancki projekt łączy logo Ncoffee z nowoczesną typografią i miejscem na wszystkie niezbędne dane kontaktowe. Atrakcyjna kolorystyka i wysokiej jakości materiały sprawiają, że wizytówka wyróżnia się i podkreśla profesjonalizm oraz pasję do wysokiej jakości kawy." },
+          "14": { "title": "Etykieta Vular", "description": "Etykieta rzemieślniczej kawy firmy Ncoffee nosi nazwę Vular Intensive Blend. Elegancki projekt w czerni z białymi napisami i złotymi akcentami sprawia wrażenie produktu premium i odzwierciedla jego wyrafinowanie." },
+          "15": { "title": "Ulotka Vular ciemna", "description": "Składana poziomo ulotka A5 opisuje wszystkie zalety mieszanki kawy Vular Blend od Ncoffee. Podkreśla najważniejsze cechy, w tym nuty smakowe, kwasowość, stopień palenia i inne walory. Atrakcyjny projekt przekazuje klientom pełną informację o jakości i wyjątkowości tej kawy." },
+          "16": { "title": "Lawendowy Zakątek", "description": "Bardzo proste logo dla spółki-córki Ncoffee, minibaru o nazwie Lawendowy Zakątek, zostało zaprojektowane w delikatnych lawendowych odcieniach. Przedstawia stylizowane kwiaty lawendy i tworzy przyjazną atmosferę. Prosty design podkreśla związek z wysokiej jakości kawą i przyjemną przerwą, jakiej klienci mogą oczekiwać w Lawendowym Zakątku." },
+          "17": { "title": "Oferta Ncoffee", "description": "Składana ulotka A5 Ncoffee na sześciu stronach daje kompaktowy przegląd oferty. W nowoczesnej, naturalnej stylistyce broszura prezentuje szeroką gamę – od wysokiej jakości kaw i ekskluzywnych mieszanek po uroczy koncept minibaru Lawendowy Zakątek. Krótkie teksty i nastrojowe zdjęcia dają nowym klientom i partnerom szybki wgląd w jakość i różnorodność Ncoffee oraz zapraszają do przyjemnej przerwy." }
+        },
+        "paluch": {
+          "1": {
+            "title": "Logo",
+            "description": "Logo polskiej firmy budowlanej przedstawia jeża w papierowej czapce. Przyjazny i zachęcający projekt symbolizuje kreatywność i rzemiosło firmy. Jeż oznacza niezawodność i siłę, a papierowa czapka dodaje humorystycznego akcentu, który odzwierciedla pasję do budownictwa."
+          },
+          "2": {
+            "title": "Wizytówka",
+            "description": "Wizytówka firmy budowlanej Paluch przedstawia logo z jeżem w papierowej czapce. Nowoczesny projekt prezentuje dane kontaktowe w przejrzysty i czytelny sposób. Paleta kolorów budzi zaufanie i profesjonalizm, a wysokiej jakości wykonanie podkreśla dbałość i rzemiosło firmy."
+          }
+        },
+        "pisa": {
+          "1": {
+            "title": "Logo",
+            "description": "Logo pizzerii Pisa przedstawia nazwę w prostej czcionce oraz charakterystyczną Krzywą Wieżę w Pizie jako centralny element. Minimalistyczny projekt wykorzystuje czyste linie i czarno-białą kolorystykę z subtelną ramką. Prosta forma i wyraźne nawiązanie do słynnego zabytku podkreślają autentyczność i włoski klimat pizzerii."
+          },
+          "2": {
+            "title": "Ulotka",
+            "description": "Składana broszura A5 dla pizzerii Pisa prezentuje pełną ofertę restauracji. W minimalistycznej stylistyce z czarnym tłem, białymi napisami i czerwonymi akcentami wyróżnia się autorskie logo z Krzywą Wieżą w Pizie. Na sześciu stronach w przejrzysty i atrakcyjny sposób przedstawiono różne rodzaje pizzy, przystawki, napoje i oferty specjalne, by podkreślić autentyczny włoski smak i wysoką jakość pizzerii."
+          }
+        }
+      }
+    }
+  }
+

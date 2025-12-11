@@ -1,8 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import MapComponent from "@/components/sections/data/mapWebsitesComponent";
+import { useTranslation } from "react-i18next";
 
-export default function CategoryComponent() {
+export default function CategoryWebsitesComponent() {
+
+  const { t } = useTranslation();
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 mt-32 min-h-screen">
       <motion.div 
@@ -23,7 +26,7 @@ export default function CategoryComponent() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="inline-block"
           >
-            Meine
+            {t("websitesSection.header.main")}
           </motion.span>
           {" "}
           <motion.span
@@ -32,7 +35,7 @@ export default function CategoryComponent() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="inline-block text-primary"
           >
-            Websites
+            {t("websitesSection.header.highlight")}
           </motion.span>
         </motion.h1>
         
@@ -42,7 +45,7 @@ export default function CategoryComponent() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-xl md:text-2xl text-muted-foreground font-medium"
         >
-          Moderne Webanwendungen mit Next.js & Co.
+          {t("websitesSection.header.subtitle")}
         </motion.h2>
         
         <motion.p 
@@ -51,9 +54,7 @@ export default function CategoryComponent() {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
         >
-          Eine Auswahl meiner realisierten Webprojekte – von Firmenwebsites bis hin zu komplexen Webanwendungen. 
-          Jedes Projekt wurde mit modernsten Technologien wie Next.js, React, Tailwind CSS und verschiedenen Backend-Lösungen entwickelt, 
-          um optimale Performance und Benutzererfahrung zu gewährleisten.
+          {t("websitesSection.header.description")}
         </motion.p>
       </motion.div>
       <MapComponent category="myProjects" />

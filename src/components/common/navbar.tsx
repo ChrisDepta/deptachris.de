@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import deptachrisLogo from "../../../public/simpleLogo.png";
+import deptachrisLogo from "@/../public/simpleLogo.png";
+import LanguageSwitcher from "@/components/elements/LanguageSwitcher";
 
 function Nav() {
   const [menuActive, setMenuActive] = useState(false);
@@ -16,11 +18,11 @@ function Nav() {
     setMenuActive((prev) => !prev);
   }
 
-  function menuClose() {
+  const menuClose = React.useCallback(() => {
     if (menuActive) {
       setMenuActive(false);
     }
-  }
+  }, [menuActive]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +35,13 @@ function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuActive, menuClose]);
 
+  const { t } = useTranslation();
   const navItems = [
-    { href: "/", label: "Start" },
-    { href: "/about", label: "Über mich" },
-    { href: "/websites", label: "Webseiten" },
-    { href: "/graphics", label: "Grafik" },
-    { href: "/contact", label: "Kontakt" },
+    { href: "/", label: t("navbar.home", "Start") },
+    { href: "/about", label: t("navbar.about", "Über mich") },
+    { href: "/websites", label: t("navbar.websites", "Webseiten") },
+    { href: "/graphics", label: t("navbar.graphics", "Grafik") },
+    { href: "/contact", label: t("navbar.contact", "Kontakt") },
   ];
 
   return (
@@ -65,9 +68,10 @@ function Nav() {
               <Image
                 src={deptachrisLogo}
                 alt="deptachris Logo"
-                width={55}
-                height={55}
-                className="rounded-xl group-hover:rotate-3 transition-transform duration-200 lg:w-12 lg:h-12"
+                width={100}
+                height={40}
+                style={{ height: "auto" }} 
+                className=" h-auto rounded-xl group-hover:rotate-3 transition-transform duration-200 lg:w-12 lg:h-12"
                 priority
               />
             </div>
@@ -77,7 +81,7 @@ function Nav() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center ml-auto">
+          <div className="hidden md:flex items-center ml-auto gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -93,6 +97,7 @@ function Nav() {
                 </div>
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
@@ -132,6 +137,9 @@ function Nav() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-6 space-y-3 border-t border-[hsl(var(--border))] mt-4 bg-card/50 rounded-2xl mx-4 px-4">
+                <div className="flex justify-center mb-4">
+                  <LanguageSwitcher />
+                </div>
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.href}

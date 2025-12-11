@@ -1,0 +1,284 @@
+  
+{ 
+  "contactSection": {
+    "title": "Contact",
+    "subtitle": "Let's work together",
+    "description": "Do you have an exciting project in mind? I look forward to turning your ideas into modern, user-friendly web applications. Contact me for a non-binding conversation!",
+    "infoCard": {
+      "name": "Chris Depta",
+      "addressTitle": "Address",
+      "addressStreet": "Sittenbacherstrasse 8",
+      "addressCity": "90482 Nuremberg",
+      "contactTitle": "Contact",
+      "phone": "Phone number",
+      "email": "Email address",
+      "socialTitle": "Social media",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "formCard": {
+      "title": "Write to me",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your full name...",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "your.email@domain.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your idea or inquiry...",
+      "submit": "Send message →",
+      "submitDescription": "Submit the form to send your message"
+    }
+  },
+  "home": {
+    "title": "Home page",
+    "description": "Welcome to the home page!"
+  },
+  "about": {
+    "title": "About me",
+    "description": "About me description in English.",
+    "header": {
+      "main": "About",
+      "highlight": "me",
+      "subtitle": "Frontend Developer & Webdesigner from Nuremberg",
+      "description": "Discover my background, technical skills, and the passion that drives me to create modern, user-friendly web applications every day."
+    },
+    "sections": {
+      "uberMich": {
+        "title": "About me",
+        "description": "Learn more about my background and passions.",
+        "moreInfo": "I have a strong background in web development, specializing in modern JavaScript frameworks and UI/UX design. My journey started with a passion for technology and creativity, leading me to work on diverse projects for clients across various industries. I value clean code, accessibility, and continuous learning."
+      },
+      "faehigkeiten": {
+        "title": "Technical skills",
+        "description": "My key skills and tools.",
+        "moreInfo": "I am proficient in React, Next.js, TypeScript, and Tailwind CSS. My toolkit also includes Node.js, REST APIs, and design tools like Figma. I focus on building scalable, maintainable, and visually appealing web applications."
+      },
+      "fokus": {
+        "title": "My approach",
+        "description": "How I approach projects and work with clients.",
+        "moreInfo": "I believe in a user-centered approach, collaborating closely with clients to understand their needs and deliver solutions that exceed expectations. Communication, transparency, and adaptability are key to my workflow."
+      },
+      "projekte": {
+        "title": "Projects and experience",
+        "description": "Selected projects and professional experience.",
+        "moreInfo": "My portfolio includes e-commerce platforms, corporate websites, and interactive dashboards. Each project reflects my commitment to quality, innovation, and client satisfaction."
+      },
+      "warumIch": {
+        "title": "Why me?",
+        "description": "Why you should work with me.",
+        "moreInfo": "I offer a blend of technical expertise, creative vision, and reliability. My goal is to help you achieve your business objectives through effective digital solutions and a seamless collaboration experience."
+      }
+    },
+    "card": {
+      "more": "Learn more",
+      "less": "Show less"
+    }
+  },
+  "hero": {
+    "firstname": "Christoph",
+    "lastname": "Depta",
+    "subtitle": "Frontend Developer & UI/UX Designer",
+    "description": "I create digital experiences that delight and work. With a passion for code and an eye for detail, I turn ideas into modern, user-friendly web applications."
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About me",
+    "websites": "Websites",
+    "graphics": "Graphics",
+    "contact": "Contact"
+  },
+  "resend": {
+    "about": {
+      "title": "About me",
+      "description": "Learn more about my background and passions."
+    },
+    "websites": {
+      "title": "My websites",
+      "description": "Discover my web development projects and get inspired."
+    },
+    "graphics": {
+      "title": "My graphics",
+      "description": "A selection of my creative graphic works and designs."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with me for your next project."
+    },
+    "header": {
+      "main": "My",
+      "highlight": "Expertise",
+      "description": "Discover my areas of work and projects"
+    },
+    "card": {
+      "button": "Learn more"
+    }
+  },
+  "websitesSection": {
+    "header": {
+      "main": "My",
+      "highlight": "Websites",
+      "subtitle": "Modern web applications with Next.js & Co.",
+      "description": "A selection of my completed web projects – from company websites to complex web applications. Each project was developed using the latest technologies such as Next.js, React, Tailwind CSS, and various backend solutions to ensure optimal performance and user experience."
+    },
+    "card": {
+      "preview": "Preview",
+      "visit": "Visit website",
+      "close": "Close"
+    },
+    "projects": {
+      "ncoffee": {
+        "title": "ncoffee.pl",
+        "shortDescription": "ncoffee.pl is a website for a distributor of coffee and other beverages in Poland, specializing in business clients. The company also offers leasing of equipment such as coffee machines, water dispensers, and water filters."
+      },
+      "wozniak": {
+        "title": "Wozniak SHK",
+        "shortDescription": "Wozniak SHK is a professional company website for a provider in the field of sanitary, heating, and ventilation, developed with Next.js. The modern and responsive website presents comprehensive SHK services with a focus on user-friendliness and fast loading times. The design emphasizes the professionalism and competence of the company in building technology."
+      },
+      "arborlim": {
+        "title": "ArborLim",
+        "shortDescription": "ArborLim is a modern company website for a German tree care company, developed with Next.js and Tailwind CSS. The application uses PostgreSQL as a database, Docker for container management, and MinIO for efficient file storage. The responsive design presents professional tree care services with optimal performance and user-friendliness."
+      }
+    }
+  },
+  "footer": {
+      "impressumPage": {
+        "ownerTitle": "Owner",
+        "nameLabel": "Full name:",
+        "professionLabel": "Profession:",
+        "addressTitle": "Address",
+        "countryLabel": "Country:",
+        "cityLabel": "City:",
+        "streetLabel": "Street:",
+        "contactTitle": "Contact details",
+        "emailLabel": "E-mail:",
+        "mobileLabel": "Mobile:",
+        "responsibleTitle": "Responsible person"
+      },
+      "datenschutzPage": {
+        "title": "Privacy Policy",
+        "intro1": "We are pleased about your interest in our website. The protection of your personal data is important to us.",
+        "intro2": "Below we inform you about how we process your personal data in connection with the contact form.",
+        "responsible": "The person responsible for data processing in connection with the contact form is:",
+        "mrLabel": "Mr: ",
+        "emailLabel": "E-mail:",
+        "mobileLabel": "Mobile: ",
+        "dataCollection": "Collection and processing of personal data: When you use the contact form on our website, we only collect the personal data that you provide to us. As a rule, this is your name and e-mail address. This data is used exclusively to process your request and is not stored in a database.",
+        "purpose": "Purpose of data processing: The personal data you provide in the contact form will only be used to process your request. Your data will not be passed on to third parties.",
+        "storage": "Storage period: The data received via the contact form will only be kept for as long as is necessary to process your request. After the communication has been completed, your data will be deleted unless there are legal retention periods to the contrary.",
+        "rights": "Your rights: You have the right to obtain information about the personal data we have stored about you at any time, as well as the right to correct, delete and restrict the processing of this data. You can revoke your consent to the processing of the data at any time. Please contact the address given above. --- Please note that this privacy policy serves as a general notice. It is advisable to have the policy checked by a lawyer to ensure that it meets current legal requirements."
+      },
+    "navigation": {
+      "home": "Home",
+      "about": "About me",
+      "websites": "Websites",
+      "graphics": "Graphics",
+      "contact": "Contact"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "github": "Github"
+    },
+    "legal": {
+      "impressum": "Impressum",
+      "datenschutz": "Privacy Policy"
+    }
+  },
+    "graphicsSection": {
+      "titleMain": "My",
+      "titleHighlight": "Graphics",
+      "subtitle": "Creative Designs & Visual Identities",
+      "description": "A collection of my graphic works for various industries and clients. From logos and corporate design to promotional materials – each design was developed with a focus on brand identity and visual impact.",
+      "categories": {
+        "ncoffee": "Coffee and Beverage Supplier - NCOFFEE",
+        "blankenship": "Expert Office - Blankenship",
+        "damiano": "Pizzeria - Damiano",
+        "paluch": "Construction Company - Paluch",
+        "pisa": "Pizzeria - Pisa"
+      },
+      "cards": {
+        "blankenship": {
+          "1": {
+            "title": "Logo",
+            "description": "The logo features a sporty car in the background, suggesting luxury and high quality. This car represents the company's specialization in automobiles and highlights the role of an appraiser who evaluates vehicle values. The elegant design conveys professionalism and expertise in automotive appraisal."
+          },
+          "2": {
+            "title": "Banner",
+            "description": "The horizontal banner shows an elegant car next to an appraiser holding a tablet. This symbolizes a modern approach to vehicle appraisal. The professional appearance of Blankenship emphasizes the accuracy and reliability of his services and invites you to use his expertise."
+          },
+          "3": {
+            "title": "Ad 1",
+            "description": "The Facebook ad shows an appraiser photographing a damaged car. It targets Poles in Germany who need a professional vehicle appraisal after an accident. Blankenship offers precise damage assessments and support with insurance matters."
+          },
+          "4": {
+            "title": "Ad 2",
+            "description": "The Facebook ad shows a woman crouching next to her damaged car and calling an appraiser. The ad targets Poles in Germany who need a quick and professional vehicle appraisal after an accident. Blankenship offers reliable support with damage assessment and insurance processing."
+          },
+          "5": {
+            "title": "Mobile Banner",
+            "description": "The banner for the mobile version of the website shows a smartphone in a horizontal position, displaying a car and the name 'KFZ-Blankenship' on the screen. The ad targets drivers in Nuremberg looking for a reliable appraiser for vehicle evaluation and damage analysis. Blankenship offers fast and professional support with damage assessment and insurance processing."
+          },
+          "6": {
+            "title": "Mobile Banner",
+            "description": "The banner for the mobile version of the website shows a smartphone in a horizontal position, displaying a car and the name 'KFZ-Blankenship' on the screen. The ad targets drivers in Nuremberg looking for a reliable appraiser for vehicle evaluation and damage analysis. Blankenship offers fast and professional support with damage assessment and insurance processing."
+          },
+          "7": {
+            "title": "Aside Banner",
+            "description": "This classic aside on the website is an ad for the car appraiser Blankenship. The ad highlights the main services: professional vehicle appraisal, damage analysis, support with insurance processing, and fast report creation. Ideal for anyone looking for reliable expertise in Nuremberg."
+          }
+        },
+        "damiano": {
+          "1": {
+            "title": "Logo",
+            "description": "The logo for Pizzeria Damiano, called Pizza Haus, was designed entirely based on specific customer requests. It features a stylized house in the shape of a pizza, with a hand giving a thumbs up. This design symbolizes the satisfaction and quality the pizzeria offers its customers."
+          },
+          "2": {
+            "title": "Flyer",
+            "description": "The flyers are in a 3 x A5 folded format with a total of 6 pages in A5 size. The brochure contains all relevant information about Pizzeria Damiano, including address, current promotions, and QR codes for easy ordering. It also presents the full menu and available dishes, giving customers a comprehensive overview of the offer."
+          }
+        },
+        "ncoffee": {
+          "1": { "title": "Logo", "description": "The simple logo in the shape of a coffee cup was designed for Ncoffee. It is available in various color versions and exudes elegance. The design emphasizes the company's specific profile and conveys a connection to coffee culture." },
+          "2": { "title": "Cerrado Label", "description": "The label for Ncoffee's artisan coffee is called Cerrado Single. The elegant design in black with white lettering and gold accents gives a high-quality impression and reflects the product's sophistication." },
+          "3": { "title": "Cerrado Flyer", "description": "The horizontally folded A5 flyer describes all the advantages of the Cerrado Single coffee blend from Ncoffee. It highlights the main features, including flavor nuances, acidity, roast level, and other taste characteristics. The appealing design provides customers with comprehensive information about the quality and uniqueness of this roast." },
+          "4": { "title": "Chemistry Brochure", "description": "The brochure provides comprehensive information about all chemical products needed for the maintenance and care of coffee machines. This includes descaling tablets, cleaning agents, and care products that extend the life of the devices and optimize coffee quality. Appealing graphics and clear instructions help customers make the right choice for their needs." },
+          "5": { "title": "Express Brochure", "description": "The brochure presents the selection of coffee machines that Ncoffee offers for purchase or leasing. It contains detailed information about each model, including technical specifications, features, and benefits. Attractive images and clear comparisons help customers find the ideal machine for their needs and understand the various financing or rental options." },
+          "6": { "title": "Ncoffee Flyer", "description": "The vertical A5 flyer provides a comprehensive overview of the entire Ncoffee range. It contains detailed information about all products, including coffees, chemical care products, water, and coffee machines available for sale or lease. The attractive design and clear structure allow customers to quickly find the information they need and discover the variety of Ncoffee's offerings." },
+          "7": { "title": "Coffee Brochure", "description": "This brochure presents the entire range of Ncoffee coffees. Each blend is presented in detail, including its flavor profiles, roast levels, and origin. Appealing visuals and informative texts invite customers to discover the variety of Ncoffee coffees and find the perfect blend for their taste." },
+          "8": { "title": "Coffee To Go", "description": "The to-go cup for Ncoffee is designed as a promotional item and is ideal for various events and coffee stands. The modern and attractive design features the Ncoffee logo in striking colors and emphasizes the quality and freshness of the products offered. With a practical lid and environmentally friendly material, the cup is not only functional but also sustainable and underlines Ncoffee's commitment to eco-friendly coffee culture." },
+          "9": { "title": "Menu", "description": "The menu card for the table in the coffee shop shows all the coffee varieties offered by Ncoffee. It includes classic drinks like espresso, americano, and cappuccino, as well as various latte options such as latte macchiato, vanilla latte, and caramel latte. Alternative preparation methods like cold brew and nitro coffee are also listed. The clear layout and appetizing images invite customers to try every drink." },
+          "10": { "title": "Menu Black", "description": "The menu card for the table in the coffee shop shows all the coffee varieties offered by Ncoffee. It includes classic drinks like espresso, americano, and cappuccino, as well as various latte options such as latte macchiato, vanilla latte, and caramel latte. Alternative preparation methods like cold brew and nitro coffee are also listed. The clear layout and appetizing images invite customers to try every drink." },
+          "11": { "title": "Prado Label", "description": "The label for Ncoffee's artisan coffee is called Prado Premium. The elegant design in black with white lettering and gold accents gives a high-quality impression and reflects the product's sophistication." },
+          "12": { "title": "Vular Flyer Light", "description": "The horizontally folded A5 flyer describes all the advantages of the Vular Blend coffee blend from Ncoffee. It highlights the main features, including flavor nuances, acidity, roast level, and other taste characteristics. The appealing design provides customers with comprehensive information about the quality and uniqueness of this roast." },
+          "13": { "title": "Ncoffee Business Card", "description": "The business card for Ncoffee is designed in the company's distinctive colors and reflects the branding. The elegant design combines the Ncoffee logo with clear, modern fonts and provides space for all essential contact details. The attractive color palette and high-quality materials make the business card stand out and convey professionalism as well as a passion for high-quality coffee." },
+          "14": { "title": "Vular Label", "description": "The label for Ncoffee's artisan coffee is called Vular Intensive Blend. The elegant design in black with white lettering and gold accents gives a high-quality impression and reflects the product's sophistication." },
+          "15": { "title": "Vular Flyer Dark", "description": "The horizontally folded A5 flyer describes all the advantages of the Vular Blend coffee blend from Ncoffee. It highlights the main features, including flavor nuances, acidity, roast level, and other taste characteristics. The appealing design provides customers with comprehensive information about the quality and uniqueness of this roast." },
+          "16": { "title": "Lavender Corner", "description": "The very simple logo for Ncoffee's subsidiary, the mini-bar snack bar called Lavender Corner, is designed in soft lavender tones. It features stylized lavender flowers and conveys a welcoming atmosphere. The simple design emphasizes the connection to high-quality coffee and a cozy break that customers can expect at Lavender Corner." },
+          "17": { "title": "Ncoffee Offer", "description": "The A5 folding flyer from Ncoffee offers a compact overview of the offer on six pages. In a modern, natural design, the flyer presents the wide range – from high-quality coffees and exclusive roasts to the charming mini-bar concept Lavender Corner. Short texts and atmospheric images give new customers and partners a quick impression of the quality and variety of Ncoffee and invite them to a pleasurable break." }
+        },
+        "paluch": {
+          "1": {
+            "title": "Logo",
+            "description": "The logo for the Polish construction company shows a hedgehog in a paper hat. The friendly and inviting design symbolizes the company's creativity and craftsmanship. The hedgehog stands for reliability and strength, while the paper hat adds a humorous touch that reflects a passion for construction."
+          },
+          "2": {
+            "title": "Business Card",
+            "description": "The business card for Paluch construction company features the logo with the hedgehog in a paper hat. The modern design presents the contact details in a clear and readable way. The color palette exudes trust and professionalism, while the high-quality finish emphasizes the company's care and craftsmanship."
+          }
+        },
+        "pisa": {
+          "1": {
+            "title": "Logo",
+            "description": "The logo for Pizzeria Pisa shows the name in a simple font and the distinctive Leaning Tower of Pisa as a central element. The minimalist design uses clean lines and a black-and-white color palette with a subtle frame. The simple design and clear reference to the famous landmark emphasize the authenticity and Italian flair of the pizzeria."
+          },
+          "2": {
+            "title": "Flyer",
+            "description": "The A5 folding brochure for Pizzeria Pisa presents the restaurant's entire range. In a minimalist design with a black background, white lettering, and red decorative accents, the custom-designed logo with the Leaning Tower of Pisa stands out. The six pages clearly and attractively present the different types of pizza, appetizers, drinks, and special offers to highlight the authentic Italian taste and high quality of the pizzeria."
+          }
+        }
+      }
+    }
+  }
+

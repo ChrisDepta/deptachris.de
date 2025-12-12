@@ -26,7 +26,7 @@ export default function MapGraphicsComponent({
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
   const { t, i18n } = useTranslation();
-
+  const [isMobile, setIsMobile] = useState(false);
 
   const graphics: GraphicsData = db.graphics;
   const data = graphics[category];
@@ -41,6 +41,13 @@ export default function MapGraphicsComponent({
   useEffect(() => {
     // This empty effect ensures the component re-renders on language change
   }, [i18n.language]);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   if (!data) {
     return <p>{t('graphicsSection.categoryNotExist', { category })}</p>;
@@ -68,6 +75,103 @@ export default function MapGraphicsComponent({
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength).trim() + "...";
   };
+
+  if (isMobile) {
+    return (
+      <div className="w-full" key={i18n.language}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {data.map((item, index) => {
+            const translation = getCardTranslation(index);
+            return (
+              <div
+                key={item.id}
+                className="card group overflow-hidden flex flex-col h-full border border-primary/20"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={`/${item.image}`}
+                    alt={translation.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="h-auto object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => openZoom(item.image)}
+                  />
+                </div>
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors capitalize">
+                    {translation.title}
+                  </h3>
+                  <div className="text-muted-foreground text-sm mb-4 leading-relaxed flex-grow">
+                    {expandedCards.has(item.id) ? (
+                      <div>{translation.description}</div>
+                    ) : (
+                      <p>{truncateText(translation.description)}</p>
+                    )}
+                    {translation.description.length > 80 && (
+                      <button
+                        onClick={() => toggleDescription(item.id)}
+                        className="text-primary hover:text-primary/80 text-xs mt-2 font-medium transition-colors"
+                      >
+                        {expandedCards.has(item.id)
+                          ? t('graphicsSection.card.less', 'Show less')
+                          : t('graphicsSection.card.more', 'Read more')}
+                      </button>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => openZoom(item.image)}
+                    className="btn-primary w-full px-3 py-2 rounded-lg font-medium text-sm mt-auto inline-flex items-center justify-center gap-2"
+                  >
+                    {t('graphicsSection.card.preview', 'Preview')}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Modern zoom modal (still animated) */}
+        {zoomedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            onClick={closeZoom}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative bg-background rounded-2xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[80vh] flex flex-col"
+              onClick={e => e.stopPropagation()}
+            >
+              <Image
+                src={`/${zoomedImage}`}
+                alt="Zoomed preview"
+                width={800}
+                height={600}
+                className="object-contain w-full h-full"
+              />
+              <button
+                onClick={closeZoom}
+                className="absolute top-2 right-2 bg-black/60 text-white rounded-full p-2 hover:bg-black/80 transition-colors"
+                aria-label="Close preview"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="w-full" key={i18n.language}>

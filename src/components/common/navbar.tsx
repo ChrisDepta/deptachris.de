@@ -5,14 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import deptachrisLogo from "@/../public/simpleLogo.png";
 import LanguageSwitcher from "@/components/elements/LanguageSwitcher";
 
+
 function Nav() {
   const [menuActive, setMenuActive] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   function classToggle() {
     setMenuActive((prev) => !prev);
@@ -24,17 +23,6 @@ function Nav() {
     }
   }, [menuActive]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
-      menuClose();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [menuActive, menuClose]);
-
   const { t } = useTranslation();
   const navItems = [
     { href: "/", label: t("navbar.home", "Start") },
@@ -45,15 +33,11 @@ function Nav() {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled 
-          ? "bg-[hsl(var(--background))]/90 backdrop-blur-md shadow-lg py-2" 
-          : "bg-[hsl(var(--background))]/80 backdrop-blur-md py-4",
-        "border-b border-[hsl(var(--border))]"
+        // On mobile always fixed, always with bg and shadow, no scroll effect
+        "bg-[hsl(var(--background))]/90 backdrop-blur-md shadow-lg py-2 border-b border-[hsl(var(--border))]"
       )}
     >
       <div className="w-full px-6 lg:px-12 xl:px-16">
@@ -68,10 +52,11 @@ function Nav() {
               <Image
                 src={deptachrisLogo}
                 alt="deptachris Logo"
-                width={100}
-                height={40}
-                style={{ height: "auto" }} 
-                className=" h-auto rounded-xl group-hover:rotate-3 transition-transform duration-200 lg:w-12 lg:h-12"
+                width={50}
+                height={20}
+                sizes="(max-width: 767px) 50px, 100px"
+                style={{ height: "auto" }}
+                className="h-auto w-[50px] rounded-xl group-hover:rotate-3 transition-transform duration-200 md:w-[100px] md:h-auto lg:w-12 lg:h-12"
                 priority
               />
             </div>
@@ -167,7 +152,7 @@ function Nav() {
           )}
         </AnimatePresence>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
 

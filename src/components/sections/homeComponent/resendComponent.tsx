@@ -106,10 +106,10 @@ const ResendComponent: React.FC = () => {
           {sections.map((section, index) => (
             <motion.div
               key={section.id}
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: "circOut" }}
               className="card group overflow-hidden flex flex-col h-full"
             >
               {/* Card Image */}

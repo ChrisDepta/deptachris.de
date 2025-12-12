@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import db from "@/db/db.json";
@@ -14,10 +14,17 @@ type Section = {
   key: number;
 };
 
- export default function AboutMe(){
-
+export default function AboutMe() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Funkcja do przełączania sekcji
   const toggleSection = (section: string) => {
@@ -68,17 +75,67 @@ type Section = {
     },
   ];
 
- 
+  if (isMobile) {
+    return (
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-16">
+        <div className="text-center mb-16 space-y-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight overflow-hidden">
+            <span className="inline-block">
+              {t("about.header.main", "Über")}
+            </span>{" "}
+            <span className="inline-block text-primary">
+              {t("about.header.highlight", "mich")}
+            </span>
+          </h1>
+          <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
+            {t("about.header.subtitle")}
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            {t("about.header.description")}
+          </p>
+        </div>
+        <div className="space-y-20">
+          {sections.map((section) => (
+            <section key={section.key} className="space-y-8">
+              <div className="text-center">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-4 leading-tight">
+                  {section.title}
+                </h2>
+                <div className="h-1 bg-primary mx-auto rounded-full w-24"></div>
+              </div>
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <Image
+                    src={section.imageSrc}
+                    alt={section.title}
+                    width={400}
+                    height={300}
+                    className="rounded-2xl object-cover mx-auto"
+                  />
+                </div>
+                <div className="flex-1 text-lg text-muted-foreground">
+                  <p>{section.description}</p>
+                  {section.moreInfo && (
+                    <p className="mt-4 text-base">{section.moreInfo}</p>
+                  )}
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-48 mb-16">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center mb-16 space-y-6"
       >
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

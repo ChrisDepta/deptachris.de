@@ -112,7 +112,8 @@ const ResendComponent: React.FC = () => {
             <motion.div
               key={section.id}
               initial={{ opacity: 0, y: 100 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ 
                 duration: 1, 
                 delay: index * 0.1,

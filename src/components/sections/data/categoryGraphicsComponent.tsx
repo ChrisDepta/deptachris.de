@@ -71,7 +71,7 @@ export default function CategoryComponent() {
             key={category.key} 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-20%" }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             className="space-y-8"
           >

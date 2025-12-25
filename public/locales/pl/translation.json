@@ -94,7 +94,13 @@
     },
     "websites": {
       "title": "Moje strony www",
-      "description": "Poznaj moje projekty webowe i zainspiruj się."
+      "description": "Poznaj moje projekty webowe i zainspiruj się.",
+      "myProjects": {
+        "0": {
+          "title": "lapaprzyjaciela.pl",
+          "shortDescription": "lapaprzyjaciela.pl to strona dla hodowcy owczarków niemieckich długowłosych, oparta na Next.js, Postgres i MinIO, Docker, Tailwind oraz NextAuth z JWT i Google. Umożliwia dodawanie zdjęć, filmów oraz miotów."
+        }
+      }
     },
     "graphics": {
       "title": "Moje grafiki",
@@ -126,17 +132,29 @@
       "close": "Zamknij"
     },
     "projects": {
+      "lapaprzyjaciela": {
+        "title": "lapaprzyjaciela",
+        "shortDescription": "lapaprzyjaciela.pl to strona dla hodowcy owczarków niemieckich długowłosych, oparta na Next.js, Postgres i MinIO, Docker, Tailwind oraz NextAuth z JWT i Google. Umożliwia dodawanie zdjęć, filmów oraz miotów."
+      },
+      "cafixo": {
+        "title": "cafixo",
+        "shortDescription": "cafixo.pl to strona internetowa w Next.js, i18next i Tailwind z trybem jasnym i ciemnym dla przedsiębiorców. Jest autoryzowanym serwisem ekspresów do kawy w Polsce, szczególnie dla 4Swiss i innych marek."
+      },
       "ncoffee": {
-        "title": "ncoffee.pl",
+        "title": "ncoffee",
         "shortDescription": "ncoffee.pl to strona internetowa dystrybutora kawy i innych napojów w Polsce, specjalizującego się w klientach biznesowych. Firma oferuje również leasing urządzeń takich jak ekspresy do kawy, dystrybutory wody oraz filtry do wody."
       },
       "wozniak": {
-        "title": "Wozniak SHK",
+        "title": "Wozniak-SHK",
         "shortDescription": "Wozniak SHK to profesjonalna strona firmowa dla dostawcy usług z zakresu sanitariatów, ogrzewania i wentylacji, stworzona w Next.js. Nowoczesna i responsywna witryna prezentuje kompleksowe usługi SHK z naciskiem na wygodę użytkownika i szybkie ładowanie. Projekt podkreśla profesjonalizm i kompetencje firmy w branży techniki budowlanej."
       },
       "arborlim": {
         "title": "ArborLim",
         "shortDescription": "ArborLim to nowoczesna strona firmowa niemieckiej firmy zajmującej się pielęgnacją drzew, stworzona w Next.js i Tailwind CSS. Aplikacja korzysta z bazy danych PostgreSQL, Dockera do zarządzania kontenerami oraz MinIO do wydajnego przechowywania plików. Responsywny design prezentuje profesjonalne usługi pielęgnacji drzew z optymalną wydajnością i wygodą użytkowania."
+        },
+        "new-ncoffee": {
+          "title": "new-ncoffee",
+          "shortDescription": "new.ncoffee.pl to nowa strona internetowa dystrybutora kawy i napojów w Polsce, specjalizującego się w klientach biznesowych. Nowoczesna platforma oferuje kompleksowe informacje o produktach i usługach, w tym opcje leasingu ekspresów do kawy, dystrybutorów wody i filtrów."
       }
     }
   },

@@ -92,10 +92,6 @@
       "title": "Über mich",
       "description": "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften."
     },
-    "websites": {
-      "title": "Meine Webseiten",
-      "description": "Entdecken Sie meine Webentwicklungsprojekte und lassen Sie sich inspirieren."
-    },
     "graphics": {
       "title": "Meine Grafiken",
       "description": "Eine Auswahl meiner kreativen grafischen Arbeiten und Designs."
@@ -126,17 +122,29 @@
       "close": "Schließen"
     },
     "projects": {
+      "lapaprzyjaciela": {
+          "title": "lapaprzyjaciela",
+          "shortDescription": "lapaprzyjaciela.pl ist eine Website für einen Züchter von langhaarigen Deutschen Schäferhunden, entwickelt mit Next.js, Postgres und MinIO, Docker, Tailwind sowie NextAuth mit JWT und Google. Sie ermöglicht das Hinzufügen von Fotos, Videos und Würfen."
+      },
+      "cafixo": {
+        "title": "cafixo",
+        "shortDescription": "cafixo.pl ist eine Internetseite in Next.js, i18next und Tailwind mit Dark- und Light-Mode für Unternehmer. Sie ist autorisierter Servicepartner für Kaffeemaschinen in Polen, insbesondere für 4Swiss und andere Marken."
+        },
       "ncoffee": {
-        "title": "ncoffee.pl",
+        "title": "ncoffee",
         "shortDescription": "ncoffee.pl ist eine Website für einen Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Zusätzlich bietet das Unternehmen Leasing von Geräten wie Kaffeemaschinen, Wasserspendern sowie Filtern für Leitungswasser an."
       },
       "wozniak": {
-        "title": "Wozniak SHK",
+        "title": "Wozniak-SHK",
         "shortDescription": "Wozniak SHK ist eine professionelle Firmenwebsite für einen Dienstleister im Bereich Sanitär, Heizung und Lüftung, entwickelt mit Next.js. Die moderne und responsive Website präsentiert umfassende SHK-Dienstleistungen mit Fokus auf Benutzerfreundlichkeit und schnelle Ladezeiten. Das Design unterstreicht die Professionalität und Kompetenz des Unternehmens in der Gebäudetechnik."
       },
       "arborlim": {
         "title": "ArborLim",
         "shortDescription": "ArborLim ist eine moderne Firmenwebsite für ein deutsches Baumpflegeunternehmen, entwickelt mit Next.js und Tailwind CSS. Die Anwendung nutzt PostgreSQL als Datenbank, Docker für Container-Management und MinIO für effizientes File-Storage. Das responsive Design präsentiert professionelle Baumpflegedienste mit optimaler Performance und Benutzerfreundlichkeit."
+        },
+        "new-ncoffee": {
+          "title": "new-ncoffee",
+          "shortDescription": "new.ncoffee.pl ist die neue Website für den Vertriebspartner von Kaffee und anderen Getränken in Polen, spezialisiert auf Geschäftskunden. Die moderne Plattform bietet umfassende Informationen zu Produkten und Dienstleistungen, einschließlich Leasingoptionen für Kaffeemaschinen, Wasserspender und Wasserfilter."
       }
     }
   },

@@ -58,9 +58,12 @@ export default function MapWebsitesComponent({
           {data.map((item, index) => {
             // Map db key to translation key (normalize for translation keys)
             let key = item.titel.toLowerCase();
-            if (key === "ncoffee.pl") key = "ncoffee";
-            if (key === "wozniak shk") key = "wozniak";
+            if (key === "lapaprzyjaciela") key = "lapaprzyjaciela";
+            if (key === "cafixo") key = "cafixo";
+            if (key === "wozniak-SHK") key = "wozniak";
             if (key === "arborlim") key = "arborlim";
+            if (key === "ncoffee") key = "ncoffee";
+            if (key === "new-ncoffee") key = "new-ncoffee";
             return (
               <div
                 key={item.id}
